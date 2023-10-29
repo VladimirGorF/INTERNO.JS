@@ -29,8 +29,7 @@ a {
   margin-top: 53px;
   margin-bottom: 53px;
   display: flex;
-  justify-content: center;
-  gap: 48%;
+  justify-content: space-around;
 }
 .box__header .left {
   display: flex;
