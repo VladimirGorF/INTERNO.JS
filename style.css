@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.box__lineMainBox {
+  display: flex;
+  justify-content: center;
+}
+.box__lineMainBox .lineBox {
+  position: absolute;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+}
+.box__lineMainBox .lineBox .box {
+  border: 1px solid #E6E6E6;
+  height: 4350px;
+}
+.box__header {
+  margin-top: 53px;
+  margin-bottom: 53px;
+  display: flex;
+  justify-content: center;
+  gap: 48%;
+}
+.box__header .left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.box__header .left .headerLeft {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.box__header .right {
+  display: flex;
+  gap: 25px;
+}
+.box__header .right .rightPage {
+  color: #292F36;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.box__bannerMain {
+  display: flex;
+  justify-content: center;
+}
+.box__bannerMain .banner {
+  position: relative;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+}
+.box__bannerMain .banner .bannerImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50px;
+}
+.box__bannerMain .banner .informPart {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-left: 50px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  width: 434px;
+}
+.box__bannerMain .banner .informPart .title {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  margin-bottom: 18px;
+}
+.box__bannerMain .banner .informPart .text {
+  height: 66px;
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  margin-bottom: 21px;
+}
+.box__bannerMain .banner .informPart .button {
+  width: 220px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border-radius: 18px;
+  background: #292F36;
+}
+.box__bannerMain .banner .informPart .button .buttonText {
+  color: #FFF;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+}
+.box__bannerMain .banner .informPart .button .ArrowButton {
+  width: 15.141px;
+  height: 13.177px;
+}
+.box__projects .projects__Heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 93px;
+}
+.box__projects .projects__Heading .projects__Title {
+  color: #292F36;
+  text-align: center;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+}
+.box__projects .projects__Heading .projects__Text {
+  color: #4D5053;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  width: 737px;
+}
+.box__projects .projects__items {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 547px);
+  gap: 56px 100px;
+  margin-bottom: 96px;
+}
+.box__projects .projects__items .item .itemImage {
+  margin-bottom: 24px;
+}
+.box__projects .projects__items .item .itemInform {
+  display: flex;
+  justify-content: space-between;
+}
+.box__projects .projects__items .item .itemInform .itemInfom__left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.box__projects .projects__items .item .itemInform .itemInfom__left .leftSubtitle {
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+}
+.box__projects .projects__items .item .itemInform .itemInfom__left .leftText {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.box__projects .projects__items .item .itemInform .arrowRound {
+  height: 70px;
+}
+.box__counter {
+  display: flex;
+  justify-content: center;
+  height: 457px;
+  background-color: #F4F0EC;
+  padding-left: 53px;
+  padding-right: 53px;
+  margin-bottom: 96px;
+}
+.box__counter .counter__item {
+  display: flex;
+  align-items: center;
+}
+.box__counter .counter__item .inform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 76px;
+}
+.box__counter .counter__item .inform .number {
+  color: #CDA274;
+  font-family: "DM Serif Display";
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1.7px;
+}
+.box__counter .counter__item .inform .counterText {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.box__counter .counter__item .line {
+  height: 150px;
+  margin-right: 76px;
+}
+.box__blog {
+  margin-bottom: 96px;
+}
+.box__blog .title {
+  text-align: center;
+  color: #292F36;
+  text-align: center;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.box__blog .boxBlogText {
+  text-align: center;
+  color: #4D5053;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 22px;
+  max-width: 737px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 52px;
+}
+.box__blog .examples {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 382px);
+  gap: 27px;
+}
+.box__blog .examples .examples__Item {
+  border: 1px solid;
+  border-radius: 62px;
+  padding: 21px 21px;
+}
+.box__blog .examples .examples__Item .examples__image {
+  border-radius: 50px 50px 0px 0px;
+}
+.box__blog .examples .examples__Item .title {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  text-align: left;
+  max-width: 305px;
+  height: 70px;
+}
+.box__blog .examples .examples__Item .dateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.box__blog .examples .examples__Item .dateBox .dateBoxText {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 16px;
+}
+.box__blog .examples .examples__Item .dateBox .dateBoxImage {
+  height: 52px;
+  width: 52px;
+}
+.box__blog .examples .itemMiddle {
+  background-color: #E7E7E7;
+}
+.box .footer {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 382px);
+  gap: 27px;
+  height: 272px;
+  margin-bottom: 134px;
+}
+.box .footer__left .top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+.box .footer__left .top .topLeft {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 40px;
+}
+.box .footer__left .footer__leftText {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  margin-bottom: 31px;
+}
+.box .footer__left .logo {
+  display: flex;
+  justify-content: start;
+  gap: 54px;
+}
+.box .footer .footer__middle {
+  padding-left: 101px;
+}
+.box .footer .footer__middle .title {
+  margin-bottom: 30px;
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+}
+.box .footer .footer__middle .pages {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 22px;
+}
+.box .footer .footer__middle .pages .page {
+  margin-bottom: 30px;
+}
+.box .footer .footer__right {
+  padding-left: 126px;
+}
+.box .footer .footer__right .title {
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  margin-bottom: 26px;
+}
+.box .footer .footer__right .contacts .contactsText {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
