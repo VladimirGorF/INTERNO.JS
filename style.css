@@ -9,6 +9,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #4D5053;
 }
 
 .box__lineMainBox {
@@ -23,6 +24,8 @@ a {
 }
 .box__lineMainBox .lineBox .box {
   border: 1px solid #E6E6E6;
+  border-top-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
   height: 4350px;
 }
 .box__header {
@@ -56,6 +59,13 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 125%;
+  transition: 0.3s ease-in-out;
+}
+.box__header .right .rightPage:hover {
+  color: red;
+}
+.box__header .right .rightPage:visited {
+  color: green;
 }
 .box__bannerMain {
   display: flex;
@@ -112,20 +122,24 @@ a {
   align-items: center;
   border-radius: 18px;
   background: #292F36;
+  transition: 0.3s ease-in-out;
 }
 .box__bannerMain .banner .informPart .button .buttonText {
   color: #FFF;
   text-align: center;
   font-family: "Jost";
   font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 125%;
-  letter-spacing: 0.36px;
+  transition: 0.3s ease-in-out;
 }
 .box__bannerMain .banner .informPart .button .ArrowButton {
   width: 15.141px;
   height: 13.177px;
+}
+.box__bannerMain .banner .informPart .button:hover {
+  background-color: #29306E;
+}
+.box__bannerMain .banner .informPart .button:hover .buttonText {
+  color: #eb2d85;
 }
 .box__projects .projects__Heading {
   display: flex;
@@ -192,8 +206,11 @@ a {
   line-height: 150%;
   letter-spacing: 0.22px;
 }
-.box__projects .projects__items .item .itemInform .arrowRound {
-  height: 70px;
+.box__projects .projects__items .item .itemInform .projectArrowImage circle {
+  transition: 0.3s;
+}
+.box__projects .projects__items .item .itemInform .projectArrowImage:hover circle {
+  fill: lightsteelblue;
 }
 .box__counter {
   display: flex;
@@ -303,8 +320,12 @@ a {
 .box__blog .examples .examples__Item .dateBox .dateBoxImage {
   height: 52px;
   width: 52px;
+  border-radius: 50px 50px;
 }
-.box__blog .examples .itemMiddle {
+.box__blog .examples .examples__Item:hover .circle {
+  fill: #FFFFFF;
+}
+.box__blog .examples .examples__Item:hover {
   background-color: #E7E7E7;
 }
 .box .footer {
@@ -353,6 +374,10 @@ a {
 }
 .box .footer .footer__middle .pages .page {
   margin-bottom: 30px;
+  transition: 0.3s;
+}
+.box .footer .footer__middle .pages .page:hover {
+  color: red;
 }
 .box .footer .footer__right {
   padding-left: 126px;

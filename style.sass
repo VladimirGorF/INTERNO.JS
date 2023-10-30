@@ -7,6 +7,7 @@ html
 
 a
     text-decoration: none
+    color: #4D5053
 
 .box
     &__lineMainBox
@@ -20,6 +21,8 @@ a
             grid-template-columns: repeat(3, 400px)
             .box
                 border: 1px solid #E6E6E6
+                border-top-color: #FFFFFF
+                border-bottom-color: #FFFFFF
                 height: 4350px
 
     &__header
@@ -49,6 +52,11 @@ a
                 font-style: normal
                 font-weight: 400
                 line-height: 125%
+                transition: 0.3s ease-in-out
+            .rightPage:hover
+                color: red
+            .rightPage:visited
+                color: green  
 
     &__bannerMain
         display: flex
@@ -99,18 +107,21 @@ a
                     align-items: center
                     border-radius: 18px
                     background: #292F36
+                    transition: 0.3s ease-in-out
                     .buttonText
                         color: #FFF
                         text-align: center
                         font-family: 'Jost'
                         font-size: 18px
-                        font-style: normal
-                        font-weight: 600
-                        line-height: 125%
-                        letter-spacing: 0.36px
+                        transition: 0.3s ease-in-out
                     .ArrowButton
                         width: 15.141px
                         height: 13.177px
+                .button:hover
+                    background-color: #29306E
+                .button:hover .buttonText
+                    color:  #eb2d85
+
 
     &__projects
         .projects__Heading
@@ -170,8 +181,11 @@ a
                             font-weight: 400
                             line-height: 150%
                             letter-spacing: 0.22px
-                    .arrowRound
-                        height: 70px
+                    .projectArrowImage
+                        circle
+                            transition: .3s 
+                    .projectArrowImage:hover circle
+                        fill: lightsteelblue
 
     &__counter
         display: flex
@@ -267,7 +281,11 @@ a
                     .dateBoxImage
                         height: 52px
                         width: 52px
-            .itemMiddle
+                        border-radius: 50px 50px                  
+
+            .examples__Item:hover .circle
+                fill:#FFFFFF 
+            .examples__Item:hover
                 background-color: #E7E7E7
 
     .footer
@@ -311,6 +329,9 @@ a
                 font-size: 22px
                 .page
                     margin-bottom: 30px
+                    transition: .3s
+                .page:hover
+                    color: red    
 
         .footer__right
             padding-left: 126px
