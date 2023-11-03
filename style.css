@@ -26,7 +26,7 @@ a {
   border: 1px solid #E6E6E6;
   border-top-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
-  height: 4350px;
+  height: 3100px;
 }
 .box__header {
   margin-top: 53px;
@@ -140,6 +140,107 @@ a {
 }
 .box__bannerMain .banner .informPart .button:hover .buttonText {
   color: #eb2d85;
+}
+.box__blogBanner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 350px;
+  background: url(images/blogImages/BlogBannerPhoto.svg) no-repeat;
+  background-position: 50% 50%;
+  margin-bottom: 150px;
+}
+.box__blogBanner .titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 503px;
+  height: 178px;
+  background-color: #FFFFFF;
+  border-radius: 37px 37px 0px 0px;
+}
+.box__blogBanner .titleBox .title {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.box__blogBanner .titleBox .text {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.box__Post {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+.box__Post .postMain .title {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 27px;
+}
+.box__Post .postMain .contentPost {
+  display: flex;
+  gap: 65px;
+  padding: 22px;
+  border-radius: 62px;
+  border: 1px solid #E7E7E7;
+}
+.box__Post .postMain .contentPost .imagePost {
+  border-radius: 40px;
+}
+.box__Post .postMain .contentPost .informPost {
+  width: 463px;
+  margin-top: 50px;
+}
+.box__Post .postMain .contentPost .informPost .titleInformPost {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+}
+.box__Post .postMain .contentPost .informPost .textPost {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  margin-bottom: 41px;
+}
+.box__Post .postMain .contentPost .informPost .dateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.box__Post .postMain .contentPost .informPost .dateBox .dateBoxText {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 16px;
+}
+.box__Post .postMain .contentPost .informPost .dateBox .dateBoxImage {
+  height: 52px;
+  width: 52px;
+  border-radius: 50px 50px;
 }
 .box__projects .projects__Heading {
   display: flex;
@@ -257,6 +358,15 @@ a {
 .box__blog {
   margin-bottom: 96px;
 }
+.box__blog .titleBlogPage {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+}
 .box__blog .title {
   text-align: center;
   color: #292F36;
@@ -327,6 +437,104 @@ a {
 }
 .box__blog .examples .examples__Item:hover {
   background-color: #E7E7E7;
+}
+.box__blogPage {
+  display: flex;
+  justify-content: center;
+}
+.box__blogPage .blogPageContent {
+  margin-bottom: 96px;
+}
+.box__blogPage .blogPageContent .titleBlogPage {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.box__blogPage .blogPageContent .examples {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 382px);
+  gap: 27px;
+  margin-bottom: 51px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item {
+  border: 1px solid;
+  border-radius: 62px;
+  padding: 21px 21px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item .examples__image {
+  border-radius: 50px 50px 0px 0px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item .title {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  text-align: left;
+  max-width: 305px;
+  height: 70px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item .dateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item .dateBox .dateBoxText {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 16px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item .dateBox .dateBoxImage {
+  height: 52px;
+  width: 52px;
+  border-radius: 50px 50px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item:hover .circle {
+  fill: #FFFFFF;
+}
+.box__blogPage .blogPageContent .examples .examples__Item:hover {
+  background-color: #E7E7E7;
+}
+.box__blogPage .blogPageContent .pagination .pagBox {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.box__blogPage .blogPageContent .pagination .pagBox .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #292F36;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: capitalize;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #CDA274;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.box__blogPage .blogPageContent .pagination .pagBox .page:hover {
+  background-color: #F4F0EC;
+  transform: scale(1.3);
+}
+.box__blogPage .blogPageContent .pagination .pagBox .page:active {
+  background-color: #F4F0EC;
+}
+.box__blogPage .blogPageContent .pagination .pagBox .page:visited {
+  background-color: #F4F0EC;
 }
 .box .footer {
   display: grid;
