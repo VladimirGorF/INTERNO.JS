@@ -530,11 +530,9 @@ a {
   background-color: #F4F0EC;
   transform: scale(1.3);
 }
-.box__blogPage .blogPageContent .pagination .pagBox .page:active {
+.box__blogPage .blogPageContent .pagination .pagBox .active {
   background-color: #F4F0EC;
-}
-.box__blogPage .blogPageContent .pagination .pagBox .page:visited {
-  background-color: #F4F0EC;
+  transform: scale(1.3);
 }
 .box .footer {
   display: grid;
