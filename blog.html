@@ -112,7 +112,7 @@
           <div class="titleBlogPage">Articles & News</div>
 
           <!-- это под VUE раздел -->
-          <div class="examples">
+          <div id="chen" class="examples">
             <div
               class="examples__Item"
               v-for="item in sliceProducts"
@@ -157,8 +157,8 @@
           </div>
           <div class="pagination">
             <div class="pagBox">
-              <a class="page" @click="backPage(); getProducts(activePageId, 6)">&lt</a>
-              <a
+              <a href="#chen" class="page" @click="backPage(); getProducts(activePageId, 6)">&lt</a>
+              <a href="#chen"
                 class="page"
                 v-for="page in slicePages"
                 :key="page.id"
@@ -166,7 +166,7 @@
                 @click="activePageId = page.id; getProducts(page.id, 6); movePage(page.id)"
                 >0{{page.id}}</a
               >
-              <a class="page" @click="forwardPage(); getProducts(activePageId, 6) ">&gt</a>
+              <a href="#chen" class="page" @click="forwardPage(); getProducts(activePageId, 6) ">&gt</a>
             </div>
             <a hidden>Кол-во страниц: 0{{pagesCounter}} страниц</a>
           </div>
