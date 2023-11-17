@@ -157,8 +157,14 @@
           </div>
           <div class="pagination">
             <div class="pagBox">
-              <a href="#chen" class="page" @click="backPage(); getProducts(activePageId, 6)">&lt</a>
-              <a href="#chen"
+              <a
+                href="#chen"
+                class="page"
+                @click="backPage(); getProducts(activePageId, 6)"
+                >&lt</a
+              >
+              <a
+                href="#chen"
                 class="page"
                 v-for="page in slicePages"
                 :key="page.id"
@@ -166,13 +172,63 @@
                 @click="activePageId = page.id; getProducts(page.id, 6); movePage(page.id)"
                 >0{{page.id}}</a
               >
-              <a href="#chen" class="page" @click="forwardPage(); getProducts(activePageId, 6) ">&gt</a>
+              <a
+                href="#chen"
+                class="page"
+                @click="forwardPage(); getProducts(activePageId, 6) "
+                >&gt</a
+              >
             </div>
             <a hidden>Кол-во страниц: 0{{pagesCounter}} страниц</a>
           </div>
         </div>
       </div>
 
+      <div class="footer">
+        <div class="footer__left">
+          <div class="top">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+            >
+              <path
+                d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
+                fill="#CDA274"
+              />
+            </svg>
+            <h3 class="topLeft">Interno</h3>
+          </div>
+          <p class="footer__leftText">
+            It is a long established fact that a reader will be distracted
+            lookings.
+          </p>
+          <div class="logo">
+            <a href="#"><img src="images/Bird.svg" alt="Bird" /></a>
+            <a href="#"><img src="images/In.svg" alt="in" /></a>
+          </div>
+        </div>
+        <div class="footer__middle">
+          <h3 class="title">Pages</h3>
+          <div class="pages">
+            <a href="#"><p class="page">Home</p></a>
+            <a href="#"><p class="page">Project</p></a>
+            <a href="#"><p class="page">Blog</p></a>
+          </div>
+        </div>
+        <div class="footer__right">
+          <h3 class="title">Contact</h3>
+          <div class="contacts">
+            <p class="contactsText">
+              55 East Birchwood Ave. Brooklyn, New York 11201
+            </p>
+            <p class="contactsText">contact@interno.com</p>
+            <p class="contactsText">(123) 456 - 7890</p>
+          </div>
+        </div>
+      </div>
       <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
       <script>
@@ -184,10 +240,7 @@
             pagesQuantity: 1,
             activePageId: 1, // активная подсвечиваемая страница по умолчанию
             pages: [
-              {
-                id: 1,
-                class: "",
-              },
+             
             ],
             productStart: 0,
             productEnd: 7,
@@ -430,7 +483,7 @@
                 page === this.pagesQuantity
               ) {
                 return;
-              }else if (page + 1 === this.pageEnd) {
+              } else if (page + 1 === this.pageEnd) {
                 this.pageStart += 1;
                 this.pageEnd += 1;
                 return;
@@ -458,12 +511,12 @@
             backPage() {
               if (this.activePageId === 1) {
                 return;
-              }else if (this.pageStart - 1 <= 1) {
+              } else if (this.pageStart - 1 <= 1) {
                 this.pageStart = 1;
                 this.pageEnd = 4;
                 this.activePageId -= 1;
                 return;
-              }else if (this.activePageId === this.pagesQuantity) {
+              } else if (this.activePageId === this.pagesQuantity) {
                 this.activePageId -= 1;
                 return;
               }
@@ -496,52 +549,6 @@
           },
         });
       </script>
-
-      <div class="footer">
-        <div class="footer__left">
-          <div class="top">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="34"
-              viewBox="0 0 34 34"
-              fill="none"
-            >
-              <path
-                d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
-                fill="#CDA274"
-              />
-            </svg>
-            <h3 class="topLeft">Interno</h3>
-          </div>
-          <p class="footer__leftText">
-            It is a long established fact that a reader will be distracted
-            lookings.
-          </p>
-          <div class="logo">
-            <a href="#"><img src="images/Bird.svg" alt="Bird" /></a>
-            <a href="#"><img src="images/In.svg" alt="in" /></a>
-          </div>
-        </div>
-        <div class="footer__middle">
-          <h3 class="title">Pages</h3>
-          <div class="pages">
-            <a href="#"><p class="page">Home</p></a>
-            <a href="#"><p class="page">Project</p></a>
-            <a href="#"><p class="page">Blog</p></a>
-          </div>
-        </div>
-        <div class="footer__right">
-          <h3 class="title">Contact</h3>
-          <div class="contacts">
-            <p class="contactsText">
-              55 East Birchwood Ave. Brooklyn, New York 11201
-            </p>
-            <p class="contactsText">contact@interno.com</p>
-            <p class="contactsText">(123) 456 - 7890</p>
-          </div>
-        </div>
-      </div>
     </div>
   </body>
 </html>
