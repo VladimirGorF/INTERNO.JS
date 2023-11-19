@@ -1,0 +1,1058 @@
+<template>
+  <div class="articles">
+    <div class="left">
+      <article class="article" v-if="Tag === 'kitchen' || Tag === ''">
+        <h2 class="title">
+          Let’s Get Solution for Building Construction Work: KITCHEN
+        </h2>
+        <img
+          class="articleImage"
+          src="../assets/blogDetailsImages/kitchen.svg"
+          alt="articleImage"
+        />
+        <div class="dateInformation">
+          <div class="left">26 December,2022</div>
+          <div class="right">Interior / Home / Decore</div>
+        </div>
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered alteration in some form, by injecthumour, or randomised words
+          which don't look even slightly believable. <br /><br />Embarrassing
+          hidden in the middle of text. All the Lorem Ipsum generators on the
+          Internet tend to repeat predefined chunks as necessary.
+        </p>
+        <div class="sloganBox">
+          <div class="commas">,,</div>
+          <div class="subtitle">
+            The details are not the details. They make the design.
+          </div>
+        </div>
+      </article>
+      <article class="article" v-if="Tag === 'kitchen' || Tag === ''">
+        <h2 class="title">Design sprints are great: KITCHEN</h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">1</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">2</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">3</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <img
+          src="../assets/blogDetailsImages/kitchen2.svg"
+          alt="articleImage"
+          class="articleImage"
+        />
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered.
+        </p>
+      </article>
+      <article class="article" v-if="Tag === 'mobi' || Tag === ''">
+        <h2 class="title">
+          Let’s Get Solution for Building Construction Work: MOBI
+        </h2>
+        <img
+          class="articleImage"
+          src="../assets/blogDetailsImages/kitchen2.svg"
+          alt="articleImage"
+        />
+        <div class="dateInformation">
+          <div class="left">26 December,2022</div>
+          <div class="right">Interior / Home / Decore</div>
+        </div>
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered alteration in some form, by injecthumour, or randomised words
+          which don't look even slightly believable. <br /><br />Embarrassing
+          hidden in the middle of text. All the Lorem Ipsum generators on the
+          Internet tend to repeat predefined chunks as necessary.
+        </p>
+        <div class="sloganBox">
+          <div class="commas">,,</div>
+          <div class="subtitle">
+            The details are not the details. They make the design.
+          </div>
+        </div>
+      </article>
+      <article class="article" v-if="Tag === 'gor' || Tag === ''">
+        <h2 class="title">Design sprints are great: GOR</h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">1</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">2</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">3</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <img
+          src="../assets/blogDetailsImages/kitchen2.svg"
+          alt="articleImage"
+          class="articleImage"
+        />
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered.
+        </p>
+      </article>
+      <article class="article" v-if="Tag === 'burgerlist' || Tag === ''">
+        <h2 class="title">Design sprints are great: BURGERLIST</h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">1</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">2</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">3</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <img
+          src="../assets/blogDetailsImages/kitchen2.svg"
+          alt="articleImage"
+          class="articleImage"
+        />
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered.
+        </p>
+      </article>
+      <article class="article" v-if="Tag === 'kitchenNurgen' || Tag === ''">
+        <h2 class="title">Design sprints are great: KITCHENNURGEN</h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">1</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">2</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <p class="text">
+          <span class="numbers">3</span>
+          Contrary to popular belief.There are many variations of passages of
+          Lorem Ipsum available, but the majority have suffered.
+        </p>
+        <img
+          src="../assets/blogDetailsImages/kitchen2.svg"
+          alt="articleImage"
+          class="articleImage"
+        />
+        <p class="text">
+          Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+          turpmaximus.posuere in.Contrary to popular belief.There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered.
+        </p>
+      </article>
+    </div>
+    <div class="right">
+      <div class="title">Tags</div>
+      <div class="tagsBox">
+        <a
+          href="#app"
+          class="button"
+          v-for="tag in tags"
+          :key="tag.id"
+          :class="[tag.id === activeTagId && Tag ? 'buttonVisited' : '']"
+          @click="
+            activeTagId = tag.id;
+            showArticles(tag.name);
+          "
+        >
+          {{ tag.name }}
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "MyArticles",
+  data() {
+    return {
+      activeTagId: "0",
+      Tag: "",
+      tags: [
+        { id: 0, name: "kitchen" },
+        { id: 1, name: "mobi" },
+        { id: 2, name: "burgerlist" },
+        { id: 3, name: "gor" },
+        { id: 4, name: "kitchenNurgen" },
+      ],
+    };
+  },
+  methods: {
+    showArticles(nameOfTag) {
+      this.Tag === nameOfTag ? (this.Tag = "") : (this.Tag = nameOfTag);
+      // если придет клик с уже кликнутого Тега, то обнуляем фильтр, а если фильтр обнулен, то устанавливаем по клику новый
+    },
+  },
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #4d5053;
+}
+
+.box__lineMainBox {
+  display: flex;
+  justify-content: center;
+}
+.box__lineMainBox .lineBox {
+  position: absolute;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+}
+.box__lineMainBox .lineBox .box {
+  border: 1px solid #e6e6e6;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+  height: 3100px;
+}
+.box__header {
+  margin-top: 53px;
+  margin-bottom: 53px;
+  display: flex;
+  justify-content: space-around;
+}
+.box__header .left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.box__header .left .headerLeft {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.box__header .right {
+  display: flex;
+  gap: 25px;
+}
+.box__header .right .rightPage {
+  color: #292f36;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  transition: 0.3s ease-in-out;
+}
+.box__header .right .rightPage:hover {
+  color: red;
+}
+.box__header .right .rightPage:visited {
+  color: green;
+}
+.box__bannerMain {
+  display: flex;
+  justify-content: center;
+}
+.box__bannerMain .banner {
+  position: relative;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+}
+.box__bannerMain .banner .bannerImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50px;
+}
+.box__bannerMain .banner .informPart {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-left: 50px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  width: 434px;
+}
+.box__bannerMain .banner .informPart .title {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  margin-bottom: 18px;
+}
+.box__bannerMain .banner .informPart .text {
+  height: 66px;
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  margin-bottom: 21px;
+}
+.box__bannerMain .banner .informPart .button {
+  width: 220px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border-radius: 18px;
+  background: #292f36;
+  transition: 0.3s ease-in-out;
+}
+.box__bannerMain .banner .informPart .button .buttonText {
+  color: #fff;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+.box__bannerMain .banner .informPart .button .ArrowButton {
+  width: 15.141px;
+  height: 13.177px;
+}
+.box__bannerMain .banner .informPart .button:hover {
+  background-color: #29306e;
+}
+.box__bannerMain .banner .informPart .button:hover .buttonText {
+  color: #eb2d85;
+}
+.box__blogBanner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 350px;
+  background: url(../assets/blogDetailsImages/blogBannerImage.svg) no-repeat;
+  background-position: 50% 50%;
+  margin-bottom: 150px;
+}
+.box__blogBanner .titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 503px;
+  height: 178px;
+  background-color: #ffffff;
+  border-radius: 37px 37px 0px 0px;
+}
+.box__blogBanner .titleBox .title {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.box__blogBanner .titleBox .text {
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.box__Post {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+.box__Post .postMain .title {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 27px;
+}
+.box__Post .postMain .contentPost {
+  display: flex;
+  gap: 65px;
+  padding: 22px;
+  border-radius: 62px;
+  border: 1px solid #e7e7e7;
+}
+.box__Post .postMain .contentPost .imagePost {
+  border-radius: 40px;
+}
+.box__Post .postMain .contentPost .informPost {
+  width: 463px;
+  margin-top: 50px;
+}
+.box__Post .postMain .contentPost .informPost .titleInformPost {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+}
+.box__Post .postMain .contentPost .informPost .textPost {
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  margin-bottom: 41px;
+}
+.box__Post .postMain .contentPost .informPost .dateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.box__Post .postMain .contentPost .informPost .dateBox .dateBoxText {
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 16px;
+}
+.box__Post .postMain .contentPost .informPost .dateBox .dateBoxImage {
+  height: 52px;
+  width: 52px;
+  border-radius: 50px 50px;
+}
+.box__projects .projects__Heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 93px;
+}
+.box__projects .projects__Heading .projects__Title {
+  color: #292f36;
+  text-align: center;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+}
+.box__projects .projects__Heading .projects__Text {
+  color: #4d5053;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  width: 737px;
+}
+.box__projects .projects__items {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 547px);
+  gap: 56px 100px;
+  margin-bottom: 96px;
+}
+.box__projects .projects__items .item .itemImage {
+  margin-bottom: 24px;
+}
+.box__projects .projects__items .item .itemInform {
+  display: flex;
+  justify-content: space-between;
+}
+.box__projects .projects__items .item .itemInform .itemInfom__left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.box__projects
+  .projects__items
+  .item
+  .itemInform
+  .itemInfom__left
+  .leftSubtitle {
+  color: #292f36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+}
+.box__projects .projects__items .item .itemInform .itemInfom__left .leftText {
+  color: #4d5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.box__projects .projects__items .item .itemInform .projectArrowImage circle {
+  transition: 0.3s;
+}
+.box__projects
+  .projects__items
+  .item
+  .itemInform
+  .projectArrowImage:hover
+  circle {
+  fill: lightsteelblue;
+}
+.box__counter {
+  display: flex;
+  justify-content: center;
+  height: 457px;
+  background-color: #f4f0ec;
+  padding-left: 53px;
+  padding-right: 53px;
+  margin-bottom: 96px;
+}
+.box__counter .counter__item {
+  display: flex;
+  align-items: center;
+}
+.box__counter .counter__item .inform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 76px;
+}
+.box__counter .counter__item .inform .number {
+  color: #cda274;
+  font-family: "DM Serif Display";
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1.7px;
+}
+.box__counter .counter__item .inform .counterText {
+  color: #4d5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.box__counter .counter__item .line {
+  height: 150px;
+  margin-right: 76px;
+}
+.box__blog {
+  margin-bottom: 96px;
+}
+.box__blog .titleBlogPage {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+}
+.box__blog .title {
+  text-align: center;
+  color: #292f36;
+  text-align: center;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.box__blog .boxBlogText {
+  text-align: center;
+  color: #4d5053;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 22px;
+  max-width: 737px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 52px;
+}
+.box__blog .examples {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 382px);
+  gap: 27px;
+}
+.box__blog .examples .examples__Item {
+  border: 1px solid;
+  border-radius: 62px;
+  padding: 21px 21px;
+}
+.box__blog .examples .examples__Item .examples__image {
+  border-radius: 50px 50px 0px 0px;
+}
+.box__blog .examples .examples__Item .title {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  text-align: left;
+  max-width: 305px;
+  height: 70px;
+}
+.box__blog .examples .examples__Item .dateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.box__blog .examples .examples__Item .dateBox .dateBoxText {
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 16px;
+}
+.box__blog .examples .examples__Item .dateBox .dateBoxImage {
+  height: 52px;
+  width: 52px;
+  border-radius: 50px 50px;
+}
+.box__blog .examples .examples__Item:hover .circle {
+  fill: #ffffff;
+}
+.box__blog .examples .examples__Item:hover {
+  background-color: #e7e7e7;
+}
+.box__blogPage {
+  display: flex;
+  justify-content: center;
+}
+.box__blogPage .blogPageContent .titleBlogPage {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.box__blogPage .blogPageContent .examples {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 382px);
+  gap: 27px;
+  margin-bottom: 51px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item {
+  border: 1px solid;
+  border-radius: 62px;
+  padding: 21px 21px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item .examples__image {
+  border-radius: 50px 50px 0px 0px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item .title {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  text-align: left;
+  max-width: 305px;
+  height: 70px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item .dateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.box__blogPage
+  .blogPageContent
+  .examples
+  .examples__Item
+  .dateBox
+  .dateBoxText {
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 16px;
+}
+.box__blogPage
+  .blogPageContent
+  .examples
+  .examples__Item
+  .dateBox
+  .dateBoxImage {
+  height: 52px;
+  width: 52px;
+  border-radius: 50px 50px;
+}
+.box__blogPage .blogPageContent .examples .examples__Item:hover .circle {
+  fill: #ffffff;
+}
+.box__blogPage .blogPageContent .examples .examples__Item:hover {
+  background-color: #e7e7e7;
+}
+.box__blogPage .blogPageContent .pagination {
+  margin-bottom: 200px;
+}
+.box__blogPage .blogPageContent .pagination .pagBox {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.box__blogPage .blogPageContent .pagination .pagBox .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #292f36;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: capitalize;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #cda274;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.box__blogPage .blogPageContent .pagination .pagBox .page:hover {
+  background-color: #f4f0ec;
+  transform: scale(1.3);
+}
+.box__blogPage .blogPageContent .pagination .pagBox .active {
+  background-color: #f4f0ec;
+  transform: scale(1.3);
+}
+.box__blogDetailsPage {
+  display: flex;
+  flex-direction: column;
+}
+.box__blogDetailsPage .articleBlogBanner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 350px;
+  background: url(../assets/blogDetailsImages/blogBannerImage.svg) no-repeat;
+  background-position: 50% 50%;
+  margin-bottom: 150px;
+}
+.box__blogDetailsPage .articlesBox {
+  display: flex;
+  justify-content: center;
+}
+.box__blogDetailsPage .articlesBox .articles {
+  display: flex;
+  flex-direction: row;
+  gap: 52px;
+}
+.box__blogDetailsPage .articlesBox .articles .left {
+  max-width: 799px;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article:last-child {
+  margin-bottom: 98px;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article {
+  margin-bottom: 27px;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article .title {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 21px;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article .articleImage {
+  border-radius: 50px;
+  margin-bottom: 46px;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article .dateInformation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.box__blogDetailsPage
+  .articlesBox
+  .articles
+  .left
+  .article
+  .dateInformation
+  .left {
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+.box__blogDetailsPage
+  .articlesBox
+  .articles
+  .left
+  .article
+  .dateInformation
+  .right {
+  padding-right: 70px;
+  color: #4d5053;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article .text {
+  display: flex;
+  gap: 14px;
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  margin-bottom: 35px;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article .text .numbers {
+  color: #cda274;
+  font-family: "DM Serif Display";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.4px;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article .sloganBox {
+  border-radius: 50px;
+  background: #f4f0ec;
+  padding-top: 79px;
+  padding-bottom: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box__blogDetailsPage .articlesBox .articles .left .article .sloganBox .commas {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #cda274;
+  font-family: "DM Serif Display";
+  font-size: 200px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 4px;
+  max-height: 80px;
+}
+.box__blogDetailsPage
+  .articlesBox
+  .articles
+  .left
+  .article
+  .sloganBox
+  .subtitle {
+  height: 70px;
+  color: #cda274;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  max-width: 351px;
+  text-align: center;
+}
+.box__blogDetailsPage .articlesBox .articles .right {
+  max-width: 345px;
+}
+.box__blogDetailsPage .articlesBox .articles .right .title {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+.box__blogDetailsPage .articlesBox .articles .right .tagsBox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.box__blogDetailsPage .articlesBox .articles .right .tagsBox .button {
+  text-align: center;
+  font-family: "Jost";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+  display: flex;
+  padding: 9px 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #f4f0ec;
+  color: #292f36;
+  transition: 0.3s;
+}
+.box__blogDetailsPage .articlesBox .articles .right .tagsBox .button:hover {
+  background: #292f36;
+  color: #fff;
+}
+.box__blogDetailsPage .articlesBox .articles .right .tagsBox .buttonVisited {
+  background: #292f36;
+  color: #fff;
+}
+.box .footer {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 382px);
+  gap: 27px;
+  height: 272px;
+  margin-bottom: 134px;
+}
+.box .footer__left .top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+.box .footer__left .top .topLeft {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 40px;
+}
+.box .footer__left .footer__leftText {
+  color: #4d5053;
+  font-family: Jost;
+  font-size: 22px;
+  margin-bottom: 31px;
+}
+.box .footer__left .logo {
+  display: flex;
+  justify-content: start;
+  gap: 54px;
+}
+.box .footer .footer__middle {
+  padding-left: 101px;
+}
+.box .footer .footer__middle .title {
+  margin-bottom: 30px;
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+}
+.box .footer .footer__middle .pages {
+  color: #4d5053;
+  font-family: "Jost";
+  font-size: 22px;
+}
+.box .footer .footer__middle .pages .page {
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+.box .footer .footer__middle .pages .page:hover {
+  color: red;
+}
+.box .footer .footer__right {
+  padding-left: 126px;
+}
+.box .footer .footer__right .title {
+  color: #292f36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  margin-bottom: 26px;
+}
+.box .footer .footer__right .contacts .contactsText {
+  color: #4d5053;
+  font-family: Jost;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+</style>
