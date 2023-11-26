@@ -767,3 +767,155 @@ a {
   font-size: 22px;
   margin-bottom: 20px;
 }
+.box__projectPage .ProjectPageBanner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 350px;
+  background: url(../images/projectPageImages/banner.svg) no-repeat;
+  background-position: 50% 50%;
+  margin-bottom: 150px;
+}
+.box__projectPage .ProjectPageBanner .titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 503px;
+  height: 178px;
+  background-color: #FFFFFF;
+  border-radius: 37px 37px 0px 0px;
+}
+.box__projectPage .ProjectPageBanner .titleBox .title {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.box__projectPage .ProjectPageBanner .titleBox .text {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+.box__projectPage .toggleBoxMain {
+  display: flex;
+  justify-content: center;
+}
+.box__projectPage .toggleBoxMain .toggleBox {
+  display: flex;
+  justify-content: center;
+  max-width: 880px;
+  margin-bottom: 61px;
+  border: 1px solid #cb4f01;
+  border-radius: 20px;
+}
+.box__projectPage .toggleBoxMain .toggle {
+  color: #292F36;
+  font-family: "Jost";
+  font-size: 18px;
+  border-radius: 18px;
+  background: #fefefe;
+  height: 75px;
+  width: 219px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.box__projectPage .toggleBoxMain .toggleActive {
+  background: #CDA274;
+  color: #fefefe;
+}
+.box__projectPage .ProjectContent {
+  display: flex;
+  justify-content: center;
+}
+.box__projectPage .ProjectContent .blogPageContent .titleBlogPage {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 3460px;
+  gap: 27px;
+  margin-bottom: 61px;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples .examples__Item {
+  padding: 21px 21px;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples .examples__Item .examples__image {
+  margin-bottom: 24px;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples .examples__Item .title {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples .examples__Item .dateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples .examples__Item .dateBox .dateBoxText {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 22px;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples .examples__Item .dateBox .dateBoxImage {
+  height: 52px;
+  width: 52px;
+  border-radius: 50px 50px;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples .examples__Item:hover .circle {
+  fill: #FFFFFF;
+}
+.box__projectPage .ProjectContent .blogPageContent .examples .examples__Item:hover {
+  background-color: #E7E7E7;
+}
+.box__projectPage .ProjectContent .blogPageContent .pagination {
+  margin-bottom: 200px;
+}
+.box__projectPage .ProjectContent .blogPageContent .pagination .pagBox {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.box__projectPage .ProjectContent .blogPageContent .pagination .pagBox .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #292F36;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: capitalize;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #CDA274;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.box__projectPage .ProjectContent .blogPageContent .pagination .pagBox .page:hover {
+  background-color: #F4F0EC;
+  transform: scale(1.3);
+}
+.box__projectPage .ProjectContent .blogPageContent .pagination .pagBox .active {
+  background-color: #F4F0EC;
+  transform: scale(1.3);
+}
