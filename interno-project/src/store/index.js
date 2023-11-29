@@ -1,0 +1,78 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  state: {
+    projectItemsList: [],
+    examplesList: [],
+    titleProjectDetails: 'Minimal Look Bedrooms',
+    descriptonProjectDetails: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.'
+  },
+  mutations: {
+    //  перебрасываем наш массив из actions в state
+    SET_projectItemsList (state, projectItemsList) {
+      state.projectItemsList = projectItemsList
+    },
+    SET_ExamplesList (state, examplesList) {
+      state.examplesList = examplesList
+    }
+  },
+  actions: {
+    // имитируем полученные данных из удаленной БД записывая из в нужную мутацию, которая отвечает за изменение данных массива в state
+    fetchData ({ commit }) {
+      setTimeout(() => {
+        const projectItemsList = [
+          {
+            url: 'indexImages/Item1.svg',
+            title: 'Modern Kitchan',
+            text: 'Decor / Artchitecture'
+          },
+          {
+            url: 'indexImages/Item2.svg',
+            title: 'Modern Kitchan',
+            text: 'Decor / Artchitecture'
+          },
+          {
+            url: 'indexImages/Item3.svg',
+            title: 'Modern Kitchan',
+            text: 'Decor / Artchitecture'
+          },
+          {
+            url: 'indexImages/Item4.svg',
+            title: 'Modern Kitchan',
+            text: 'Decor / Artchitecture'
+          }
+        ]
+        commit('SET_projectItemsList', projectItemsList)
+      }, 500)
+    },
+    fetchDataExamples ({ commit }) {
+      setTimeout(() => {
+        const examplesList = [
+          {
+            url: 'indexImages/Blog1.svg',
+            title: 'Let’s Get Solution For Building Construction Work'
+          },
+          {
+            url: 'indexImages/Blog2.svg',
+            title: 'Low Cost Latest Invented Interior Designing <br/> Ideas.'
+          },
+          {
+            url: 'indexImages/Blog3.svg',
+            title: 'Best For Any Office & Business Interior <br/> Solution'
+          }
+        ]
+        commit('SET_ExamplesList', examplesList)
+      }, 1000)
+    }
+
+  },
+  getters: {
+    getProjectItemsList: (state) => state.projectItemsList,
+    getExamplesList: (state) => state.examplesList,
+    getTitleProjectDetails: (state) => state.titleProjectDetails,
+    getDescriptonProjectDetails: (state) => state.descriptonProjectDetails
+  }
+})

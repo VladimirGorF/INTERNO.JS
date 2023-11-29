@@ -826,7 +826,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .box__projectPage .toggleBoxMain .toggleActive {
   background: #CDA274;
@@ -850,7 +850,7 @@ a {
   display: flex;
   flex-flow: column wrap;
   align-content: space-between;
-  height: 3460px;
+  height: 3500px;
   gap: 27px;
   margin-bottom: 61px;
 }
