@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import ProjectDetails from './components/ProjectDetails.vue'
+import ProjectDetails from './components/ProjectDetails/ProjectDetails.vue'
 
 // import MyHeader from './components/MyHeader.vue'
 // import MyFooter from './components/MyFooter.vue'

@@ -11,62 +11,87 @@
       <div class="slider">
         <img
           class="slide"
-          :class="class1"
-          src="projectDetailsImages/slider1.svg"
+          :class="getClass(index)"
+          v-for="(item, index) in sliderUrls"
+          :key="index"
+          :src="item.url"
+          alt="Слайдер №"
         />
-        <img class="slide" :class="class2" src="indexImages/bannerImage.svg" />
-        <img
-          class="slide"
-          :class="class3"
-          src="blogImages/BlogBannerPhoto.svg"
-        />
-        <button class="next" @click="forward">&gt;</button>
-        <button class="prev" @click="back">&lt;</button>
+        <button class="next" @click="forward()">&gt;</button>
+        <button class="prev" @click="back()">&lt;</button>
       </div>
     </div>
     <div class="iconsBox">
       <div class="icons">
-        <div class="icon" :class="{ checked: class1 === 'active' }"></div>
-        <div class="icon" :class="{ checked: class2 === 'active' }"></div>
-        <div class="icon" :class="{ checked: class3 === 'active' }"></div>
+        <!-- Присваиваем класс checked по номеру активного слайда -->
+        <div
+          class="icon"
+          :class="{ checked: [0, 3, 6].includes(activeSlide) }"
+        ></div>
+        <div
+          class="icon"
+          :class="{ checked: [1, 4, 7].includes(activeSlide) }"
+        ></div>
+        <div
+          class="icon"
+          :class="{ checked: [2, 5, 8].includes(activeSlide) }"
+        ></div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
   name: 'ProjectDetails',
 
   data () {
     return {
-      class1: 'active',
-      class2: 'outRight',
-      class3: 'outRight'
+      activeSlide: 0
     }
   },
 
   methods: {
-    ...mapGetters(['getTitleProjectDetais', 'getDescriptonProjectDetais']),
+    // регистрируем все геттеры
+    ...mapGetters([
+      'getTitleProjectDetais',
+      'getDescriptonProjectDetais',
+      'getSliderImagesUrls'
+    ]),
+    ...mapMutations(['SET_SliderImagesUrls', 'ADD_SliderList']),
 
+    // если выходим за границы слайдера то будем повторять показ, увеличивая наш массив слайдерских картинок
+
+    getClass (index) {
+      if (index < this.activeSlide) {
+        return 'outLeft'
+      }
+      if (index === this.activeSlide) {
+        return 'active'
+      }
+      if (index > this.activeSlide) {
+        return 'outRight'
+      }
+    },
     forward () {
-      if (this.class1 === 'active') {
-        this.class2 = 'active'
-        this.class1 = 'outLeft'
-      } else if (this.class2 === 'active') {
-        this.class3 = 'active'
-        this.class2 = 'outLeft'
+      if (this.activeSlide < this.sliderUrls.length - 1) {
+        this.activeSlide++
+      } else {
+        if (this.activeSlide <= 8) {
+          // если он будет на последнем слайде, то увеличим массив слайдера на три элемента
+          this.ADD_SliderList()
+          setTimeout(() => {
+            // нужна небольшая задержка на переходе с поледнего слайда для плавности
+            this.activeSlide++
+          }, 10)
+        }
       }
     },
     back () {
-      if (this.class3 === 'active') {
-        this.class3 = 'outRight'
-        this.class2 = 'active'
-      } else if (this.class2 === 'active') {
-        this.class2 = 'outRight'
-        this.class1 = 'active'
+      if (this.activeSlide > 0) {
+        this.activeSlide--
       }
     }
   },
@@ -76,6 +101,9 @@ export default {
     },
     description () {
       return this.$store.getters.getDescriptonProjectDetails
+    },
+    sliderUrls () {
+      return this.$store.getters.getSliderImagesUrls
     }
   }
 }
@@ -86,7 +114,7 @@ export default {
 <style lang="scss" scoped>
 .banner {
   height: 350px;
-  background: url("../../public/projectDetailsImages/Banner.svg") no-repeat;
+  background: url("../../../public/projectDetailsImages/Banner.svg") no-repeat;
   background-position: 50% 50%;
   margin-bottom: 150px;
 }
@@ -133,7 +161,6 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  // top: 0;
   transition: 1s ease-in-out;
 }
 .outRight {

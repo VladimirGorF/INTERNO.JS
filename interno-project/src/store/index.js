@@ -7,8 +7,20 @@ export default new Vuex.Store({
   state: {
     projectItemsList: [],
     examplesList: [],
+    sliderImagesUrls: [
+      {
+        url: 'projectDetailsImages/slider1.svg'
+      },
+      {
+        url: 'indexImages/bannerImage.svg'
+      },
+      {
+        url: 'indexImages/Blog3.svg'
+      }
+    ],
     titleProjectDetails: 'Minimal Look Bedrooms',
-    descriptonProjectDetails: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.'
+    descriptonProjectDetails:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.'
   },
   mutations: {
     //  перебрасываем наш массив из actions в state
@@ -17,6 +29,23 @@ export default new Vuex.Store({
     },
     SET_ExamplesList (state, examplesList) {
       state.examplesList = examplesList
+    },
+    SET_SliderImagesUrls (state, sliderImagesUrls) {
+      // примет картинки из actions, но по факту не принимает
+      state.sliderImagesUrls = sliderImagesUrls
+    },
+    ADD_SliderList (state) { // увеличиваем размер сладеров для бесконечной прокрутки
+      state.sliderImagesUrls.push(...[
+        {
+          url: 'projectDetailsImages/slider1.svg'
+        },
+        {
+          url: 'indexImages/bannerImage.svg'
+        },
+        {
+          url: 'indexImages/Blog3.svg'
+        }
+      ])
     }
   },
   actions: {
@@ -67,12 +96,29 @@ export default new Vuex.Store({
         commit('SET_ExamplesList', examplesList)
       }, 1000)
     }
-
+    // fetchDataSliderImagesUrls ({ commit }) {
+    //   setTimeout(() => {
+    //     const sliderImagesUrls = [
+    //       {
+    //         url: 'projectDetailsImages/slider1.svg'
+    //       },
+    //       {
+    //         url: 'indexImages/bannerImage.svg'
+    //       },
+    //       {
+    //         url: 'indexImages/Blog3.svg'
+    //       }
+    //     ]
+    //     commit('SET_SliderImagesUrls', sliderImagesUrls)
+    //   }, 1000)
+    // }
   },
   getters: {
+    // для вывоза данных из state в дргуие компоненты
     getProjectItemsList: (state) => state.projectItemsList,
     getExamplesList: (state) => state.examplesList,
     getTitleProjectDetails: (state) => state.titleProjectDetails,
-    getDescriptonProjectDetails: (state) => state.descriptonProjectDetails
+    getDescriptonProjectDetails: (state) => state.descriptonProjectDetails,
+    getSliderImagesUrls: (state) => state.sliderImagesUrls
   }
 })
