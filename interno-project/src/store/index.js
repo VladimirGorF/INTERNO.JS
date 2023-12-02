@@ -8,15 +8,15 @@ export default new Vuex.Store({
     projectItemsList: [],
     examplesList: [],
     sliderImagesUrls: [
-      {
-        url: 'projectDetailsImages/slider1.svg'
-      },
-      {
-        url: 'indexImages/bannerImage.svg'
-      },
-      {
-        url: 'indexImages/Blog3.svg'
-      }
+      // {
+      //   url: 'projectDetailsImages/slider1.svg'
+      // },
+      // {
+      //   url: 'indexImages/bannerImage.svg'
+      // },
+      // {
+      //   url: 'indexImages/Blog3.svg'
+      // }
     ],
     titleProjectDetails: 'Minimal Look Bedrooms',
     descriptonProjectDetails:
@@ -95,23 +95,23 @@ export default new Vuex.Store({
         ]
         commit('SET_ExamplesList', examplesList)
       }, 1000)
+    },
+    fetchDataSliderImagesUrls ({ commit }) {
+      setTimeout(() => {
+        const sliderImagesUrls = [
+          {
+            url: 'projectDetailsImages/slider1.svg'
+          },
+          {
+            url: 'indexImages/bannerImage.svg'
+          },
+          {
+            url: 'indexImages/Blog3.svg'
+          }
+        ]
+        commit('SET_SliderImagesUrls', sliderImagesUrls)
+      }, 1000)
     }
-    // fetchDataSliderImagesUrls ({ commit }) {
-    //   setTimeout(() => {
-    //     const sliderImagesUrls = [
-    //       {
-    //         url: 'projectDetailsImages/slider1.svg'
-    //       },
-    //       {
-    //         url: 'indexImages/bannerImage.svg'
-    //       },
-    //       {
-    //         url: 'indexImages/Blog3.svg'
-    //       }
-    //     ]
-    //     commit('SET_SliderImagesUrls', sliderImagesUrls)
-    //   }, 1000)
-    // }
   },
   getters: {
     // для вывоза данных из state в дргуие компоненты

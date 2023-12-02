@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapGetters, mapMutations, mapActions } from 'vuex'
 
 export default {
   name: 'ProjectDetails',
@@ -53,6 +53,9 @@ export default {
     }
   },
 
+  created () {
+    this.SET_SliderImagesUrls(this.fetchDataSliderImagesUrls())
+  },
   methods: {
     // регистрируем все геттеры
     ...mapGetters([
@@ -61,6 +64,7 @@ export default {
       'getSliderImagesUrls'
     ]),
     ...mapMutations(['SET_SliderImagesUrls', 'ADD_SliderList']),
+    ...mapActions(['fetchDataSliderImagesUrls']),
 
     // если выходим за границы слайдера то будем повторять показ, увеличивая наш массив слайдерских картинок
 
