@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    notFoundFlag: true, // сеттер для флага перехода на страницу NotFound, по умлочанию true, но если перешли на NotFound, то изменится на false
     projectItemsList: [],
     examplesList: [],
     sliderImagesUrls: [
@@ -46,6 +47,9 @@ export default new Vuex.Store({
           url: 'indexImages/Blog3.svg'
         }
       ])
+    },
+    SET_NotFoundFlag (state, flag) { // сеттер для флага перехода на страницу NotFound
+      state.notFoundFlag = flag
     }
   },
   actions: {
@@ -114,11 +118,12 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    // для вывоза данных из state в дргуие компоненты
+    // для вывоза данных из state в другие компоненты
     getProjectItemsList: (state) => state.projectItemsList,
     getExamplesList: (state) => state.examplesList,
     getTitleProjectDetails: (state) => state.titleProjectDetails,
     getDescriptonProjectDetails: (state) => state.descriptonProjectDetails,
-    getSliderImagesUrls: (state) => state.sliderImagesUrls
+    getSliderImagesUrls: (state) => state.sliderImagesUrls,
+    getNotFoundFlag: (state) => state.notFoundFlag
   }
 })

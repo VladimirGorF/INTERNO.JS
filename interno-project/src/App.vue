@@ -1,36 +1,31 @@
 <template>
   <div>
-    <!-- <h1>Страница MyHeader</h1>
-    <MyHeader />
-    <h1>Страница MyFooter</h1>
-    <MyFooter /> -->
-    <!-- <h1 style="display: flex; justify-content: center;">Страница MyIndex</h1>
-    <MyIndex /> -->
-    <!-- <h1>Страница MyBlog</h1>
-    <MyBlog /> -->
-    <!-- <h1>Страница MyBlogDetails</h1>
-    <MyBlogDetails /> -->
-    <!-- <h1>Страница Project</h1>
-    <MyProject /> -->
-        <h1>Страница ProjectDetails</h1>
-    <ProjectDetails />
+    <header></header>
+    <MyHeader v-if="!notFoundFlag" />
+    <router-view />
+    <MyFooter v-if="!notFoundFlag" />
   </div>
 </template>
 
 <script>
-import ProjectDetails from './components/ProjectDetails/ProjectDetails.vue'
-
-// import MyHeader from './components/MyHeader.vue'
-// import MyFooter from './components/MyFooter.vue'
-// import MyIndex from './components/Index/MyIndex.vue'
-// import MyBlog from './components/MyBlog.vue'
-// import MyBlogDetails from './components/MyBlogDetails.vue'
-// import MyProject from './components/MyProject/MyProject.vue'
+import MyHeader from './components/pages/MyHeader.vue'
+import MyFooter from './components//pages/MyFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    ProjectDetails
+    MyHeader,
+    MyFooter
+  },
+  created () {
+    this.$router.push({ name: 'index' }) // пушим в роутре главную страницу при создании
+  },
+  computed: {
+    notFoundFlag () {
+      return this.$store.getters.getNotFoundFlag
+    }
   }
 }
 </script>
+
+<style></style>
