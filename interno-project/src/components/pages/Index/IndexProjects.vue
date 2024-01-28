@@ -11,7 +11,8 @@
         <div class="projects__items">
           <div class="item" v-for="item in itemsList" :key="item.id">
             <img class="itemImage" :src="item.url" alt="itemImage" />
-            <div class="itemInform">
+            <router-link to="/project">
+              <div class="itemInform">
               <div class="itemInfom__left">
                 <h6 class="leftSubtitle">{{item.title}}</h6>
                 <p class="leftText">{{item.text}}</p>
@@ -22,6 +23,8 @@
                   <path d="M32 44.0001L40 35.0001L32 26.0001" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg></a>
             </div>
+            </router-link>
+
           </div>
         </div>
       </div>

@@ -1,9 +1,8 @@
 <template>
   <div>
-    <header></header>
-    <MyHeader v-if="!notFoundFlag" />
+    <MyHeader />
     <router-view />
-    <MyFooter v-if="!notFoundFlag" />
+    <MyFooter v-if="visibility"/>
   </div>
 </template>
 
@@ -21,8 +20,8 @@ export default {
     this.$router.push({ name: 'index' }) // пушим в роутре главную страницу при создании
   },
   computed: {
-    notFoundFlag () {
-      return this.$store.getters.getNotFoundFlag
+    visibility () {
+      return this.$store.getters.getVisibility // запрашиваем флаг через геттер в store
     }
   }
 }

@@ -1,5 +1,12 @@
 <template>
   <div class="box">
+    <div class="box__lineMainBox">
+      <div class="lineBox">
+        <div class="box projectDetails"></div>
+        <div class="box projectDetails"></div>
+        <div class="box projectDetails"></div>
+      </div>
+    </div>
     <div class="banner"></div>
     <div class="informBox">
       <div class="inform">
@@ -17,8 +24,8 @@
           :src="item.url"
           alt="Слайдер №"
         />
-        <button class="next" @click="forward()">&gt;</button>
-        <button class="prev" @click="back()">&lt;</button>
+        <button class="next" @click="forward();makeSound();">&gt;</button>
+        <button class="prev" @click="back();makeSound();">&lt;</button>
       </div>
     </div>
     <div class="iconsBox">
@@ -43,7 +50,6 @@
 
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
-
 export default {
   name: 'ProjectDetails',
 
@@ -52,11 +58,18 @@ export default {
       activeSlide: 0
     }
   },
-
   created () {
     this.SET_SliderImagesUrls(this.fetchDataSliderImagesUrls())
   },
   methods: {
+    makeSound () {
+      const audio = new Audio(
+        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3'
+      )
+      audio.play()
+    },
+    ...mapMutations(['SET_NotFoundFlag']),
+
     // регистрируем все геттеры
     ...mapGetters([
       'getTitleProjectDetais',
@@ -83,7 +96,7 @@ export default {
       if (this.activeSlide < this.sliderUrls.length - 1) {
         this.activeSlide++
       } else {
-        if (this.activeSlide <= 8) {
+        if (this.activeSlide <= 2) {
           // если он будет на последнем слайде, то увеличим массив слайдера на три элемента
           this.ADD_SliderList()
           setTimeout(() => {

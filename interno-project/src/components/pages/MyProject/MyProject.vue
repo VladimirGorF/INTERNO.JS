@@ -1,5 +1,12 @@
 <template>
   <div class="box">
+    <div class="box__lineMainBox">
+      <div class="lineBox">
+        <div class="box project"></div>
+        <div class="box project"></div>
+        <div class="box project"></div>
+      </div>
+    </div>
     <div class="box__projectPage">
       <div class="ProjectPageBanner">
         <div class="titleBox">
@@ -27,6 +34,7 @@
                 class="page"
                 @click="
                   backPage();
+                  makeSound();
                   getProducts(activePageId, 8);
                 "
                 >&lt;</a
@@ -39,6 +47,7 @@
                 :class="{ active: page.id === activePageId }"
                 @click="
                   activePageId = page.id;
+                  makeSound();
                   getProducts(page.id, 8);
                   movePage(page.id);
                 "
@@ -49,6 +58,7 @@
                 class="page"
                 @click="
                   forwardPage();
+                  makeSound();
                   getProducts(activePageId, 8);
                 "
                 >&gt;</a
@@ -67,7 +77,7 @@
 <script>
 import ExampleItem from "./ExampleItem.vue";
 import MyToggle from "./MyToggle.vue";
-
+import { mapMutations } from "vuex";
 export default {
   name: "MyProject",
   components: {
@@ -207,7 +217,56 @@ export default {
         },
         {
           id: 17,
+          url: "projectPageImages/1.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 18,
           url: "projectPageImages/2.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 19,
+          url: "projectPageImages/3.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 20,
+          url: "projectPageImages/4.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 21,
+          url: "projectPageImages/5.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 22,
+          url: "projectPageImages/6.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 23,
+          url: "projectPageImages/7.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 24,
+          url: "projectPageImages/8.svg",
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Living Area",
@@ -215,7 +274,15 @@ export default {
       ],
     };
   },
+
   methods: {
+    makeSound() {
+      const audio = new Audio(
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3"
+      );
+      audio.play();
+    },
+    ...mapMutations(["SET_NotFoundFlag"]),
     filterToggle(toggle) {
       this.activeToggleName = toggle;
     },
@@ -287,8 +354,9 @@ export default {
       return this.products.slice(this.pageStart, this.pageEnd); // срез страниц
     },
     pagesCounter() {
-      const pagesQuantity = Math.ceil(this.products.length / 6); // определяем количество страниц
-      for (let i = 2; i < pagesQuantity + 2; i++) {
+      const pagesQuantity = Math.ceil(this.products.length / 9); // определяем количество страниц
+      console.log(pagesQuantity);
+      for (let i = 2; i < pagesQuantity + 1; i++) {
         this.pages.push({
           id: i,
           class: "",

@@ -5,19 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    notFoundFlag: true, // сеттер для флага перехода на страницу NotFound, по умлочанию true, но если перешли на NotFound, то изменится на false
+    visibility: true,
     projectItemsList: [],
     examplesList: [],
     sliderImagesUrls: [
-      // {
-      //   url: 'projectDetailsImages/slider1.svg'
-      // },
-      // {
-      //   url: 'indexImages/bannerImage.svg'
-      // },
-      // {
-      //   url: 'indexImages/Blog3.svg'
-      // }
+      // сюда придут данные из actions
     ],
     titleProjectDetails: 'Minimal Look Bedrooms',
     descriptonProjectDetails:
@@ -48,8 +40,8 @@ export default new Vuex.Store({
         }
       ])
     },
-    SET_NotFoundFlag (state, flag) { // сеттер для флага перехода на страницу NotFound
-      state.notFoundFlag = flag
+    SET_Visibility (state, flag) { // сеттер для флага перехода на страницу NotFound
+      state.visibility = flag
     }
   },
   actions: {
@@ -118,12 +110,12 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    // для вывоза данных из state в другие компоненты
+    // для вызова данных из state в другие компоненты
     getProjectItemsList: (state) => state.projectItemsList,
     getExamplesList: (state) => state.examplesList,
     getTitleProjectDetails: (state) => state.titleProjectDetails,
     getDescriptonProjectDetails: (state) => state.descriptonProjectDetails,
     getSliderImagesUrls: (state) => state.sliderImagesUrls,
-    getNotFoundFlag: (state) => state.notFoundFlag
+    getVisibility: (state) => state.visibility
   }
 })

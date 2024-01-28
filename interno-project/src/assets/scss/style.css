@@ -26,7 +26,22 @@ a {
   border: 1px solid #E6E6E6;
   border-top-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
-  height: 3100px;
+  height: 250px;
+}
+.box__lineMainBox .lineBox .index {
+  height: 4100px;
+}
+.box__lineMainBox .lineBox .blog {
+  height: 3000px;
+}
+.box__lineMainBox .lineBox .blogDetails {
+  height: 2000px;
+}
+.box__lineMainBox .lineBox .project {
+  height: 4700px;
+}
+.box__lineMainBox .lineBox .projectDetails {
+  height: 2300px;
 }
 .box__header {
   margin-top: 53px;
@@ -38,7 +53,7 @@ a {
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 .box__header .left .headerLeft {
   color: #36383b;
@@ -49,7 +64,7 @@ a {
   line-height: 125%;
 }
 .box__header .left:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .box__header .left:hover .headerLeft {
   color: #e18009;
@@ -69,6 +84,8 @@ a {
   line-height: 125%;
   transition: 0.3s ease-in-out;
   width: 150px;
+  cursor: pointer;
+  margin-bottom: 12px;
 }
 .box__header .right .rightPage:hover {
   color: #e18709;
@@ -149,8 +166,15 @@ a {
   height: 13.177px;
 }
 .box__bannerMain .banner .informPart .button:hover {
-  background-color: #7c0f82;
-  transform: scale(1.1);
+  background-color: #CDA274;
+  transform: scale(1.05);
+  color: #302e2c;
+}
+.box__bannerMain .banner .informPart .button:hover .buttonText {
+  color: #FFF;
+}
+.box__bannerMain .banner .informPart .button:hover svg path {
+  stroke: #292F36;
 }
 .box__blogBanner {
   display: flex;
@@ -309,6 +333,9 @@ a {
   line-height: 125%;
   letter-spacing: 0.5px;
 }
+.box__projects .projects__items .item .itemInform .itemInfom__left .leftSubtitle:hover {
+  color: #CDA274;
+}
 .box__projects .projects__items .item .itemInform .itemInfom__left .leftText {
   color: #4D5053;
   font-family: Jost;
@@ -322,7 +349,7 @@ a {
   transition: 0.3s;
 }
 .box__projects .projects__items .item .itemInform .projectArrowImage:hover circle {
-  fill: lightsteelblue;
+  fill: #CDA274;
 }
 .box__counter {
   display: flex;
@@ -477,6 +504,7 @@ a {
 }
 .box__blogPage .blogPageContent .examples .examples__Item .examples__image {
   border-radius: 50px 50px 0px 0px;
+  max-width: 340px;
 }
 .box__blogPage .blogPageContent .examples .examples__Item .title {
   color: #292F36;
@@ -730,6 +758,10 @@ a {
   color: #292F36;
   font-family: "DM Serif Display";
   font-size: 40px;
+  transition: 0.3s;
+}
+.box .footer__left .top .topLeft:hover {
+  color: #e18009;
 }
 .box .footer__left .footer__leftText {
   color: #4D5053;
@@ -741,6 +773,12 @@ a {
   display: flex;
   justify-content: start;
   gap: 54px;
+}
+.box .footer__left .logo path {
+  transition: 0.3s;
+}
+.box .footer__left .logo svg:hover path {
+  fill: #e18009;
 }
 .box .footer .footer__middle {
   padding-left: 101px;
@@ -765,7 +803,7 @@ a {
 }
 .box .footer .footer__middle .pages .page:hover {
   color: #e3780d;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .box .footer .footer__right {
   padding-left: 126px;

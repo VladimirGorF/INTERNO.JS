@@ -1,10 +1,10 @@
 *
     margin: 0
     padding: 0
+    
 
 html
     scroll-behavior: smooth
-
 a
     text-decoration: none
     color: #4D5053
@@ -23,7 +23,17 @@ a
                 border: 1px solid #E6E6E6
                 border-top-color: #FFFFFF
                 border-bottom-color: #FFFFFF
-                height: 3100px
+                height: 250px
+            .index
+                height: 4100px
+            .blog
+                height: 3000px
+            .blogDetails
+                height: 2000px
+            .project
+                height: 4700px
+            .projectDetails
+                height: 2300px
 
     &__header
         margin-top: 53px
@@ -34,7 +44,7 @@ a
             display: flex
             align-items: center
             gap: 5px
-            transition: 0.3s ease-in-out
+            transition: 0.3s
             .headerLeft
                 color: #36383b
                 font-family: 'DM Serif Display'
@@ -43,9 +53,9 @@ a
                 font-weight: 400
                 line-height: 125%
         .left:hover
-            transform: scale(1.2)
+            transform: scale(1.1)
         .left:hover .headerLeft
-            color:  #e18009         
+            color: #e18009
         .right
             display: flex
             gap: 50px
@@ -60,8 +70,10 @@ a
                 line-height: 125%
                 transition: 0.3s ease-in-out
                 width: 150px
+                cursor: pointer
+                margin-bottom: 12px
             .rightPage:hover
-                color:  #e18709
+                color: #e18709
                 transform: scale(1.2)
             .rightPage:visited
                 color: green
@@ -69,8 +81,6 @@ a
                 position: relative
                 .summary1
                 .summary2
-
-
 
     &__bannerMain
         display: flex
@@ -132,8 +142,13 @@ a
                         width: 15.141px
                         height: 13.177px
                 .button:hover
-                    background-color: #7c0f82
-                    transform: scale(1.1)
+                    background-color: #CDA274
+                    transform: scale(1.05)
+                    color: #302e2c
+                .button:hover .buttonText
+                    color: #FFF
+                .button:hover svg path
+                    stroke: #292F36
 
     &__blogBanner
         display: flex
@@ -276,6 +291,9 @@ a
                             font-weight: 400
                             line-height: 125%
                             letter-spacing: 0.5px
+                        .leftSubtitle:hover
+                            color: #CDA274
+
                         .leftText
                             color: #4D5053
                             font-family: Jost
@@ -284,11 +302,12 @@ a
                             font-weight: 400
                             line-height: 150%
                             letter-spacing: 0.22px
+
                     .projectArrowImage
                         circle
                             transition: .3s
                     .projectArrowImage:hover circle
-                        fill: lightsteelblue
+                        fill: #CDA274
 
     &__counter
         display: flex
@@ -425,6 +444,7 @@ a
                     padding: 21px 21px
                     .examples__image
                         border-radius: 50px 50px 0px 0px
+                        max-width: 340px
                     .title
                         color: #292F36
                         font-family: 'DM Serif Display'
@@ -649,6 +669,9 @@ a
                     color: #292F36
                     font-family: 'DM Serif Display'
                     font-size: 40px
+                    transition: .3s
+                .topLeft:hover
+                    color: #e18009
             .footer__leftText
                 color: #4D5053
                 font-family: Jost
@@ -658,6 +681,10 @@ a
                 display: flex
                 justify-content: start
                 gap: 54px
+                path
+                    transition: .3s
+            .logo svg:hover path
+                fill: #e18009
 
         .footer__middle
             padding-left: 101px
@@ -679,8 +706,7 @@ a
                     justify-content: center
                 .page:hover
                     color: #e3780d
-                    transform: scale(1.5)
-
+                    transform: scale(1.2)
 
         .footer__right
             padding-left: 126px

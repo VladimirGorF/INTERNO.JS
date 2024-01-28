@@ -1,5 +1,12 @@
 <template>
   <div class="box">
+    <div class="box__lineMainBox">
+      <div class="lineBox">
+        <div class="box index"></div>
+        <div class="box index"></div>
+        <div class="box index"></div>
+      </div>
+    </div>
     <div class="box__bannerMain">
       <div class="banner">
         <img
@@ -13,18 +20,29 @@
             There are many variations of the passages of lorem Ipsum
             fromavailable, majority.
           </p>
-            <router-link to="/project">
-              <h6 class="rightPage">
-                <div class="button">
-                  <p class="buttonText">Get Started</p>
-                  <img
-                    class="ArrowButton"
-                    src="../../../../public/indexImages/ArrowButton.svg"
-                    alt="ArrowRight"
+          <router-link to="/index">
+            <h6 class="rightPage">
+              <div class="button">
+                <p class="buttonText">Get Started</p>
+                <svg
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="Vector"
+                    d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887"
+                    stroke="#CDA274"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
                   />
-                </div>
-              </h6>
-            </router-link>
+                </svg>
+              </div>
+            </h6>
+          </router-link>
         </div>
       </div>
     </div>
@@ -86,10 +104,10 @@ export default {
     IndexBlog
   },
   created () {
-    this.SET_NotFoundFlag(false) // переход на страницу main, передаем true во флаг старницы NotFound
+    this.SET_Visibility(true) // переход на страницу main, передаем true во флаг старницы NotFound
   },
   methods: {
-    ...mapMutations(['SET_NotFoundFlag'])
+    ...mapMutations(['SET_Visibility'])
   }
 }
 </script>

@@ -27,9 +27,8 @@
       </h6></router-link>
 
       <nav class="right">
-        <!-- маршурты прописаны в index.js  -->
+        <!-- маршурты прописаны в index.js в роутере  -->
         <router-link to="/index"><h6 class="rightPage">Home</h6></router-link>
-
         <details class="details">
           <summary class="summary rightPage">Project</summary>
           <ul class="menu">
@@ -41,7 +40,6 @@
             </router-link>
           </ul>
         </details>
-
         <details class="details">
           <summary class="summary rightPage">Blog</summary>
           <ul class="menu">
@@ -53,7 +51,6 @@
             >
           </ul>
         </details>
-
         <router-link to="/non-existingPage">
           <h6 class="rightPage">NotExistingPage</h6>
         </router-link>
@@ -62,11 +59,15 @@
   </div>
 </template>
 
-<script></script>
+<script>
+const boxlineMainBoxElement = document.querySelector('.box__lineMainBox')
+console.log(boxlineMainBoxElement)
+</script>
 
-<style>
-details summary::-webkit-details-marker {
-  display: none
+<style scoped>
+
+summary {
+  list-style: none; /* Removes the disclosure triangle. */
 }
 .summary{
 width: 150px;

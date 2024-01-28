@@ -1,25 +1,22 @@
 <template>
-    <div>
-        <div class="box__blog">
-        <h2 class="title">Articles & News</h2>
-        <p class="boxBlogText">
-          It is a long established fact that a reader will be distracted by the
-          of readable content of a page when lookings at its layouts the points
-          of using.
-        </p>
-        <div class="examples">
-          <div class="examples__Item" v-for="item in examplesList" :key="item.id">
-            <img
-              :src="item.url"
-              alt="examples__image"
-              class="examples__image"
-            />
-            <h2 class="title">
-              {{item.title}}
-            </h2>
-            <div class="dateBox">
-              <p class="dateBoxText">26 December,2022</p>
-              <a href="#"><svg
+  <div>
+    <div class="box__blog">
+      <h2 class="title">Articles & News</h2>
+      <p class="boxBlogText">
+        It is a long established fact that a reader will be distracted by the of
+        readable content of a page when lookings at its layouts the points of
+        using.
+      </p>
+      <div class="examples">
+        <div class="examples__Item" v-for="item in examplesList" :key="item.id">
+          <img :src="item.url" alt="examples__image" class="examples__image" />
+          <h2 class="title">
+            {{ item.title }}
+          </h2>
+          <div class="dateBox">
+            <p class="dateBoxText">26 December,2022</p>
+            <router-link to="/blog">
+              <svg
                 class="dateBoxImage"
                 xmlns="http://www.w3.org/2000/svg"
                 width="52"
@@ -41,20 +38,19 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-              </svg></a>
-
-            </div>
+              </svg>
+            </router-link>
           </div>
-
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
 import { mapMutations, mapActions, mapGetters } from 'vuex'
 export default {
-  name: 'IndexProjects',
+  name: 'IndexBlog',
 
   methods: {
     ...mapMutations(['SET_ExamplesList']),
@@ -73,6 +69,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

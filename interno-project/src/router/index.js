@@ -5,7 +5,7 @@ import MyIndex from '../components/pages/Index/MyIndex.vue'
 import ProjectDetails from '../components/pages/ProjectDetails/ProjectDetails.vue'
 import MyHeader from '../components/pages/MyHeader.vue'
 import MyFooter from '../components/pages/MyFooter.vue'
-import MyBlog from '../components/pages/MyBlog.vue'
+import MyBlog from '../components/pages/Blog/MyBlog'
 import MyBlogDetails from '../components/pages/MyBlogDetails.vue'
 import MyProject from '../components/pages/MyProject/MyProject.vue'
 import PageNotFound from '../components/pages/PageNotFound.vue'
@@ -54,6 +54,9 @@ export default new Router({
       path: '*',
       redirect: '/404' // перенаправляется на /404
     }
-
-  ]
+  ],
+  // прокрутка до верха страницы при открытии через роутер
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })

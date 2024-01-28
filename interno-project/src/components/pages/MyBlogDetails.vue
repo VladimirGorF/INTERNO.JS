@@ -1,5 +1,12 @@
 <template>
   <div class="box">
+    <div class="box__lineMainBox">
+      <div class="lineBox">
+        <div class="box blogDetails"></div>
+        <div class="box blogDetails"></div>
+        <div class="box blogDetails"></div>
+      </div>
+    </div>
     <div class="box__blogDetailsPage">
       <div class="articleBlogBanner"></div>
       <div id="app" class="articlesBox">
@@ -234,6 +241,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'MyBlogDetails',
   data () {
@@ -249,7 +257,11 @@ export default {
       ]
     }
   },
+  created () {
+    this.SET_NotFoundFlag(false) // переход на страницу main, передаем true во флаг старницы NotFound
+  },
   methods: {
+    ...mapMutations(['SET_NotFoundFlag']),
     showArticles (nameOfTag) {
       this.Tag === nameOfTag ? (this.Tag = '') : (this.Tag = nameOfTag)
       // если придет клик с уже кликнутого Тега, то обнуляем фильтр, а если фильтр обнулен, то устанавливаем по клику новый
