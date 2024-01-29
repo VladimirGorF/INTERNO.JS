@@ -228,6 +228,7 @@
                 @click="
                   activeTagId = tag.id;
                   showArticles(tag.name);
+                  makeSound();
                 "
               >
                 {{ tag.name }}
@@ -261,6 +262,12 @@ export default {
     this.SET_NotFoundFlag(false) // переход на страницу main, передаем true во флаг старницы NotFound
   },
   methods: {
+    makeSound () {
+      const audio = new Audio(
+        require('../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
+      )
+      audio.play()
+    },
     ...mapMutations(['SET_NotFoundFlag']),
     showArticles (nameOfTag) {
       this.Tag === nameOfTag ? (this.Tag = '') : (this.Tag = nameOfTag)

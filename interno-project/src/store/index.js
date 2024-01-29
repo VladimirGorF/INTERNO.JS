@@ -11,12 +11,16 @@ export default new Vuex.Store({
     sliderImagesUrls: [
       // сюда придут данные из actions
     ],
+    articles: [], // статьи для ArticlesNews
     titleProjectDetails: 'Minimal Look Bedrooms',
     descriptonProjectDetails:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.'
   },
   mutations: {
     //  перебрасываем наш массив из actions в state
+    SET_articles (state, articles) {
+      state.articles = articles
+    },
     SET_projectItemsList (state, projectItemsList) {
       state.projectItemsList = projectItemsList
     },
@@ -71,7 +75,174 @@ export default new Vuex.Store({
           }
         ]
         commit('SET_projectItemsList', projectItemsList)
-      }, 500)
+      }, 100)
+    },
+    fetchDataArticles ({ commit }) {
+      setTimeout(() => {
+        const articlesList = [
+          {
+            id: 0,
+            url: '/blogImages/Blog1.svg',
+            title: "Let's Get Solution For Building Construction Work",
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 1,
+            url: '/blogImages/Blog1.svg',
+            title: 'Low Cost Latest Invented Interior Designing Ideas.',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 2,
+            url: '/blogImages/Blog2.svg',
+            title: 'Best For Any Office & Business Interior Solution',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 3,
+            url: '/blogImages/Blog3.svg',
+            title: "Let's Get Solution For Building Construction Work",
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 4,
+            url: '/blogImages/Blog5.svg',
+            title: 'Low Cost Latest Invented Interior Designing Ideas.',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 5,
+            url: '/blogImages/Blog6.svg',
+            title: 'Best For Any Office & Business Interior Solution',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 6,
+            url: '/blogImages/Blog1.svg',
+            title: "Let's Get Solution For Building Construction Work",
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 7,
+            url: '/blogImages/Blog2.svg',
+            title: 'Low Cost Latest Invented Interior Designing Ideas.',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 8,
+            url: '/blogImages/Blog3.svg',
+            title: 'Best For Any Office & Business Interior Solution',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 9,
+            url: '/blogImages/Blog4.svg',
+            title: "Let's Get Solution For Building Construction Work",
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 10,
+            url: '/blogImages/Blog5.svg',
+            title: 'Low Cost Latest Invented Interior Designing Ideas.',
+            dateBoxText: '26 December,2022'
+          },
+          {
+            id: 11,
+            url: '/blogImages/Blog6.svg',
+            title: 'Best For Any Office & Business Interior Solution',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 12,
+            url: '/blogImages/Blog1.svg',
+            title: "Let's Get Solution For Building Construction Work",
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 13,
+            url: '/blogImages/Blog2.svg',
+            title: 'Low Cost Latest Invented Interior Designing Ideas.',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 14,
+            url: '/blogImages/Blog3.svg',
+            title: 'Best For Any Office & Business Interior Solution',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 15,
+            url: '/blogImages/Blog4.svg',
+            title: "Let's Get Solution For Building Construction Work",
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 16,
+            url: '/blogImages/Blog5.svg',
+            title: 'Low Cost Latest Invented Interior Designing Ideas.',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 17,
+            url: '/blogImages/Blog6.svg',
+            title: 'Best For Any Office & Business Interior Solution',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 18,
+            url: '/blogImages/Blog1.svg',
+            title: "Let's Get Solution For Building Construction Work",
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 19,
+            url: '/blogImages/Blog2.svg',
+            title: 'Low Cost Latest Invented Interior Designing Ideas.',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 20,
+            url: '/blogImages/Blog3.svg',
+            title: 'Best For Any Office & Business Interior Solution',
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 21,
+            url: '/blogImages/Blog4.svg',
+            title: "Let's Get Solution For Building Construction Work",
+            dateBoxText: '26 December,2022',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
+          },
+          {
+            id: 22,
+            url: '/blogImages/BannerPostPhoto.svg',
+            title: 'Low Cost Latest Invented Interior Designing Ideas.',
+            dateBoxText: '26 January,2023',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief. Lorem Ipsum is not simply random text. It has roots in a piece of classica'
+          }
+        ]
+        commit('SET_articles', articlesList)
+      }, 100)
     },
     fetchDataExamples ({ commit }) {
       setTimeout(() => {
@@ -90,7 +261,7 @@ export default new Vuex.Store({
           }
         ]
         commit('SET_ExamplesList', examplesList)
-      }, 1000)
+      }, 100)
     },
     fetchDataSliderImagesUrls ({ commit }) {
       setTimeout(() => {
@@ -106,12 +277,13 @@ export default new Vuex.Store({
           }
         ]
         commit('SET_SliderImagesUrls', sliderImagesUrls)
-      }, 1000)
+      }, 100)
     }
   },
   getters: {
     // для вызова данных из state в другие компоненты
     getProjectItemsList: (state) => state.projectItemsList,
+    getArticlesList: (state) => state.articles,
     getExamplesList: (state) => state.examplesList,
     getTitleProjectDetails: (state) => state.titleProjectDetails,
     getDescriptonProjectDetails: (state) => state.descriptonProjectDetails,

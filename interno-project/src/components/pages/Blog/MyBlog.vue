@@ -13,16 +13,19 @@
         <div class="text">Home / Blog</div>
       </div>
     </div>
+    <LastArticle />
     <ArticlesNews />
   </div>
 </template>
 
 <script>
 import ArticlesNews from './ArticlesNews'
+import LastArticle from './LastArticle'
 export default {
   name: 'MyBlog',
   components: {
-    ArticlesNews
+    ArticlesNews,
+    LastArticle
   }
 }
 </script>

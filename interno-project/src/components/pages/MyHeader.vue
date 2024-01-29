@@ -9,7 +9,7 @@
     </div>
     <div class="box__header">
       <router-link to="/index"><h6 class="rightPage">
-              <div class="left">
+              <div class="left" @click="makeSound()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="34"
@@ -28,8 +28,8 @@
 
       <nav class="right">
         <!-- маршурты прописаны в index.js в роутере  -->
-        <router-link to="/index"><h6 class="rightPage">Home</h6></router-link>
-        <details class="details">
+        <router-link to="/index"><h6 class="rightPage" @click="makeSound()">Home</h6></router-link>
+        <details class="details" @click="makeSound()">
           <summary class="summary rightPage">Project</summary>
           <ul class="menu">
             <router-link to="/project">
@@ -40,7 +40,7 @@
             </router-link>
           </ul>
         </details>
-        <details class="details">
+        <details class="details" @click="makeSound()">
           <summary class="summary rightPage">Blog</summary>
           <ul class="menu">
             <router-link to="/blog">
@@ -52,7 +52,7 @@
           </ul>
         </details>
         <router-link to="/non-existingPage">
-          <h6 class="rightPage">NotExistingPage</h6>
+          <h6 class="rightPage" @click="makeSound()">NotExistingPage</h6>
         </router-link>
       </nav>
     </div>
@@ -60,8 +60,23 @@
 </template>
 
 <script>
-const boxlineMainBoxElement = document.querySelector('.box__lineMainBox')
-console.log(boxlineMainBoxElement)
+export default {
+  name: 'MyHeader',
+  data () {
+    return {}
+  },
+
+  mounted () {},
+
+  methods: {
+    makeSound () {
+      const audio = new Audio(
+        require('../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
+      )
+      audio.play()
+    }
+  }
+}
 </script>
 
 <style scoped>

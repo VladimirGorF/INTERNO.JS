@@ -17,8 +17,8 @@
       <!-- это под VUE раздел -->
       <MyToggle @filterToggle="filterToggle" />
       <div class="ProjectContent">
-        <div class="blogPageContent">
-          <div id="chen" class="examples">
+        <div class="blogPageContent" id="chen">
+          <div class="examples">
             <!-- это под VUE раздел -->
             <ExampleItem
               v-for="item in sliceProducts()"
@@ -36,6 +36,7 @@
                   backPage();
                   makeSound();
                   getProducts(activePageId, 8);
+
                 "
                 >&lt;</a
               >
@@ -50,6 +51,7 @@
                   makeSound();
                   getProducts(page.id, 8);
                   movePage(page.id);
+
                 "
                 >0{{ page.id }}</a
               >
@@ -60,11 +62,11 @@
                   forwardPage();
                   makeSound();
                   getProducts(activePageId, 8);
+
                 "
                 >&gt;</a
               >
             </div>
-            <a hidden>Кол-во страниц: 0{{ pagesCounter }} страниц</a>
           </div>
         </div>
       </div>
@@ -95,6 +97,7 @@ export default {
       productStart: 0,
       productEnd: 8,
       productsQuantity: 0,
+      productsFilteredArray: [],
       products: [
         {
           id: 0,
@@ -271,6 +274,134 @@ export default {
           text: "Decor / Artchitecture",
           type: "Living Area",
         },
+        ,
+        {
+          id: 25,
+          url: "projectPageImages/1.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Bed Room",
+        },
+        {
+          id: 26,
+          url: "projectPageImages/2.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Bed Room",
+        },
+        {
+          id: 27,
+          url: "projectPageImages/3.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Bed Room",
+        },
+        {
+          id: 28,
+          url: "projectPageImages/4.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Bed Room",
+        },
+        {
+          id: 29,
+          url: "projectPageImages/5.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Bed Room",
+        },
+        {
+          id: 30,
+          url: "projectPageImages/6.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Bed Room",
+        },
+        {
+          id: 31,
+          url: "projectPageImages/7.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Bed Room",
+        },
+        {
+          id: 32,
+          url: "projectPageImages/8.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Bed Room",
+        },
+        {
+          id: 33,
+          url: "projectPageImages/7.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 34,
+          url: "projectPageImages/8.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        ,
+        {
+          id: 35,
+          url: "projectPageImages/1.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 36,
+          url: "projectPageImages/2.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 37,
+          url: "projectPageImages/3.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 38,
+          url: "projectPageImages/4.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 39,
+          url: "projectPageImages/5.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 40,
+          url: "projectPageImages/6.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 41,
+          url: "projectPageImages/7.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 42,
+          url: "projectPageImages/8.svg",
+          title: "Modern Bedroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
       ],
     };
   },
@@ -278,13 +409,15 @@ export default {
   methods: {
     makeSound() {
       const audio = new Audio(
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3"
+        require("../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3")
       );
       audio.play();
     },
-    ...mapMutations(["SET_NotFoundFlag"]),
     filterToggle(toggle) {
       this.activeToggleName = toggle;
+      this.pageEnd = 2;
+      this.sliceProducts();  // обновляем филльтрацию
+      this.pagesCounter(); // вызываем счетчик страниц при включении Тоггла
     },
     movePage(page) {
       if (
@@ -339,30 +472,31 @@ export default {
     },
     sliceProducts() {
       //фильтруем весь массив по activeToggleName
-        const productsFiltered = this.products.filter((product) => {
-          if (product.type === this.activeToggleName || !this.activeToggleName ) {
-            return true;
-          } else {
-            return false;
-          }
-        });
-        return productsFiltered.slice(this.productStart, this.productEnd); // срез продуктов на вывод по 8 штук на странице
-      }
-    },
-  computed: {
-    slicePages() {
-      return this.products.slice(this.pageStart, this.pageEnd); // срез страниц
+      const productsFiltered = this.products.filter((product) => {
+        if (product.type === this.activeToggleName || !this.activeToggleName) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      this.productsFilteredArray = productsFiltered;
+      return productsFiltered.slice(this.productStart, this.productEnd); // срез продуктов на вывод по 8 штук на странице
     },
     pagesCounter() {
-      const pagesQuantity = Math.ceil(this.products.length / 9); // определяем количество страниц
-      console.log(pagesQuantity);
+      const pagesQuantity = Math.ceil(this.productsFilteredArray.length / 9); // определяем количество страниц
       for (let i = 2; i < pagesQuantity + 1; i++) {
         this.pages.push({
           id: i,
           class: "",
         });
       }
-      return (this.pagesQuantity = pagesQuantity);
+      this.pageEnd = pagesQuantity + 1;
+      this.pagesQuantity = pagesQuantity;
+    },
+  },
+  computed: {
+    slicePages() {
+      return this.products.slice(this.pageStart, this.pageEnd); // срез страниц
     },
   },
 };

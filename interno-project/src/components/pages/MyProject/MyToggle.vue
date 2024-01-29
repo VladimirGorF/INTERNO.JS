@@ -3,7 +3,6 @@
     <div class="toggleBoxMain">
       <div class="toggleBox">
         <a
-          href="#"
           class="toggle"
           v-for="(toggle, index) in toggleList"
           :key="index"
@@ -11,6 +10,7 @@
           @click="
             activeToggleIndex = index;
             filter(toggle);
+            makeSound();
           "
         >
           {{ toggle }}
@@ -37,6 +37,11 @@ export default {
     filter (toggle) {
       // отсюда наш toggle улетит в тег MyToggle компонента MyProject, там мы его вызовем как событие @filterToggle="filterToggle"  и создадим для него там функцию с аргументом toggle.
       this.$emit('filterToggle', toggle)
+    },
+    makeSound () {
+      const audio = new Audio(require('../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
+      )
+      audio.play()
     }
   }
 }

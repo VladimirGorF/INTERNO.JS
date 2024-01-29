@@ -52,7 +52,6 @@
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
   name: 'ProjectDetails',
-
   data () {
     return {
       activeSlide: 0
@@ -64,12 +63,10 @@ export default {
   methods: {
     makeSound () {
       const audio = new Audio(
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3'
+        require('../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
       )
       audio.play()
     },
-    ...mapMutations(['SET_NotFoundFlag']),
-
     // регистрируем все геттеры
     ...mapGetters([
       'getTitleProjectDetais',
@@ -80,7 +77,6 @@ export default {
     ...mapActions(['fetchDataSliderImagesUrls']),
 
     // если выходим за границы слайдера то будем повторять показ, увеличивая наш массив слайдерских картинок
-
     getClass (index) {
       if (index < this.activeSlide) {
         return 'outLeft'
