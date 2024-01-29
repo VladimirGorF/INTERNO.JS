@@ -381,13 +381,6 @@ export default {
           text: "Decor / Artchitecture",
           type: "Kitchan",
         },
-        {
-          id: 40,
-          url: "projectPageImages/6.svg",
-          title: "Modern Bedroom.",
-          text: "Decor / Artchitecture",
-          type: "Kitchan",
-        },
       ],
     };
   },
@@ -474,13 +467,14 @@ export default {
       return productsFiltered.slice(this.productStart, this.productEnd); // срез продуктов на вывод по 8 штук на странице
     },
     pagesCounter() {
-      const pagesQuantity = Math.ceil(this.productsFilteredArray.length / 9); // определяем количество страниц
+      const pagesQuantity = Math.ceil(this.productsFilteredArray.length / 8); // определяем количество страниц
       for (let i = 2; i < pagesQuantity + 1; i++) {
         this.pages.push({
           id: i,
           class: "",
         });
       }
+      console.log(pagesQuantity);
       this.pageEnd = pagesQuantity + 1;
       this.pagesQuantity = pagesQuantity;
     },

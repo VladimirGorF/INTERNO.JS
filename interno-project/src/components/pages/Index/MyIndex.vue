@@ -20,9 +20,9 @@
             There are many variations of the passages of lorem Ipsum
             fromavailable, majority.
           </p>
-          <router-link to="/index">
+          <router-link to="/project">
             <h6 class="rightPage">
-              <div class="button">
+              <div class="button" @click="makeSound()">
                 <p class="buttonText">Get Started</p>
                 <svg
                   width="18"
@@ -107,6 +107,12 @@ export default {
     this.SET_Visibility(true) // переход на страницу main, передаем true во флаг старницы NotFound
   },
   methods: {
+    makeSound () {
+      const audio = new Audio(
+        require('../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
+      )
+      audio.play()
+    },
     ...mapMutations(['SET_Visibility'])
   }
 }
