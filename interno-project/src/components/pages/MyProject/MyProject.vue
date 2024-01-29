@@ -30,18 +30,17 @@
           <div class="pagination">
             <div class="pagBox">
               <a
-                href="#chen"
                 class="page"
                 @click="
                   backPage();
                   makeSound();
                   getProducts(activePageId, 8);
-
+                  sliceProducts();
+                  pagesCounter();
                 "
                 >&lt;</a
               >
               <a
-                href="#chen"
                 class="page"
                 v-for="page in slicePages"
                 :key="page.id"
@@ -51,18 +50,19 @@
                   makeSound();
                   getProducts(page.id, 8);
                   movePage(page.id);
-
+                  sliceProducts();
+                  pagesCounter();
                 "
                 >0{{ page.id }}</a
               >
               <a
-                href="#chen"
                 class="page"
                 @click="
                   forwardPage();
                   makeSound();
                   getProducts(activePageId, 8);
-
+                  sliceProducts();
+                  pagesCounter();
                 "
                 >&gt;</a
               >
@@ -388,20 +388,6 @@ export default {
           text: "Decor / Artchitecture",
           type: "Kitchan",
         },
-        {
-          id: 41,
-          url: "projectPageImages/7.svg",
-          title: "Modern Bedroom.",
-          text: "Decor / Artchitecture",
-          type: "Kitchan",
-        },
-        {
-          id: 42,
-          url: "projectPageImages/8.svg",
-          title: "Modern Bedroom.",
-          text: "Decor / Artchitecture",
-          type: "Kitchan",
-        },
       ],
     };
   },
@@ -415,8 +401,8 @@ export default {
     },
     filterToggle(toggle) {
       this.activeToggleName = toggle;
-      this.pageEnd = 2;
-      this.sliceProducts();  // обновляем филльтрацию
+      this.pageEnd = 2; // а дальше функциями ниже он изменится
+      this.sliceProducts(); // обновляем филльтрацию
       this.pagesCounter(); // вызываем счетчик страниц при включении Тоггла
     },
     movePage(page) {
@@ -467,8 +453,13 @@ export default {
       this.pageEnd -= 1;
     },
     getProducts(page, step) {
-      this.productEnd = step * page + 1;
-      this.productStart = this.productEnd - 8;
+      if (page === 1) {
+        this.productEnd = 8;
+        this.productStart = 0;
+      } else {
+        this.productEnd = step * page;  // был + 1
+        this.productStart = this.productEnd - 8;
+      }
     },
     sliceProducts() {
       //фильтруем весь массив по activeToggleName
