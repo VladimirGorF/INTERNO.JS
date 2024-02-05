@@ -2,7 +2,7 @@
   <div>
     <div class="box__Post">
       <div class="postMain">
-        <div class="title">Latest Post</div>
+        <div id="main" class="title">Latest Post</div>
         <div class="contentPost">
           <img :src="lastArticle.url" alt="imagePost" class="imagePost" />
           <div class="informPost">
@@ -16,7 +16,7 @@
               <p class="dateBoxText">
                 {{ lastArticle.dateBoxText }}
               </p>
-              <a href="#">
+              <a href="#articles&news">
                 <svg
                   class="dateBoxImage"
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,20 +53,28 @@
 import { mapMutations, mapActions, mapGetters } from 'vuex'
 export default {
   name: 'ArticlesNews',
+  data () {
+    return {
+    }
+  },
+
   created () {
     // при создании вызывается мутация SET_articles и в нее передаются из коммита в actions данные из fetchDataArticles
     this.SET_articles(this.fetchDataArticles())
   },
   methods: {
-    ...mapMutations(['SET_articles']),
+    ...mapMutations(['SET_articles'], ['SET_indexOfLastArticle']),
     ...mapActions(['fetchDataArticles']),
-    ...mapGetters(['getArticlesList'])
+    ...mapGetters(['getArticlesList'], ['getindexOfLastArticle'])
   },
   computed: {
     lastArticle () {
       // проверка на пустоту, данные приходят с имитацией задержки в store и вылетит ошибка без них
       if (this.$store.getters.getArticlesList.length) {
-        return this.$store.getters.getArticlesList.slice(-1)[0]
+        // берем индекс из store (он там стоит -1 изначально)
+        const index = this.$store.getters.getindexOfLastArticle
+        //  последняя статья по умолчанию
+        return this.$store.getters.getArticlesList.slice(index)[0]
       }
       // возвращаем пустой объект, пока не придут данные и мы не уйдем автоматически в if
       return {

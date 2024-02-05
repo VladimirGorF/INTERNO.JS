@@ -259,7 +259,7 @@ export default {
     }
   },
   created () {
-    this.SET_NotFoundFlag(false) // переход на страницу main, передаем true во флаг старницы NotFound
+    this.SET_Visibility(true) //  передаем true во флаг страницы NotFound
   },
   methods: {
     makeSound () {
@@ -268,7 +268,7 @@ export default {
       )
       audio.play()
     },
-    ...mapMutations(['SET_NotFoundFlag']),
+    ...mapMutations(['SET_Visibility']),
     showArticles (nameOfTag) {
       this.Tag === nameOfTag ? (this.Tag = '') : (this.Tag = nameOfTag)
       // если придет клик с уже кликнутого Тега, то обнуляем фильтр, а если фильтр обнулен, то устанавливаем по клику новый

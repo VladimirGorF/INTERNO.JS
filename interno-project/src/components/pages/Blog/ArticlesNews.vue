@@ -2,65 +2,30 @@
   <div>
     <div id="app" class="box__blogPage">
       <div class="blogPageContent">
-        <div class="titleBlogPage">Articles & News</div>
-        <div id="chen" class="examples">
-          <div
-            class="examples__Item"
+        <div id="articles&news" class="titleBlogPage">Articles & News</div>
+        <div class="examples">
+          <MyArticle
             v-for="item in sliceProducts"
             :key="item.id"
-          >
-            <img
-              :src="item.url"
-              alt="examples__image"
-              class="examples__image"
-            />
-            <h2 class="title">{{ item.title }}:{{ item.id }}</h2>
-            <div class="dateBox">
-              <p class="dateBoxText">{{ item.dateBoxText }}</p>
-              <a href="#">
-                <svg
-                  class="dateBoxImage"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="52"
-                  height="53"
-                  viewBox="0 0 52 53"
-                  fill="none"
-                >
-                  <circle
-                    class="circle"
-                    cx="26"
-                    cy="26.2671"
-                    r="26"
-                    fill="#F4F0EC"
-                  />
-                  <path
-                    d="M23.7714 32.9529L29.7142 26.2672L23.7714 19.5815"
-                    stroke="#292F36"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
+            :item="item"
+          />
+          <!-- Нужно забиндить :item = "item" чтобы его увидел дочерний компонент тогда он попадет в его Props -->
         </div>
-
         <div class="pagination">
           <div class="pagBox">
             <a
-              href="#chen"
+              href="#articles&news"
               class="page"
               @click="
                 backPage();
-                pagesCounterFunc()
+                pagesCounterFunc();
                 makeSound();
                 getProducts(activePageId, 6);
               "
               >&lt;</a
             >
             <a
-              href="#chen"
+              href="#articles&news"
               class="page"
               v-for="page in slicePages"
               :key="page.id"
@@ -68,18 +33,18 @@
               @click="
                 activePageId = page.id;
                 getProducts(page.id, 6);
-                pagesCounterFunc()
+                pagesCounterFunc();
                 makeSound();
                 movePage(page.id);
               "
               >0{{ page.id }}</a
             >
             <a
-              href="#chen"
+              href="#articles&news"
               class="page"
               @click="
                 forwardPage();
-                pagesCounterFunc()
+                pagesCounterFunc();
                 makeSound();
                 getProducts(activePageId, 6);
               "
@@ -94,8 +59,12 @@
 
 <script>
 import { mapMutations, mapActions, mapGetters } from 'vuex'
+import MyArticle from './MyArticle'
 export default {
   name: 'ArticlesNews',
+  components: {
+    MyArticle
+  },
   data () {
     return {
       pageStart: 1, // начало отображения страниц
@@ -129,7 +98,7 @@ export default {
 
     makeSound () {
       const audio = new Audio(
-        require('../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
+        require('../../../assets/sounds/knopka-klik-korotkii-odinochnyii-shumnyii.mp3')
       )
       audio.play()
     },

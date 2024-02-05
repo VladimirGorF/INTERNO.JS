@@ -10,13 +10,14 @@
               height="34"
               viewBox="0 0 34 34"
               fill="none"
+              @click="makeSound()"
             >
               <path
                 d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
                 fill="#CDA274"
               />
             </svg>
-            <h3 class="topLeft">Interno</h3>
+            <h3 class="topLeft" @click="makeSound()">Interno</h3>
           </div>
           </router-link>
           <p class="footer__leftText">
@@ -25,7 +26,7 @@
           </p>
           <div class="logo">
             <!-- птичка -->
-            <a href="https://twitter.com"><svg
+            <a href="https://twitter.com" @click="makeSound()"><svg
               width="19"
               height="16"
               viewBox="0 0 19 16"
@@ -38,7 +39,7 @@
               />
             </svg></a>
             <!-- logo IN -->
-            <a href="https://www.linkedin.com/"><svg
+            <a href="https://www.linkedin.com/" @click="makeSound()"><svg
               width="17"
               height="16"
               viewBox="0 0 17 16"
@@ -57,13 +58,13 @@
           <h3 class="title">Pages</h3>
           <div class="pages">
             <router-link to="/index">
-              <p class="page">Home</p>
+              <p class="page" @click="makeSound()">Home</p>
             </router-link>
             <router-link to="/project">
-              <p class="page">Project</p>
+              <p class="page" @click="makeSound()">Project</p>
             </router-link>
             <router-link to="/blog">
-              <p class="page">Blog</p>
+              <p class="page" @click="makeSound()">Blog</p>
             </router-link>
           </div>
         </div>
@@ -81,6 +82,22 @@
     </div>
 </template>
 
-<script></script>
+<script>export default {
+  name: 'MyFooter',
+  data () {
+    return {}
+  },
+
+  mounted () {},
+
+  methods: {
+    makeSound () {
+      const audio = new Audio(
+        require('../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
+      )
+      audio.play()
+    }
+  }
+}</script>
 
 <style></style>

@@ -15,33 +15,35 @@
       </div>
     </div>
     <div class="sliderBox">
-      <div class="slider">
+      <img
+        class="searchImage"
+        src="../../../assets/images/projectPageImages/search.svg"
+        alt="searchImg"
+        @click="preview()"
+      />
+      <div :class="sliderBoxClass">
         <img
           class="slide"
-          :class="getClass(index)"
+          :class="getImageClass(index)"
           v-for="(item, index) in sliderUrls"
           :key="index"
           :src="item.url"
           alt="Слайдер №"
         />
-        <button class="next" @click="forward();makeSound();">&gt;</button>
-        <button class="prev" @click="back();makeSound();">&lt;</button>
+        <button class="next" @click="forward()">&gt;</button>
+        <button class="prev" @click="back()">&lt;</button>
       </div>
     </div>
     <div class="iconsBox">
       <div class="icons">
-        <!-- Присваиваем класс checked по номеру активного слайда -->
+        <!-- Рисуем иконки и присваиваем класс checked по номеру активного слайда. -->
         <div
           class="icon"
-          :class="{ checked: [0, 3, 6].includes(activeSlide) }"
-        ></div>
-        <div
-          class="icon"
-          :class="{ checked: [1, 4, 7].includes(activeSlide) }"
-        ></div>
-        <div
-          class="icon"
-          :class="{ checked: [2, 5, 8].includes(activeSlide) }"
+          :class="{
+            checked: activeSlide === index,
+          }"
+          v-for="(item, index) in sliderUrls"
+          :key="index.id"
         ></div>
       </div>
     </div>
@@ -54,30 +56,52 @@ export default {
   name: 'ProjectDetails',
   data () {
     return {
+      sliderBoxClass: 'slider',
       activeSlide: 0
     }
   },
   created () {
     this.SET_SliderImagesUrls(this.fetchDataSliderImagesUrls())
+    this.SET_Visibility(true) //  передаем true во флаг страницы NotFound
   },
   methods: {
+    preview () {
+      this.makeSoundPreview()
+      if (this.sliderBoxClass === 'slider') {
+        this.sliderBoxClass = 'sliderBig'
+      } else {
+        this.sliderBoxClass = 'slider'
+      }
+    },
     makeSound () {
+      const audio = new Audio(
+        require('../../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
+      )
+      audio.play()
+    },
+    makeSoundSlider () {
       const audio = new Audio(
         require('../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
       )
       audio.play()
     },
+    makeSoundPreview () {
+      const audio = new Audio(
+        require('../../../assets/sounds/multfilm-stun-fail-oshibka-knopka-parametryi-videoigryi-43032.mp3')
+      )
+      audio.play()
+    },
+
     // регистрируем все геттеры
     ...mapGetters([
       'getTitleProjectDetais',
       'getDescriptonProjectDetais',
       'getSliderImagesUrls'
     ]),
-    ...mapMutations(['SET_SliderImagesUrls', 'ADD_SliderList']),
+    ...mapMutations(['SET_SliderImagesUrls', 'SET_Visibility']),
     ...mapActions(['fetchDataSliderImagesUrls']),
 
-    // если выходим за границы слайдера то будем повторять показ, увеличивая наш массив слайдерских картинок
-    getClass (index) {
+    getImageClass (index) {
       if (index < this.activeSlide) {
         return 'outLeft'
       }
@@ -88,22 +112,17 @@ export default {
         return 'outRight'
       }
     },
+
+    // если выходим за границы слайдера то будем повторять показ, увеличивая наш массив адресов слайдерских картинок
     forward () {
       if (this.activeSlide < this.sliderUrls.length - 1) {
+        this.makeSoundSlider()
         this.activeSlide++
-      } else {
-        if (this.activeSlide <= 2) {
-          // если он будет на последнем слайде, то увеличим массив слайдера на три элемента
-          this.ADD_SliderList()
-          setTimeout(() => {
-            // нужна небольшая задержка на переходе с поледнего слайда для плавности
-            this.activeSlide++
-          }, 10)
-        }
       }
     },
     back () {
       if (this.activeSlide > 0) {
+        this.makeSoundSlider()
         this.activeSlide--
       }
     }
@@ -127,7 +146,8 @@ export default {
 <style lang="scss" scoped>
 .banner {
   height: 350px;
-  background: url("../../../../public/projectDetailsImages/Banner.svg") no-repeat;
+  background: url("../../../../public/projectDetailsImages/Banner.svg")
+    no-repeat;
   background-position: 50% 50%;
   margin-bottom: 150px;
 }
@@ -159,15 +179,25 @@ export default {
 // стили слайдера
 
 .sliderBox {
+  position: relative;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 .slider {
-  width: 1200px;
+  width: 800px;
   height: 800px;
   position: relative;
   overflow: hidden;
+  transition: 1s;
+}
+
+.sliderBig {
+  width: 1500px;
+  height: 1200px;
+  position: relative;
+  overflow: hidden;
+  transition: 1s;
 }
 
 .slide {
@@ -176,34 +206,59 @@ export default {
   position: absolute;
   transition: 1s ease-in-out;
 }
+
 .outRight {
-  left: 1200px;
+  top: 100px;
+  left: 1500px;
+  z-index: -1;
 }
 .outLeft {
-  left: -1200px;
+  top: 100px;
+  left: -1500px;
+  z-index: -1;
 }
 
 .active {
-  left: 0;
+  left: 0px;
+  top: 100px;
 }
 
 button {
   border-radius: 20px;
   position: absolute;
-  top: 50%;
-  opacity: 0.4;
+  top: 55%;
+  opacity: 0.3;
+  width: 100px;
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
 }
 
 .prev {
-  width: 100px;
   left: 10px;
-  font-size: 50px;
 }
 
 .next {
-  width: 100px;
   right: 10px;
-  font-size: 50px;
+}
+
+.searchImage {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.4;
+}
+
+.searchImage:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
 }
 
 .iconsBox {

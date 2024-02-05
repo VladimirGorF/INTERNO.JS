@@ -23,6 +23,7 @@
                 height="53"
                 viewBox="0 0 52 53"
                 fill="none"
+                @click="makeSound()"
               >
                 <circle
                   class="circle"
@@ -55,7 +56,13 @@ export default {
   methods: {
     ...mapMutations(['SET_ExamplesList']),
     ...mapActions(['fetchDataExamples']),
-    ...mapGetters(['getExamplesList'])
+    ...mapGetters(['getExamplesList']),
+    makeSound () {
+      const audio = new Audio(
+        require('../../../assets/sounds/knopka-klik-korotkii-odinochnyii-shumnyii.mp3')
+      )
+      audio.play()
+    }
   },
   computed: {
     examplesList () {

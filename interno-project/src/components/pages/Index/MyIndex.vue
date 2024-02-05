@@ -103,13 +103,18 @@ export default {
     IndexProjects,
     IndexBlog
   },
+  data () {
+    return {
+    }
+  },
   created () {
-    this.SET_Visibility(true) // переход на страницу main, передаем true во флаг старницы NotFound
+    this.SET_Visibility(true) // переход c NonExistPage, передаем true во флаг старницы NotFound
   },
   methods: {
+
     makeSound () {
       const audio = new Audio(
-        require('../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
+        require('../../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
       )
       audio.play()
     },
@@ -118,4 +123,6 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+
+</style>

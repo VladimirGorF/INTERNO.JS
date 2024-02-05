@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="toggleBoxMain">
+    <div id="toggleMain" class="toggleBoxMain">
       <div class="toggleBox">
         <a
           class="toggle"

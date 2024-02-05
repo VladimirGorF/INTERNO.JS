@@ -21,11 +21,18 @@
 <script>
 import ArticlesNews from './ArticlesNews'
 import LastArticle from './LastArticle'
+import { mapMutations } from 'vuex'
 export default {
   name: 'MyBlog',
   components: {
     ArticlesNews,
     LastArticle
+  },
+  created () {
+    this.SET_Visibility(true) //  передаем true во флаг страницы NotFound
+  },
+  methods: {
+    ...mapMutations(['SET_Visibility'])
   }
 }
 </script>

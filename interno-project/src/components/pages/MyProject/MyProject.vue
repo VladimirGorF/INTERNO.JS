@@ -2,9 +2,9 @@
   <div class="box">
     <div class="box__lineMainBox">
       <div class="lineBox">
-        <div class="box project"></div>
-        <div class="box project"></div>
-        <div class="box project"></div>
+        <div :class="classLineBox"></div>
+        <div :class="classLineBox"></div>
+        <div :class="classLineBox"></div>
       </div>
     </div>
     <div class="box__projectPage">
@@ -16,53 +16,58 @@
       </div>
       <!-- это под VUE раздел -->
       <MyToggle @filterToggle="filterToggle" />
+
       <div class="ProjectContent">
-        <div class="blogPageContent" id="chen">
-          <div class="examples">
+        <div class="blogPageContent">
+          <div :class="classExamples">
             <!-- это под VUE раздел -->
             <ExampleItem
               v-for="item in sliceProducts()"
               :key="item.id"
               :item="item"
             />
-            <!-- Нужно забиндить :item = "item" чтобы его увидел дочерний компонент тогда он попает в его Props -->
+            <!-- Нужно забиндить :item = "item" чтобы его увидел дочерний компонент тогда он попадет в его Props -->
           </div>
+
           <div class="pagination">
             <div class="pagBox">
-              <a
+              <a href="#toggleMain"
                 class="page"
                 @click="
                   backPage();
-                  makeSound();
+                  makeSoundKorotkiy();
                   getProducts(activePageId, 8);
                   sliceProducts();
                   pagesCounter();
+                  getСlassLine();
                 "
                 >&lt;</a
               >
-              <a
+              <a href="#toggleMain"
                 class="page"
                 v-for="page in slicePages"
                 :key="page.id"
                 :class="{ active: page.id === activePageId }"
                 @click="
                   activePageId = page.id;
-                  makeSound();
+                  makeSoundKorotkiy();
                   getProducts(page.id, 8);
                   movePage(page.id);
                   sliceProducts();
                   pagesCounter();
+                  getСlassLine();
                 "
                 >0{{ page.id }}</a
               >
-              <a
+              <a href="#toggleMain"
                 class="page"
                 @click="
+                  pagesCounter();
                   forwardPage();
-                  makeSound();
+                  makeSoundKorotkiy();
                   getProducts(activePageId, 8);
                   sliceProducts();
-                  pagesCounter();
+                  getСlassLine();
                 "
                 >&gt;</a
               >
@@ -86,8 +91,13 @@ export default {
     ExampleItem,
     MyToggle,
   },
+  created () {
+    this.SET_Visibility(true) //  передаем true во флаг страницы NotFound
+  },
   data() {
     return {
+      classLineBox: "box project", // будем менять этот класс в зависимости от длины productsFilteredArray
+      classExamples: "examples",
       activeToggleName: "",
       pageStart: 1, // начало отображения страниц
       pageEnd: 4,
@@ -102,177 +112,202 @@ export default {
         {
           id: 0,
           url: "projectPageImages/1.svg",
-          title: "Minimal Bedroom.",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 1,
           url: "projectPageImages/2.svg",
-          title: "Minimal Bedroom.",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 2,
-          url: "projectPageImages/3.svg",
-          title: "Minimal Bedroom.",
+          url: "projectPageImages/4.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 3,
-          url: "projectPageImages/4.svg",
-          title: "Classic Minimal Bedroom.",
+          url: "projectPageImages/5.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 4,
-          url: "projectPageImages/5.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/6.svg",
+          title: "Modern Kitchan.",
           text: "Decor / Artchitecture",
-          type: "Bathroom",
+          type: "Kitchan",
+          star: 'false'
         },
         {
           id: 5,
-          url: "projectPageImages/6.svg",
-          title: "Minimal Bedroom.",
+          url: "projectPageImages/5.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 6,
-          url: "projectPageImages/7.svg",
-          title: "Minimal Bedroom.",
+          url: "projectPageImages/8.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 7,
-          url: "projectPageImages/8.svg",
-          title: "Classic Minimal Bedroom.",
+          url: "projectPageImages/1.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 8,
           url: "projectPageImages/1.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 9,
           url: "projectPageImages/2.svg",
-          title: "Minimal Bedroom.",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 10,
-          url: "projectPageImages/3.svg",
-          title: "Minimal Bedroom.",
+          url: "projectPageImages/5.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 11,
           url: "projectPageImages/4.svg",
-          title: "Minimal Bedroom.",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
+          star: 'false'
         },
         {
           id: 12,
           url: "projectPageImages/5.svg",
-          title: "Classic Minimal Bedroom.",
+          title: "Classic Minimal Bed Room.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 13,
           url: "projectPageImages/6.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Bed Room.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 14,
           url: "projectPageImages/7.svg",
-          title: "Minimal Bedroom.",
+          title: "Minimal Kitchan.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
         },
         {
           id: 15,
           url: "projectPageImages/8.svg",
-          title: "Minimal Bedroom.",
+          title: "Minimal Kitchan.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
         },
         {
           id: 16,
           url: "projectPageImages/1.svg",
-          title: "Classic Minimal Bedroom.",
+          title: "Classic Minimal Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         {
           id: 17,
           url: "projectPageImages/1.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         {
           id: 18,
           url: "projectPageImages/2.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         {
           id: 19,
           url: "projectPageImages/3.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         {
           id: 20,
           url: "projectPageImages/4.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         {
           id: 21,
           url: "projectPageImages/5.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         {
           id: 22,
           url: "projectPageImages/6.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         {
           id: 23,
           url: "projectPageImages/7.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         {
           id: 24,
           url: "projectPageImages/8.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Living Area.",
           text: "Decor / Artchitecture",
           type: "Living Area",
+          star: 'false'
         },
         ,
         {
@@ -281,6 +316,7 @@ export default {
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 26,
@@ -288,6 +324,7 @@ export default {
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 27,
@@ -295,6 +332,7 @@ export default {
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 28,
@@ -302,6 +340,7 @@ export default {
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 29,
@@ -309,6 +348,7 @@ export default {
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 30,
@@ -316,6 +356,7 @@ export default {
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 31,
@@ -323,6 +364,7 @@ export default {
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 32,
@@ -330,73 +372,123 @@ export default {
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
+          star: 'false'
         },
         {
           id: 33,
-          url: "projectPageImages/7.svg",
+          url: "projectPageImages/1.svg",
           title: "Modern Bedroom.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
         },
         {
           id: 34,
           url: "projectPageImages/8.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Kitchan.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
         },
         ,
         {
           id: 35,
           url: "projectPageImages/1.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Kitchan.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
         },
         {
           id: 36,
           url: "projectPageImages/2.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Kitchan.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
         },
         {
           id: 37,
           url: "projectPageImages/3.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Kitchan.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
         },
         {
           id: 38,
           url: "projectPageImages/4.svg",
-          title: "Modern Bedroom.",
+          title: "Modern Kitchan.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
         },
         {
           id: 39,
-          url: "projectPageImages/5.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/3.svg",
+          title: "Modern Kitchan.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
+          star: 'false'
+        },
+        {
+          id: 40,
+          url: "projectPageImages/4.svg",
+          title: "Modern Kitchan.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+          star: 'false'
+        },
+        {
+          id: 41,
+          url: "projectPageImages/5.svg",
+          title: "Modern Kitchan.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+          star: 'false'
+        },
+        {
+          id: 42,
+          url: "projectPageImages/6.svg",
+          title: "Modern Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Bathroom",
+          star: 'false'
+        },
+        {
+          id: 43,
+          url: "projectPageImages/6.svg",
+          title: "Modern Kitchan.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+          star: 'false'
         },
       ],
     };
   },
 
   methods: {
+    ...mapMutations(['SET_Visibility']),
     makeSound() {
       const audio = new Audio(
         require("../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3")
       );
       audio.play();
     },
+    makeSoundKorotkiy () {
+      const audio = new Audio(
+        require('../../../assets/sounds/knopka-klik-korotkii-odinochnyii-shumnyii.mp3')
+      )
+      audio.play()
+    },
     filterToggle(toggle) {
       this.activeToggleName = toggle;
+      this.activePageId = 1
       this.pageEnd = 2; // а дальше функциями ниже он изменится
-      this.sliceProducts(); // обновляем филльтрацию
+      this.getProducts(1, 8);
+      this.sliceProducts(); // обновляем фильтрацию
       this.pagesCounter(); // вызываем счетчик страниц при включении Тоггла
+      this.getСlassLine(); // управление вертикальными линиями и размером сетки контента
     },
     movePage(page) {
       if (
@@ -450,7 +542,7 @@ export default {
         this.productEnd = 8;
         this.productStart = 0;
       } else {
-        this.productEnd = step * page;  // был + 1
+        this.productEnd = step * page; // был + 1
         this.productStart = this.productEnd - 8;
       }
     },
@@ -463,7 +555,7 @@ export default {
           return false;
         }
       });
-      this.productsFilteredArray = productsFiltered;
+      this.productsFilteredArray = productsFiltered; // фтльтрованный массив потом используем в pagesCounter ниже
       return productsFiltered.slice(this.productStart, this.productEnd); // срез продуктов на вывод по 8 штук на странице
     },
     pagesCounter() {
@@ -474,9 +566,38 @@ export default {
           class: "",
         });
       }
-      console.log(pagesQuantity);
+
       this.pageEnd = pagesQuantity + 1;
       this.pagesQuantity = pagesQuantity;
+    },
+    getСlassLine() {
+      const countItemsInLastRender = this.productsFilteredArray.length % 8; // получем остаток от деления всего количства отображаемых объектов на 8 (потому что по 8 выводится) и это и будет количством на посл странице
+      if (
+        countItemsInLastRender < 3 &&
+        this.pageEnd - 1 === this.activePageId &&
+        countItemsInLastRender > 0
+      ) {
+        this.classLineBox = "box projectSmall";
+        this.classExamples = "examplesSmall examples";
+      } else if (
+        countItemsInLastRender < 5 &&
+        this.pageEnd - 1 === this.activePageId &&
+        countItemsInLastRender > 2
+      ) {
+        this.classLineBox = "box projectMedium";
+        this.classExamples = "examplesMedium examples";
+      } else if (
+        countItemsInLastRender < 7 &&
+        this.pageEnd - 1 === this.activePageId &&
+        countItemsInLastRender > 4
+      ) {
+        this.classLineBox = "box projectMedium2";
+        this.classExamples = "examplesMedium2 examples";
+      }
+      else {
+        this.classLineBox = "box project";
+        this.classExamples = "examples";
+      }
     },
   },
   computed: {

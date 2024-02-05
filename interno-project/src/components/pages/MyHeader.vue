@@ -51,9 +51,10 @@
             >
           </ul>
         </details>
-        <router-link to="/non-existingPage">
+        <!-- Несуществующая страница -->
+        <!-- <router-link to="/non-existingPage">
           <h6 class="rightPage" @click="makeSound()">NotExistingPage</h6>
-        </router-link>
+        </router-link> -->
       </nav>
     </div>
   </div>
@@ -71,7 +72,7 @@ export default {
   methods: {
     makeSound () {
       const audio = new Audio(
-        require('../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
+        require('../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
       )
       audio.play()
     }

@@ -11,6 +11,7 @@ export default new Vuex.Store({
     sliderImagesUrls: [
       // сюда придут данные из actions
     ],
+    indexOfLastArticle: -1,
     articles: [], // статьи для ArticlesNews
     titleProjectDetails: 'Minimal Look Bedrooms',
     descriptonProjectDetails:
@@ -21,6 +22,9 @@ export default new Vuex.Store({
     SET_articles (state, articles) {
       state.articles = articles
     },
+    SET_indexOfLastArticle (state, indexOfLastArticle) {
+      state.indexOfLastArticle = indexOfLastArticle
+    },
     SET_projectItemsList (state, projectItemsList) {
       state.projectItemsList = projectItemsList
     },
@@ -30,19 +34,6 @@ export default new Vuex.Store({
     SET_SliderImagesUrls (state, sliderImagesUrls) {
       // примет картинки из actions, но по факту не принимает
       state.sliderImagesUrls = sliderImagesUrls
-    },
-    ADD_SliderList (state) { // увеличиваем размер сладеров для бесконечной прокрутки
-      state.sliderImagesUrls.push(...[
-        {
-          url: 'projectDetailsImages/slider1.svg'
-        },
-        {
-          url: 'indexImages/bannerImage.svg'
-        },
-        {
-          url: 'indexImages/Blog3.svg'
-        }
-      ])
     },
     SET_Visibility (state, flag) { // сеттер для флага перехода на страницу NotFound
       state.visibility = flag
@@ -89,9 +80,9 @@ export default new Vuex.Store({
           },
           {
             id: 1,
-            url: '/blogImages/Blog1.svg',
+            url: '/blogImages/Blog4.svg',
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
-            dateBoxText: '26 December,2022',
+            dateBoxText: '15 September,1614',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
@@ -237,8 +228,8 @@ export default new Vuex.Store({
             id: 22,
             url: '/blogImages/BannerPostPhoto.svg',
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
-            dateBoxText: '26 January,2023',
-            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief. Lorem Ipsum is not simply random text. It has roots in a piece of classica'
+            dateBoxText: '26 January,2024',
+            text: 'Last article ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief. Lorem Ipsum is not simply random text. It has roots in a piece of classica'
           }
         ]
         commit('SET_articles', articlesList)
@@ -273,7 +264,7 @@ export default new Vuex.Store({
             url: 'indexImages/bannerImage.svg'
           },
           {
-            url: 'indexImages/Blog3.svg'
+            url: 'blogImages/BannerPostPhoto.svg'
           }
         ]
         commit('SET_SliderImagesUrls', sliderImagesUrls)
@@ -284,6 +275,7 @@ export default new Vuex.Store({
     // для вызова данных из state в другие компоненты
     getProjectItemsList: (state) => state.projectItemsList,
     getArticlesList: (state) => state.articles,
+    getindexOfLastArticle: (state) => state.indexOfLastArticle,
     getExamplesList: (state) => state.examplesList,
     getTitleProjectDetails: (state) => state.titleProjectDetails,
     getDescriptonProjectDetails: (state) => state.descriptonProjectDetails,

@@ -1,12 +1,19 @@
 <template>
   <div>
+    <div class="box__lineMainBox">
+      <div class="lineBox">
+        <div class="box nonExistPage"></div>
+        <div class="box nonExistPage"></div>
+        <div class="box nonExistPage"></div>
+      </div>
+    </div>
     <div class="content">
       <div class="leftSide">
         <h1 class="title404">404</h1>
         <h5 class="text">
           We are sorry, but the page you requested was not found
         </h5>
-        <router-link to="/project">
+        <router-link to="/index">
           <div class="button">
             <p class="buttonText">Back To Home</p>
             <svg

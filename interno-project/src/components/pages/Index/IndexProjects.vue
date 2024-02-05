@@ -12,7 +12,7 @@
           <div class="item" v-for="item in itemsList" :key="item.id">
             <img class="itemImage" :src="item.url" alt="itemImage" />
             <router-link to="/project">
-              <div class="itemInform">
+              <div class="itemInform" @click="makeSound()">
               <div class="itemInfom__left">
                 <h6 class="leftSubtitle">{{item.title}}</h6>
                 <p class="leftText">{{item.text}}</p>
@@ -39,7 +39,13 @@ export default {
   methods: {
     ...mapMutations(['SET_projectItemsList']),
     ...mapActions(['fetchData']),
-    ...mapGetters(['getProjectItemsList'])
+    ...mapGetters(['getProjectItemsList']),
+    makeSound () {
+      const audio = new Audio(
+        require('../../../assets/sounds/knopka-klik-korotkii-odinochnyii-shumnyii.mp3')
+      )
+      audio.play()
+    }
   },
   computed: {
     itemsList () {
