@@ -17,7 +17,7 @@ export default {
     MyFooter
   },
   created () {
-    this.$router.push({ name: 'index' }) // пушим в роутре главную страницу при создании
+    // this.$router.push({ name: 'index' }) // пушим в роутре главную страницу при загрузке сайта
   },
   computed: {
     visibility () {

@@ -63,11 +63,6 @@
 <script>
 export default {
   name: 'MyHeader',
-  data () {
-    return {}
-  },
-
-  mounted () {},
 
   methods: {
     makeSound () {

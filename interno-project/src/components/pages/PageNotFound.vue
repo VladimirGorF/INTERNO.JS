@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="nepBox">
     <div class="box__lineMainBox">
       <div class="lineBox">
         <div class="box nonExistPage"></div>
@@ -14,7 +14,7 @@
           We are sorry, but the page you requested was not found
         </h5>
         <router-link to="/index">
-          <div class="button">
+          <div class="button" @click="makeSound()">
             <p class="buttonText">Back To Home</p>
             <svg
               width="18"
@@ -50,7 +50,13 @@ export default {
     this.SET_Visibility(false) // переход на страницу NotFound, по умлочанию true, но  в момент создания NotFound, то передаем false
   },
   methods: {
-    ...mapMutations(['SET_Visibility'])
+    ...mapMutations(['SET_Visibility']),
+    makeSound () {
+      const audio = new Audio(
+        require('../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
+      )
+      audio.play()
+    }
   }
 }
 </script>
@@ -58,6 +64,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.nepBox{
+  margin-top: -60px;
+}
+.box__header {
+  margin-bottom: 10px !important;
+}
 .content {
   display: flex;
   justify-content: center;
@@ -124,5 +136,9 @@ export default {
 img {
   border-radius: 0px 0px 0px 250px;
   max-width: 700px;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+
 }
 </style>
