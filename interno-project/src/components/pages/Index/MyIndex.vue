@@ -17,8 +17,8 @@
         <div class="informPart">
           <h1 class="title">Let Your Home Be Unique</h1>
           <p class="text">
-            There are many variations of the passages of lorem Ipsum
-            fromavailable, majority.
+            There are many variations of the passages of <br />
+            lorem Ipsum fromavailable, majority.
           </p>
           <router-link to="/project">
             <h6 class="rightPage">
@@ -123,6 +123,12 @@ export default {
 
 <style lang="scss" scoped>
 @media (max-width: 1440px) and (min-width: 1024px) {
+  .box__lineMainBox .lineBox {
+    grid-template-columns: repeat(3, 285px);
+  }
+  .box__lineMainBox .lineBox .index {
+    height: 3500px !important;
+  }
   .box__bannerMain .banner {
     max-width: 856px;
   }
@@ -131,7 +137,7 @@ export default {
   }
   .box__counter .counter__item .line {
     margin-right: 38px;
-}
+  }
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
@@ -161,5 +167,27 @@ export default {
   .box__counter .counter__item .inform {
     margin-right: 34px;
   }
+}
+
+@media (max-width: 767px) and (min-width: 375px) {
+  .box__bannerMain .banner .informPart .title {
+    color: #292f36;
+    font-family: "DM Serif Display";
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .box__bannerMain .banner .informPart .button {
+    width: 149px;
+    height: 44px;
+  }
+  .box__bannerMain .banner .informPart .text {
+    display: none;
+  }
+
+  .box__bannerMain .banner .informPart {
+    margin-top: 71px;
+  }
+
 }
 </style>

@@ -86,4 +86,43 @@ export default {
     max-width: 347px;
   }
 }
+
+@media (max-width: 767px) and (min-width: 375px) {
+  .box__projects .projects__Heading .projects__Title {
+    font-size: 26px;
+  }
+  .box__projects .projects__Heading .projects__Text {
+    display: none;
+  }
+  .box__bannerMain .banner {
+    margin-bottom: 25px;
+}
+.box__projects .projects__Heading {
+    margin-bottom: 19px;
+}
+
+.projects__items {
+    grid-template-columns: repeat(1, 304px);
+    gap: 56px;
+    margin-bottom: 96px;
+  }
+  .item {
+    max-width: 304px;
+  }
+  .itemImage {
+    max-width: 304px;
+  }
+  .box__projects .projects__items .item .itemInform .itemInfom__left .leftSubtitle {
+    font-size: 19px;
+}
+.box__projects .projects__items .item .itemInform .itemInfom__left .leftText {
+    font-size: 16px;
+}
+svg{
+  width: 45px;
+  height: 45px;
+}
+
+}
+
 </style>

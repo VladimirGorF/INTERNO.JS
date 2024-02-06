@@ -112,6 +112,9 @@ a {
 .box__header .right .details {
   position: relative;
 }
+.box__header .rightMobile {
+  display: none;
+}
 .box__bannerMain {
   display: flex;
   justify-content: center;

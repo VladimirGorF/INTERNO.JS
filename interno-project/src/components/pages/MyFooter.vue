@@ -105,13 +105,13 @@ export default {
 <style lang="scss" scoped>
 @media (max-width: 1440px) and (min-width: 1024px) {
   .footer {
-    grid-template-columns: repeat(3, 252px) !important;
+    grid-template-columns: repeat(3, 250px) !important;
 }
   .footer__middle {
     padding-left: 60px !important;
   }
   .pages {
-    margin-left: -100px !important;
+    margin-left: -120px !important;
 }
   .footer__right {
     padding-left: 26px !important;
@@ -122,6 +122,7 @@ export default {
 
   .footer {
     grid-template-columns: repeat(3, 222px) !important;
+    margin-bottom: 45px !important;
 }
   .footer__middle {
     padding-left: 60px !important;
