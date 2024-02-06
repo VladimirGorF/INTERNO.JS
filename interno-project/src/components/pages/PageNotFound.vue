@@ -138,7 +138,4 @@ img {
   max-width: 700px;
 }
 
-@media (min-width: 320px) and (max-width: 640px) {
-
-}
 </style>

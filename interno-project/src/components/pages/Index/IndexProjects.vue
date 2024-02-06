@@ -60,5 +60,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@media (max-width: 1440px) and (min-width: 1024px)  {
+  .projects__items {
+    grid-template-columns: repeat(2, 400px);
+    gap: 24px;
+    margin-bottom: 96px;
+  }
+  .item {
+    max-width: 400px;
+  }
+  .itemImage {
+    max-width: 400px;
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px)  {
+  .projects__items {
+    grid-template-columns: repeat(2, 347px);
+    gap: 56px;
+    margin-bottom: 96px;
+  }
+  .item {
+    max-width: 347px;
+  }
+  .itemImage {
+    max-width: 347px;
+  }
+}
 </style>

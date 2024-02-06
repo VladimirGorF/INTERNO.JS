@@ -244,11 +244,11 @@ export default new Vuex.Store({
           },
           {
             url: 'indexImages/Blog2.svg',
-            title: 'Low Cost Latest Invented Interior Designing <br/> Ideas.'
+            title: 'Low Cost Latest Invented Interior Designing Ideas.'
           },
           {
             url: 'indexImages/Blog3.svg',
-            title: 'Best For Any Office & Business Interior <br/> Solution'
+            title: 'Best For Any Office & Business Interior Solution'
           }
         ]
         commit('SET_ExamplesList', examplesList)

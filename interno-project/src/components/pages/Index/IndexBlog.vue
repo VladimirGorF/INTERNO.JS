@@ -76,4 +76,28 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .examples {
+    grid-template-columns: repeat(3, 270px);
+  }
+  .examples__image {
+    max-width: 230px;
+  }
+  .box__blog .examples .examples__Item .title {
+    max-width: 305px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .examples {
+    grid-template-columns: repeat(3, 235px);
+  }
+  .examples__image {
+    max-width: 194px;
+  }
+  .box__blog .examples .examples__Item .title {
+    font-size: 21px !important;
+  }
+}
+</style>

@@ -104,14 +104,12 @@ export default {
     IndexBlog
   },
   data () {
-    return {
-    }
+    return {}
   },
   created () {
     this.SET_Visibility(true) // переход c NonExistPage, передаем true во флаг старницы NotFound
   },
   methods: {
-
     makeSound () {
       const audio = new Audio(
         require('../../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
@@ -123,6 +121,45 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .box__bannerMain .banner {
+    max-width: 856px;
+  }
+  .box__counter .counter__item .inform {
+    margin-right: 24px;
+  }
+  .box__counter .counter__item .line {
+    margin-right: 38px;
+}
+}
 
+@media (max-width: 1023px) and (min-width: 768px) {
+  .box__lineMainBox .lineBox {
+    grid-template-columns: repeat(3, 250px);
+  }
+  .box__lineMainBox .lineBox .index {
+    height: 3300px !important;
+  }
+
+  .box__bannerMain .banner .informPart .button {
+    width: 160px;
+    height: 50px;
+  }
+  .box__bannerMain .banner .informPart .title {
+    font-size: 50px;
+  }
+  .box__bannerMain .banner {
+    max-width: 762px;
+  }
+  .bannerImage {
+    max-width: 99% !important;
+  }
+  .box__counter .counter__item .line {
+    margin-right: 50px;
+  }
+  .box__counter .counter__item .inform {
+    margin-right: 34px;
+  }
+}
 </style>

@@ -1,0 +1,14 @@
+.box__projects .projects__items {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 447px);
+  gap: 56px;
+  margin-bottom: 96px;
+}
+.box__projects .projects__items .item {
+  max-width: 447px;
+}
+.box__projects .projects__items .item .itemImage {
+  max-width: 447px;
+  margin-bottom: 24px;
+}
