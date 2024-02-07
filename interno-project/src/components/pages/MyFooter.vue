@@ -134,4 +134,55 @@ export default {
     padding-left: 26px !important;
   }
 }
+
+@media (max-width: 767px){
+  .box .footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__left{
+    text-align: center;
+  }
+  .box .footer__left .top{
+    justify-content: center;
+  }
+  .box .footer__left .logo{
+    justify-content: center;
+  }
+  .box .footer .footer__middle{
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .box .footer .footer__middle .pages{
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .box .footer .footer__right{
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .box .footer .footer__right .title{
+    text-align: center;
+  }
+  .box .footer .footer__right .contacts{
+    text-align: center;
+  }
+  .box .footer .footer__right .contacts .contactsText{
+    text-align: center;
+  }
+  .box .footer__left .logo{
+    justify-content: space-around;
+  }
+  .box .footer .footer__middle{
+    padding-top: 10px;
+  }
+
+}
 </style>

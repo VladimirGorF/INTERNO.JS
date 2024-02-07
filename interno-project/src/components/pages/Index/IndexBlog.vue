@@ -100,4 +100,24 @@ export default {
     font-size: 21px !important;
   }
 }
+
+@media (max-width: 767px) {
+  .box__blog{
+    margin-bottom: 220px;
+  }
+  .box__blog .title {
+    font-size: 40px;
+  }
+  .box__blog .boxBlogText{
+    font-size: 17px;
+  }
+
+  .box__blog .examples{
+    display: flex;
+    flex-direction: column;
+  }
+  .box__blog .examples .examples__Item{
+    max-width: 330px;
+  }
+}
 </style>

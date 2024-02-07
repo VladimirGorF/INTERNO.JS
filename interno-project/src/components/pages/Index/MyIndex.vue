@@ -169,7 +169,16 @@ export default {
   }
 }
 
-@media (max-width: 767px) and (min-width: 375px) {
+@media (max-width: 767px) {
+  .box__lineMainBox .lineBox {
+    grid-template-columns: repeat(3, 124px);
+  }
+  .box__lineMainBox .lineBox .index {
+    height: 4658px !important;
+  }
+  .bannerImage {
+    max-width: 99% !important;
+  }
   .box__bannerMain .banner .informPart .title {
     color: #292f36;
     font-family: "DM Serif Display";
@@ -187,7 +196,28 @@ export default {
 
   .box__bannerMain .banner .informPart {
     margin-top: 71px;
+    margin-left: 10px;
   }
 
+  .box__counter {
+    height: 195px;
+    margin-bottom: 20px;
+  }
+  .box__counter .counter__item .inform .number {
+    font-size: 35px;
+  }
+
+  .box__counter .counter__item .line {
+    font-size: 10px;
+  }
+  .box__counter .counter__item .inform .counterText {
+    font-size: 11px;
+  }
+  .box__counter .counter__item .inform {
+    margin-right: 20px;
+  }
+  .box__counter .counter__item .line {
+    margin-right: 20px;
+  }
 }
 </style>

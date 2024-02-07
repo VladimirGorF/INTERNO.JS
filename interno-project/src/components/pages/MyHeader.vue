@@ -163,17 +163,18 @@ summary {
 
 @media (max-width: 1023px) and (min-width: 768px) {
   .box__lineMainBox .lineBox {
-    position: absolute;
-    z-index: -1;
-    display: grid;
     grid-template-columns: repeat(3, 250px);
   }
 }
 
-@media (max-width: 767px) and (min-width: 375px) {
+@media (max-width: 767px) {
+  .box__lineMainBox .lineBox {
+    grid-template-columns: repeat(3, 124px);
+  }
   .box__header {
     margin-top: 15px;
     margin-bottom: 18px;
+    justify-content: space-evenly;
   }
   .menu {
     position: absolute;
@@ -189,7 +190,6 @@ summary {
     font-weight: 400;
     line-height: 125%;
     transition: 0.3s ease-in-out;
-    /* width: 150px; */
     cursor: pointer;
     margin-bottom: 12px;
   }

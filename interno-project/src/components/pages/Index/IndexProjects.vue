@@ -87,7 +87,7 @@ export default {
   }
 }
 
-@media (max-width: 767px) and (min-width: 375px) {
+@media (max-width: 767px){
   .box__projects .projects__Heading .projects__Title {
     font-size: 26px;
   }
