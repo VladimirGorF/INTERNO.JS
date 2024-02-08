@@ -113,8 +113,7 @@ export default {
   }
 
   .box__blog .examples{
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(1, 382px);
   }
   .box__blog .examples .examples__Item{
     max-width: 330px;
