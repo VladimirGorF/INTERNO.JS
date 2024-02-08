@@ -12,9 +12,6 @@ a {
   color: #4D5053;
 }
 
-.box {
-  transition: 1.5s;
-}
 .box__lineMainBox {
   display: flex;
   justify-content: center;
