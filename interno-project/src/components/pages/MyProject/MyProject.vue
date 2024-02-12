@@ -1,12 +1,5 @@
 <template>
-  <div class="box">
-    <div class="box__lineMainBox">
-      <div class="lineBox">
-        <div :class="classLineBox"></div>
-        <div :class="classLineBox"></div>
-        <div :class="classLineBox"></div>
-      </div>
-    </div>
+  <div>
     <div class="box__projectPage">
       <div class="ProjectPageBanner">
         <div class="titleBox">
@@ -31,11 +24,12 @@
 
           <div class="pagination">
             <div class="pagBox">
-              <a href="#toggleMain"
+              <a
+                href="#toggleMain"
                 class="page"
                 @click="
-                  backPage();
                   makeSoundKorotkiy();
+                  backPage();
                   getProducts(activePageId, 8);
                   sliceProducts();
                   pagesCounter();
@@ -43,7 +37,8 @@
                 "
                 >&lt;</a
               >
-              <a href="#toggleMain"
+              <a
+                href="#toggleMain"
                 class="page"
                 v-for="page in slicePages"
                 :key="page.id"
@@ -59,12 +54,13 @@
                 "
                 >0{{ page.id }}</a
               >
-              <a href="#toggleMain"
+              <a
+                href="#toggleMain"
                 class="page"
                 @click="
+                  makeSoundKorotkiy();
                   pagesCounter();
                   forwardPage();
-                  makeSoundKorotkiy();
                   getProducts(activePageId, 8);
                   sliceProducts();
                   getСlassLine();
@@ -91,8 +87,8 @@ export default {
     ExampleItem,
     MyToggle,
   },
-  created () {
-    this.SET_Visibility(true) //  передаем true во флаг страницы NotFound
+  created() {
+    this.SET_Visibility(true); //  передаем true во флаг страницы NotFound
   },
   data() {
     return {
@@ -115,7 +111,6 @@ export default {
           title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
         },
         {
           id: 1,
@@ -123,63 +118,55 @@ export default {
           title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
         },
         {
           id: 2,
-          url: "projectPageImages/4.svg",
+          url: "projectPageImages/3.svg",
           title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
         },
         {
           id: 3,
-          url: "projectPageImages/5.svg",
+          url: "projectPageImages/4.svg",
           title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
         },
         {
           id: 4,
-          url: "projectPageImages/6.svg",
-          title: "Modern Kitchan.",
-          text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
-        },
-        {
-          id: 5,
           url: "projectPageImages/5.svg",
-          title: "Minimal Bathroom.",
-          text: "Decor / Artchitecture",
-          type: "Bathroom",
-          star: 'false'
-        },
-        {
-          id: 6,
-          url: "projectPageImages/8.svg",
-          title: "Minimal Bathroom.",
-          text: "Decor / Artchitecture",
-          type: "Bathroom",
-          star: 'false'
-        },
-        {
-          id: 7,
-          url: "projectPageImages/1.svg",
           title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
+        },
+        {
+          id: 5,
+          url: "projectPageImages/6.svg",
+          title: "Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Bathroom",
+        },
+        {
+          id: 6,
+          url: "projectPageImages/7.svg",
+          title: "Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Bathroom",
+        },
+        {
+          id: 7,
+          url: "projectPageImages/8.svg",
+          title: "Classic Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Bathroom",
         },
         {
           id: 8,
           url: "projectPageImages/1.svg",
-          title: "Modern Bathroom.",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
         },
         {
           id: 9,
@@ -187,303 +174,310 @@ export default {
           title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
         },
         {
           id: 10,
-          url: "projectPageImages/5.svg",
+          url: "projectPageImages/4.svg",
           title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
         },
         {
           id: 11,
-          url: "projectPageImages/4.svg",
-          title: "Minimal Bathroom.",
+          url: "projectPageImages/3.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
-          star: 'false'
         },
+
         {
           id: 12,
-          url: "projectPageImages/5.svg",
-          title: "Classic Minimal Bed Room.",
+          url: "projectPageImages/3.svg",
+          title: "Bed Room",
           text: "Decor / Artchitecture",
           type: "Bed Room",
-          star: 'false'
         },
         {
           id: 13,
-          url: "projectPageImages/6.svg",
-          title: "Modern Bed Room.",
+          url: "projectPageImages/2.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
-          star: 'false'
         },
         {
           id: 14,
-          url: "projectPageImages/7.svg",
-          title: "Minimal Kitchan.",
+          url: "projectPageImages/3.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 15,
-          url: "projectPageImages/8.svg",
-          title: "Minimal Kitchan.",
+          url: "projectPageImages/4.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 16,
-          url: "projectPageImages/1.svg",
-          title: "Classic Minimal Living Area.",
+          url: "projectPageImages/4.svg",
+          title: "Bed Room",
           text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 17,
-          url: "projectPageImages/1.svg",
-          title: "Modern Living Area.",
+          url: "projectPageImages/6.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 18,
-          url: "projectPageImages/2.svg",
-          title: "Modern Living Area.",
+          url: "projectPageImages/7.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 19,
-          url: "projectPageImages/3.svg",
-          title: "Modern Living Area.",
+          url: "projectPageImages/8.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 20,
-          url: "projectPageImages/4.svg",
-          title: "Modern Living Area.",
+          url: "projectPageImages/1.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 21,
-          url: "projectPageImages/5.svg",
-          title: "Modern Living Area.",
+          url: "projectPageImages/2.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 22,
-          url: "projectPageImages/6.svg",
-          title: "Modern Living Area.",
+          url: "projectPageImages/4.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
+          type: "Bed Room",
         },
         {
           id: 23,
-          url: "projectPageImages/7.svg",
-          title: "Modern Living Area.",
-          text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
-        },
-        {
-          id: 24,
-          url: "projectPageImages/8.svg",
-          title: "Modern Living Area.",
-          text: "Decor / Artchitecture",
-          type: "Living Area",
-          star: 'false'
-        },
-        ,
-        {
-          id: 25,
-          url: "projectPageImages/1.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/3.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bed Room",
-          star: 'false'
+        },
+
+        {
+          id: 24,
+          url: "projectPageImages/1.svg",
+          title: "Kitchan",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
+        },
+        {
+          id: 25,
+          url: "projectPageImages/2.svg",
+          title: "Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Kitchan",
         },
         {
           id: 26,
-          url: "projectPageImages/2.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/3.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Bed Room",
-          star: 'false'
+          type: "Kitchan",
         },
         {
           id: 27,
-          url: "projectPageImages/3.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/4.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Bed Room",
-          star: 'false'
+          type: "Kitchan",
         },
         {
           id: 28,
-          url: "projectPageImages/4.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/5.svg",
+          title: "Modern Kitchan.",
           text: "Decor / Artchitecture",
-          type: "Bed Room",
-          star: 'false'
+          type: "Kitchan",
         },
         {
           id: 29,
-          url: "projectPageImages/5.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/6.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Bed Room",
-          star: 'false'
+          type: "Kitchan",
         },
         {
           id: 30,
-          url: "projectPageImages/6.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/7.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Bed Room",
-          star: 'false'
+          type: "Kitchan",
         },
         {
           id: 31,
-          url: "projectPageImages/7.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/8.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Bed Room",
-          star: 'false'
+          type: "Kitchan",
         },
         {
           id: 32,
-          url: "projectPageImages/8.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/1.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Bed Room",
-          star: 'false'
+          type: "Kitchan",
         },
         {
           id: 33,
-          url: "projectPageImages/1.svg",
-          title: "Modern Bedroom.",
+          url: "projectPageImages/2.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
-          star: 'false'
         },
         {
           id: 34,
-          url: "projectPageImages/8.svg",
-          title: "Modern Kitchan.",
+          url: "projectPageImages/4.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
-          star: 'false'
         },
-        ,
         {
           id: 35,
-          url: "projectPageImages/1.svg",
-          title: "Modern Kitchan.",
+          url: "projectPageImages/3.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Kitchan",
-          star: 'false'
         },
         {
           id: 36,
-          url: "projectPageImages/2.svg",
-          title: "Modern Kitchan.",
+          url: "projectPageImages/3.svg",
+          title: "Living Area",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Living Area",
         },
         {
           id: 37,
-          url: "projectPageImages/3.svg",
-          title: "Modern Kitchan.",
+          url: "projectPageImages/2.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Living Area",
         },
         {
           id: 38,
-          url: "projectPageImages/4.svg",
-          title: "Modern Kitchan.",
+          url: "projectPageImages/3.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Living Area",
         },
         {
           id: 39,
-          url: "projectPageImages/3.svg",
-          title: "Modern Kitchan.",
+          url: "projectPageImages/4.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Living Area",
         },
         {
           id: 40,
           url: "projectPageImages/4.svg",
-          title: "Modern Kitchan.",
+          title: "Living Area",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Living Area",
         },
         {
           id: 41,
-          url: "projectPageImages/5.svg",
-          title: "Modern Kitchan.",
+          url: "projectPageImages/6.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Living Area",
         },
         {
           id: 42,
-          url: "projectPageImages/6.svg",
-          title: "Modern Bathroom.",
+          url: "projectPageImages/7.svg",
+          title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Bathroom",
-          star: 'false'
+          type: "Living Area",
         },
         {
           id: 43,
-          url: "projectPageImages/6.svg",
-          title: "Modern Kitchan.",
+          url: "projectPageImages/8.svg",
+          title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
-          type: "Kitchan",
-          star: 'false'
+          type: "Living Area",
+        },
+        {
+          id: 44,
+          url: "projectPageImages/1.svg",
+          title: "Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 45,
+          url: "projectPageImages/2.svg",
+          title: "Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 46,
+          url: "projectPageImages/4.svg",
+          title: "Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 47,
+          url: "projectPageImages/3.svg",
+          title: "Classic Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 48,
+          url: "projectPageImages/4.svg",
+          title: "Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
+        },
+        {
+          id: 49,
+          url: "projectPageImages/3.svg",
+          title: "Classic Minimal Bathroom.",
+          text: "Decor / Artchitecture",
+          type: "Living Area",
         },
       ],
     };
   },
 
   methods: {
-    ...mapMutations(['SET_Visibility']),
+    ...mapMutations(["SET_Visibility"]),
     makeSound() {
       const audio = new Audio(
         require("../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3")
       );
       audio.play();
     },
-    makeSoundKorotkiy () {
+    makeSoundKorotkiy() {
       const audio = new Audio(
-        require('../../../assets/sounds/knopka-klik-korotkii-odinochnyii-shumnyii.mp3')
-      )
-      audio.play()
+        require("../../../assets/sounds/knopka-klik-korotkii-odinochnyii-shumnyii.mp3")
+      );
+      audio.play();
     },
     filterToggle(toggle) {
       this.activeToggleName = toggle;
-      this.activePageId = 1
+      this.activePageId = 1;
       this.pageEnd = 2; // а дальше функциями ниже он изменится
       this.getProducts(1, 8);
       this.sliceProducts(); // обновляем фильтрацию
@@ -491,6 +485,7 @@ export default {
       this.getСlassLine(); // управление вертикальными линиями и размером сетки контента
     },
     movePage(page) {
+      this.makeSoundKorotkiy();
       if (
         this.pageEnd > this.pagesQuantity + 1 ||
         page === this.pagesQuantity
@@ -499,11 +494,9 @@ export default {
       } else if (page + 1 === this.pageEnd) {
         this.pageStart += 1;
         this.pageEnd += 1;
-        return;
       } else if (page === this.pageStart && this.pageStart !== 1) {
         this.pageStart -= 1;
         this.pageEnd -= 1;
-        return;
       }
     },
     forwardPage() {
@@ -593,8 +586,7 @@ export default {
       ) {
         this.classLineBox = "box projectMedium2";
         this.classExamples = "examplesMedium2 examples";
-      }
-      else {
+      } else {
         this.classLineBox = "box project";
         this.classExamples = "examples";
       }

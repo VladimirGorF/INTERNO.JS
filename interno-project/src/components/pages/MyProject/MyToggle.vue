@@ -39,7 +39,8 @@ export default {
       this.$emit('filterToggle', toggle)
     },
     makeSound () {
-      const audio = new Audio(require('../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
+      const audio = new Audio(
+        require('../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3')
       )
       audio.play()
     }

@@ -1,12 +1,5 @@
 <template>
-  <div class="box">
-    <div class="box__lineMainBox">
-      <div class="lineBox">
-        <div class="box blogDetails"></div>
-        <div class="box blogDetails"></div>
-        <div class="box blogDetails"></div>
-      </div>
-    </div>
+  <div>
     <div class="box__blogDetailsPage">
       <div class="articleBlogBanner"></div>
       <div id="app" class="articlesBox">

@@ -102,21 +102,26 @@ export default {
 }
 
 @media (max-width: 767px) {
-  .box__blog{
-    margin-bottom: 220px;
+  .box__blog {
+    margin-bottom: 177px;
   }
   .box__blog .title {
     font-size: 40px;
   }
-  .box__blog .boxBlogText{
+  .box__blog .boxBlogText {
     font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
-  .box__blog .examples{
-    grid-template-columns: repeat(1, 382px);
+  .box__blog .examples {
+    grid-template-columns: repeat(1, 90%);
   }
-  .box__blog .examples .examples__Item{
-    max-width: 330px;
+  .box__blog .examples .examples__Item {
+    max-width: 100%;
+  }
+  .box__blog .examples .examples__Item .examples__image {
+    width: 100%;
   }
 }
 </style>

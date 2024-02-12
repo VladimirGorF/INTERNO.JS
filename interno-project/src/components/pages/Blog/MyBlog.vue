@@ -1,12 +1,5 @@
 <template>
-  <div class="box">
-    <div class="box__lineMainBox">
-      <div class="lineBox">
-        <div class="box blog"></div>
-        <div class="box blog"></div>
-        <div class="box blog"></div>
-      </div>
-    </div>
+  <div>
     <div class="box__blogBanner">
       <div class="titleBox">
         <div class="title">Articles & News</div>

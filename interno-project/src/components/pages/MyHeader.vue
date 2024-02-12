@@ -1,12 +1,5 @@
 <template>
-  <div class="box">
-    <div class="box__lineMainBox">
-      <div class="lineBox">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-      </div>
-    </div>
+  <div>
     <div class="box__header">
       <router-link to="/index"
         ><h6 class="">
@@ -33,45 +26,14 @@
           <summary class="summary">
             <svg
               class="menuMobile"
-              width="32"
-              height="23"
-              viewBox="0 0 32 23"
-              fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+              width="50px"
+              height="50px"
             >
-              <rect width="32" height="23" fill="#E5E5E5" />
-              <g id="tablet 768_index" clip-path="url(#clip0_188_673)">
-                <rect
-                  width="768"
-                  height="2976"
-                  transform="translate(-567 -31)"
-                  fill="white"
-                />
-                <g id="Header">
-                  <path
-                    id="Rectangle 25"
-                    d="M201 -31H-567V43H201V-31Z"
-                    fill="#222222"
-                  />
-                </g>
-                <g id="Button copy">
-                  <path
-                    id="Forma 1"
-                    d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z"
-                    fill="#E8E8E8"
-                  />
-                </g>
-              </g>
-              <defs>
-                <clipPath id="clip0_188_673">
-                  <rect
-                    width="768"
-                    height="2976"
-                    fill="white"
-                    transform="translate(-567 -31)"
-                  />
-                </clipPath>
-              </defs>
+              <path
+                d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+              />
             </svg>
           </summary>
           <ul class="menu">
@@ -152,26 +114,9 @@ summary {
   width: 150px;
 }
 
-@media (max-width: 1440px) and (min-width: 1024px) {
-  .box__lineMainBox .lineBox {
-    position: absolute;
-    z-index: -1;
-    display: grid;
-    grid-template-columns: repeat(3, 285px);
-  }
-}
-
-@media (max-width: 1023px) and (min-width: 768px) {
-  .box__lineMainBox .lineBox {
-    grid-template-columns: repeat(3, 250px);
-  }
-}
-
 @media (max-width: 767px) {
-  .box__lineMainBox .lineBox {
-    grid-template-columns: repeat(3, 124px);
-  }
   .box__header {
+    gap: 50px;
     margin-top: 15px;
     margin-bottom: 18px;
     justify-content: space-evenly;
@@ -179,7 +124,7 @@ summary {
   .menu {
     position: absolute;
     z-index: 1;
-    left: 235px;
+    left: 64%;
   }
   .rightPage {
     color: black;
@@ -192,6 +137,9 @@ summary {
     transition: 0.3s ease-in-out;
     cursor: pointer;
     margin-bottom: 12px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
   }
   .rightPage:hover {
     color: #e18709;
@@ -207,9 +155,6 @@ summary {
   .rightMobile {
     display: block !important;
     text-align: center;
-  }
-  .menuMobile {
-    margin-top: 15px;
   }
 }
 </style>

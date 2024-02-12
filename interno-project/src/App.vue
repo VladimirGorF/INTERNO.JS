@@ -1,8 +1,14 @@
 <template>
-  <div>
+  <div class="box">
+    <div class="lineBox">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
     <MyHeader />
     <router-view />
-    <MyFooter v-if="visibility"/>
+    <MyFooter v-if="visibility" />
   </div>
 </template>
 

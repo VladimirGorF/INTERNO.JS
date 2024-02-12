@@ -1,12 +1,5 @@
 <template>
-  <div class="box">
-    <div class="box__lineMainBox">
-      <div class="lineBox">
-        <div class="box projectDetails"></div>
-        <div class="box projectDetails"></div>
-        <div class="box projectDetails"></div>
-      </div>
-    </div>
+  <div class="projactDetalsPage">
     <div class="banner"></div>
     <div class="informBox">
       <div class="inform">
@@ -16,7 +9,7 @@
     </div>
     <div class="sliderBox">
       <img
-        class="searchImage"
+        :class="searchImageClass"
         src="../../../assets/images/projectPageImages/search.svg"
         alt="searchImg"
         @click="preview()"
@@ -57,7 +50,8 @@ export default {
   data () {
     return {
       sliderBoxClass: 'slider',
-      activeSlide: 0
+      activeSlide: 0,
+      searchImageClass: 'searchImage'
     }
   },
   created () {
@@ -69,8 +63,10 @@ export default {
       this.makeSoundPreview()
       if (this.sliderBoxClass === 'slider') {
         this.sliderBoxClass = 'sliderBig'
+        this.searchImageClass = 'searchImage searchImageBig'
       } else {
         this.sliderBoxClass = 'slider'
+        this.searchImageClass = 'searchImage'
       }
     },
     makeSound () {
@@ -182,19 +178,20 @@ export default {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
+  height: 800px;
 }
 .slider {
-  width: 800px;
-  height: 800px;
+  width: 60%;
+  height: 100%;
   position: relative;
   overflow: hidden;
   transition: 1s;
 }
 
 .sliderBig {
-  width: 1500px;
-  height: 1200px;
+  width: 100%;
+  height: 150%;
   position: relative;
   overflow: hidden;
   transition: 1s;
@@ -208,26 +205,26 @@ export default {
 }
 
 .outRight {
-  top: 100px;
-  left: 1500px;
+  top: 10px;
+  left: 1300px;
   z-index: -1;
 }
 .outLeft {
-  top: 100px;
-  left: -1500px;
+  top: 10px;
+  left: -1300px;
   z-index: -1;
 }
 
 .active {
   left: 0px;
-  top: 100px;
+  top: 10px;
 }
 
 button {
   border-radius: 20px;
   position: absolute;
-  top: 55%;
-  opacity: 0.3;
+  top: 48%;
+  opacity: 0.2;
   width: 100px;
   font-size: 50px;
   cursor: pointer;
@@ -248,16 +245,21 @@ button:hover {
 
 .searchImage {
   position: absolute;
-  top: 50%;
-  left: 45%;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%);
   z-index: 2;
   cursor: pointer;
   transition: 0.3s;
   opacity: 0.4;
+  transition: 1s;
+}
+
+.searchImageBig {
+  top: 75%;
 }
 
 .searchImage:hover {
-  transform: scale(1.1);
   opacity: 0.7;
 }
 

@@ -1,12 +1,5 @@
 <template>
-  <div class="box">
-    <div class="box__lineMainBox">
-      <div class="lineBox">
-        <div class="box index"></div>
-        <div class="box index"></div>
-        <div class="box index"></div>
-      </div>
-    </div>
+  <div>
     <div class="box__bannerMain">
       <div class="banner">
         <img
@@ -15,7 +8,10 @@
           class="bannerImage"
         />
         <div class="informPart">
-          <h1 class="title">Let Your Home Be Unique</h1>
+          <h1 class="title">
+            Let Your Home <br />
+            Be Unique
+          </h1>
           <p class="text">
             There are many variations of the passages of <br />
             lorem Ipsum fromavailable, majority.
@@ -123,12 +119,6 @@ export default {
 
 <style lang="scss" scoped>
 @media (max-width: 1440px) and (min-width: 1024px) {
-  .box__lineMainBox .lineBox {
-    grid-template-columns: repeat(3, 285px);
-  }
-  .box__lineMainBox .lineBox .index {
-    height: 3500px !important;
-  }
   .box__bannerMain .banner {
     max-width: 856px;
   }
@@ -141,12 +131,6 @@ export default {
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
-  .box__lineMainBox .lineBox {
-    grid-template-columns: repeat(3, 250px);
-  }
-  .box__lineMainBox .lineBox .index {
-    height: 3300px !important;
-  }
 
   .box__bannerMain .banner .informPart .button {
     width: 160px;
@@ -170,21 +154,26 @@ export default {
 }
 
 @media (max-width: 767px) {
-  .box__lineMainBox .lineBox {
-    grid-template-columns: repeat(3, 124px);
+
+  .box__bannerMain .banner {
+    margin-bottom: 34px;
   }
-  .box__lineMainBox .lineBox .index {
-    height: 4658px !important;
+  .box__bannerMain .banner .informPart {
+    margin-top: 18%;
+    left: 0%;
+    max-width: 87%;
   }
+
   .bannerImage {
-    max-width: 99% !important;
+    max-width: 95% !important;
   }
   .box__bannerMain .banner .informPart .title {
     color: #292f36;
     font-family: "DM Serif Display";
-    font-size: 23px;
+    font-size: 31px;
     font-style: normal;
     font-weight: 400;
+    margin-bottom: 17px;
   }
   .box__bannerMain .banner .informPart .button {
     width: 149px;
@@ -192,11 +181,6 @@ export default {
   }
   .box__bannerMain .banner .informPart .text {
     display: none;
-  }
-
-  .box__bannerMain .banner .informPart {
-    margin-top: 71px;
-    margin-left: 10px;
   }
 
   .box__counter {
@@ -218,6 +202,15 @@ export default {
   }
   .box__counter .counter__item .line {
     margin-right: 20px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 400px) {
+  .bannerImage {
+    max-width: 95%;
+  }
+  .box__bannerMain .banner .informPart .title {
+    margin-bottom: 34px;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div>
      <div class="footer">
        <div class="footer__left">
          <router-link to="/index">
@@ -140,6 +140,8 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .footer__left{
     text-align: center;

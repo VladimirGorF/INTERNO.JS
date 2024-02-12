@@ -102,25 +102,25 @@ export default {
 }
 
 .projects__items {
-    grid-template-columns: repeat(1, 304px);
-    gap: 56px;
+    grid-template-columns: repeat(2, 45%);
+    gap: 16px;
     margin-bottom: 96px;
   }
   .item {
-    max-width: 304px;
+    max-width: 100%;
   }
   .itemImage {
-    max-width: 304px;
+    max-width: 100%;
   }
-  .box__projects .projects__items .item .itemInform .itemInfom__left .leftSubtitle {
-    font-size: 19px;
+  .leftSubtitle {
+    font-size: 16px !important;
 }
-.box__projects .projects__items .item .itemInform .itemInfom__left .leftText {
-    font-size: 16px;
+ .itemInfom__left .leftText {
+    font-size: 10px !important;
 }
 svg{
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
 }
 
 }
