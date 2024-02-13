@@ -11,6 +11,9 @@ a
     text-decoration: none
     color: #4D5053
 
+details summary::-webkit-details-marker 
+    display: none
+
 .box
     position: relative
 
@@ -193,16 +196,19 @@ a
                 line-height: 125%
                 letter-spacing: 1px
                 margin-bottom: 27px
+                margin-left: 25px
             .contentPost
                 display: flex
                 gap: 65px
                 padding: 22px
                 border-radius: 62px
                 border: 1px solid #E7E7E7
+                margin: 10px
                 .imagePost
                     border-radius: 40px
                 .informPost
-                    width: 463px
+                    width: 100%
+                    max-width: 463px
                     margin-top: 50px
                     .titleInformPost
                         color: #292F36
@@ -852,7 +858,7 @@ a
                 .examplesMedium
                     height: 1800px
                 .examplesMedium2
-                    height: 00px
+                    height: 2800px
                 .examplesSmall
                     height: 1150px
 
@@ -907,12 +913,18 @@ a
         &__projectPage
             .examples
                 height: 3050px !important
+                &__Item
+                    .star
+                        left: 85% !important
 
 @media (max-width: 912px) and (min-width: 768px)
     .box
         &__projectPage
             .examples
                 height: 2800px !important
+                &__Item
+                    .star
+                        left: 82% !important
 
 @media (max-width: 767px) and (min-width: 664px)
     .box
@@ -923,6 +935,9 @@ a
                 .blogPageContent
                     .examples
                         height: 2500px
+                        &__Item
+                            .star
+                                left: 80% !important
 
 @media (max-width: 663px) and (min-width: 561px)
     .box
@@ -933,6 +948,9 @@ a
                 .blogPageContent
                     .examples
                         height: 2200px
+                        &__Item
+                            .star
+                                left: 80% !important
 
 @media (max-width: 560px) and (min-width: 463px)
     .box
@@ -943,6 +961,9 @@ a
                 .blogPageContent
                     .examples
                         height: 2000px
+                        &__Item
+                            .star
+                                left: 77% !important
 
 @media (max-width: 462px)
     .box
@@ -952,11 +973,12 @@ a
             .examples
                 .examples__Item
                     .star
-                        left: 67% !important
+                        top: 15px !important
+                        left: 76% !important
             .ProjectContent
                 .blogPageContent
                     .examples
-                        height: 1500px
+                        height: 1480px
                         .examples__Item
                             padding: 5px 5px
                             .title
@@ -1067,3 +1089,115 @@ a
                         left: -450px
             .iconsBox
                 margin-bottom: 170px
+
+// Медиа БлогПэйдж
+@media(max-width: 1440px) and (min-width: 1024px)
+    .box__blogPage
+        .blogPageContent
+            .examples
+                grid-template-columns: repeat(2, 382px)
+
+@media(max-width: 1023px) and (min-width: 768px)
+    .box__blogPage
+        .blogPageContent
+            .examples
+                grid-template-columns: repeat(2, 350px)
+                .examples__Item
+                    .examples__image
+                        max-width: 308px
+    .box__Post
+        .postMain
+            .contentPost
+                display: block
+
+@media(max-width: 767px)
+    .box__blogPage
+        .blogPageContent
+            .titleBlogPage
+                font-size: 40px
+                margin-left: 25px
+            .examples
+                grid-template-columns: repeat(1, 350px)
+                .examples__Item
+                    .examples__image
+                        max-width: 308px
+    .box__Post
+        margin-bottom: 50px
+        .postMain
+            .title
+                font-size: 40px
+            .contentPost
+                flex-direction: column
+                align-items: center
+                gap: 0
+                .imagePost
+                    max-width: 310px
+    .box__blogBanner
+        margin-bottom: 40px
+        .titleBox
+            margin-left: 5px
+            margin-right: 5px
+            max-width: 300px
+            .title
+                font-size: 40px
+
+// Медиа BlogDetails
+
+@media(max-width: 1440px) and (min-width: 1024px)
+    .box__blogDetailsPage
+        .articlesBox
+            .articles
+                .left
+                    max-width: 550px
+                    .article
+                        .title
+                            margin-bottom: 40px
+
+@media(max-width: 1023px) and (min-width: 768px)
+    .box__blogDetailsPage
+        .articlesBox
+            .articles
+                .left
+                    max-width: 400px
+                    .article
+                        .articleImage
+                            max-width: 416px
+                        .title
+                            margin-bottom: 40px
+                            font-size: 25px
+                        .dateInformation
+                            .right
+                                display: contents
+                .right
+                    max-width: 145px
+        .articleBlogBanner
+            max-height: 275px
+            margin-bottom: 50px
+
+@media(max-width: 767px)
+    .box__blogDetailsPage
+        .articlesBox
+            .articles
+                flex-direction: column-reverse
+                .left
+                    max-width: 360px
+                    .article
+                        .articleImage
+                            max-width: 360px
+                        .title
+                            margin-bottom: 40px
+                            font-size: 25px
+                        .dateInformation
+                            .right
+                                display: contents
+                .right
+                    max-width: 300px
+                    .title
+                        margin-left: 20px
+                    .tagsBox
+                        .button
+                            padding: 4px 16px
+
+        .articleBlogBanner
+            max-height: 275px
+            margin-bottom: 50px

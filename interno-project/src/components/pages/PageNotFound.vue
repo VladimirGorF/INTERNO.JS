@@ -6,7 +6,7 @@
         <h5 class="text">
           We are sorry, but the page you requested was not found
         </h5>
-        <router-link to="/index">
+        <router-link to="/index" class="reference">
           <div class="button" @click="makeSound()">
             <p class="buttonText">Back To Home</p>
             <svg
@@ -56,8 +56,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.nepBox{
+.nepBox {
   margin-top: -60px;
 }
 .box__header {
@@ -131,4 +130,64 @@ img {
   max-width: 700px;
 }
 
+@media (max-width: 1440px) {
+  img {
+    max-width: 500px;
+  }
+  .title404 {
+    font-size: 150px;
+  }
+  .leftSide {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  img {
+    max-width: 400px;
+  }
+  .title404 {
+    font-size: 150px;
+    margin-top: 0px;
+  }
+  .leftSide {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  img {
+    max-width: 350px;
+  }
+  .title404 {
+    font-size: 150px;
+    margin-bottom: 55%;
+  }
+  .text {
+    font-size: 19px;
+  }
+  .leftSide {
+    margin-left: 30px;
+    margin-right: 30px;
+    max-width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+  }
+  .content {
+    margin-top: 0px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0px;
+    position: relative;
+  }
+  .nepBox {
+    margin-top: 0px;
+  }
+  .reference {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
 </style>
