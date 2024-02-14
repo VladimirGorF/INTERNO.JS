@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true,
-  publicPath: '/INTERNO.JS/'
+  transpileDependencies: true
+  // publicPath: '/INTERNO.JS/'
 })

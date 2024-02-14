@@ -787,6 +787,8 @@ details summary::-webkit-details-marker
                 color: #fefefe
 
         .ProjectContent
+            // margin-left: 5%
+            // margin-right: 5%
             display: flex
             justify-content: center
 
@@ -802,10 +804,10 @@ details summary::-webkit-details-marker
                     margin-bottom: 30px
 
                 .examples
-                    max-width: 100%
+                    width: 1200px
                     display: flex
                     flex-flow: column wrap
-                    height: 3600px
+                    height: 3400px
                     gap: 1%
                     .examples__Item
                         position: relative
@@ -898,13 +900,15 @@ details summary::-webkit-details-marker
     .box
         &__projectPage
             .examples
-                height: 3650px !important
+                height: 3050px !important
+                width: 1050px !important
 
 @media (max-width: 1180px) and (min-width: 1024px)
     .box
         &__projectPage
             .examples
-                height: 3350px !important
+                height: 2900px !important
+                width: 1000px !important
                 .examples__Item
                     padding: 16px 16px !important
 
@@ -912,7 +916,8 @@ details summary::-webkit-details-marker
     .box
         &__projectPage
             .examples
-                height: 3050px !important
+                height: 2700px !important
+                width: 900px !important
                 &__Item
                     .star
                         left: 85% !important
@@ -921,7 +926,8 @@ details summary::-webkit-details-marker
     .box
         &__projectPage
             .examples
-                height: 2800px !important
+                height: 2400px !important
+                width: 700px !important
                 &__Item
                     .star
                         left: 82% !important
@@ -934,7 +940,8 @@ details summary::-webkit-details-marker
             .ProjectContent
                 .blogPageContent
                     .examples
-                        height: 2500px
+                        height: 2100px
+                        width: 600px !important
                         &__Item
                             .star
                                 left: 80% !important
@@ -947,10 +954,12 @@ details summary::-webkit-details-marker
             .ProjectContent
                 .blogPageContent
                     .examples
-                        height: 2200px
+                        height: 1900px
+                        width: 540px !important
                         &__Item
+                            box-sizing: border-box
                             .star
-                                left: 80% !important
+                                left: 73% !important
 
 @media (max-width: 560px) and (min-width: 463px)
     .box
@@ -960,16 +969,20 @@ details summary::-webkit-details-marker
             .ProjectContent
                 .blogPageContent
                     .examples
-                        height: 2000px
+                        height: 1600px
+                        width: 400px !important
+                        gap: 0px
                         &__Item
+                            padding: 15px 15px !important
+                            max-width: 45% !important
                             .star
-                                left: 77% !important
+                                left: 70% !important
 
 @media (max-width: 462px)
     .box
         &__projectPage
             .ProjectPageBanner
-                margin-bottom: 50px
+                margin-bottom: 26px
             .examples
                 .examples__Item
                     .star
@@ -978,16 +991,38 @@ details summary::-webkit-details-marker
             .ProjectContent
                 .blogPageContent
                     .examples
-                        height: 1480px
+                        height: 1100px
+                        width: 350px !important
+                        gap: 0px
                         .examples__Item
-                            padding: 5px 5px
+                            box-sizing: border-box
+                            padding: 12px 12px !important
+                            max-width: 48% !important
                             .title
-                                font-size: 18px
+                                font-size: 14px
                             .dateBox
                                 .dateBoxText
-                                    font-size: 17px
+                                    font-size: 11px
+                                .dateBoxImage
+                                    height: 30px
+                                    width: 30px
                             .examples__image
                                 margin-bottom: 6px
+                            .star
+                                top: 25px !important
+                                left: 65% !important
+                    .pagination
+                        margin-bottom: 150px
+            .toggleBoxMain
+                .toggleBox
+                    max-width: 92%
+                    margin-bottom: 10px
+                .toggleActive
+                    font-size: 14px
+                .toggle
+                    font-size: 14px
+                    height: 54px
+
         .footer
             gap: 10px
             &__left
@@ -1178,6 +1213,7 @@ details summary::-webkit-details-marker
     .box__blogDetailsPage
         .articlesBox
             .articles
+                margin-bottom: 15%
                 flex-direction: column-reverse
                 .left
                     max-width: 360px
