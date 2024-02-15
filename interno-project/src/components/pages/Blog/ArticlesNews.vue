@@ -82,6 +82,7 @@ export default {
     // при создании вызывается мутация SET_articles и в нее передаются из коммита в actions данные из fetchDataArticles
     this.SET_articles(this.fetchDataArticles())
     this.productsGet()
+    this.pagesCounterFunc()
   },
   methods: {
     ...mapMutations(['SET_articles']),
@@ -117,7 +118,10 @@ export default {
       }
     },
     forwardPage () {
+      console.log(this.activePageId)
+      console.log(this.pagesQuantity)
       if (this.activePageId === this.pagesQuantity) {
+        // значит и переключаться не надо никуда
         return
       } else if (this.pageEnd === this.pagesQuantity + 1) {
         this.activePageId += 1
