@@ -46,6 +46,10 @@ export default new Router({
       component: MyProject
     },
     {
+      path: '/',
+      redirect: '/index' // перенаправляется на /index
+    },
+    {
       path: '/404',
       name: 'PageNotFound',
       component: PageNotFound

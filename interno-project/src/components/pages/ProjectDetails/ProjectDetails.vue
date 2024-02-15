@@ -37,6 +37,7 @@
           }"
           v-for="(item, index) in sliderUrls"
           :key="index.id"
+          @click="move(index)"
         ></div>
       </div>
     </div>
@@ -109,7 +110,6 @@ export default {
       }
     },
 
-    // если выходим за границы слайдера то будем повторять показ, увеличивая наш массив адресов слайдерских картинок
     forward () {
       if (this.activeSlide < this.sliderUrls.length - 1) {
         this.makeSoundSlider()
@@ -120,6 +120,12 @@ export default {
       if (this.activeSlide > 0) {
         this.makeSoundSlider()
         this.activeSlide--
+      }
+    },
+    move (indexOfClicked) {
+      if (this.activeSlide !== indexOfClicked) {
+        this.makeSoundSlider()
+        this.activeSlide = indexOfClicked
       }
     }
   },
@@ -224,7 +230,7 @@ button {
   border-radius: 20px;
   position: absolute;
   top: 48%;
-  opacity: 0.2;
+  opacity: 0.4;
   width: 100px;
   font-size: 50px;
   cursor: pointer;
@@ -270,6 +276,7 @@ button:hover {
   .icons {
     display: flex;
     gap: 10px;
+    cursor: pointer;
     .icon {
       width: 20px;
       height: 20px;

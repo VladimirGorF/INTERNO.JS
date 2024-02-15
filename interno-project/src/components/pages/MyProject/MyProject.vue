@@ -28,7 +28,6 @@
                 href="#toggleMain"
                 class="page"
                 @click="
-                  makeSoundKorotkiy();
                   backPage();
                   getProducts(activePageId, 8);
                   sliceProducts();
@@ -45,7 +44,6 @@
                 :class="{ active: page.id === activePageId }"
                 @click="
                   activePageId = page.id;
-                  makeSoundKorotkiy();
                   getProducts(page.id, 8);
                   movePage(page.id);
                   sliceProducts();
@@ -58,7 +56,6 @@
                 href="#toggleMain"
                 class="page"
                 @click="
-                  makeSoundKorotkiy();
                   pagesCounter();
                   forwardPage();
                   getProducts(activePageId, 8);
@@ -600,9 +597,11 @@ export default {
       if (this.activePageId === this.pagesQuantity) {
         return;
       } else if (this.pageEnd === this.pagesQuantity + 1) {
+        this.makeSoundKorotkiy();
         this.activePageId += 1;
         return;
       } else if (this.activePageId === 1) {
+        this.makeSoundKorotkiy();
         this.activePageId += 1;
         return;
       }
@@ -615,11 +614,13 @@ export default {
       if (this.activePageId === 1) {
         return;
       } else if (this.pageStart - 1 <= 1) {
+        this.makeSoundKorotkiy();
         this.pageStart = 1;
         this.pageEnd = 4;
         this.activePageId -= 1;
         return;
       } else if (this.activePageId === this.pagesQuantity) {
+        this.makeSoundKorotkiy();
         this.activePageId -= 1;
         return;
       }
@@ -645,7 +646,7 @@ export default {
           return false;
         }
       });
-      this.productsFilteredArray = productsFiltered; // фтльтрованный массив потом используем в pagesCounter ниже
+      this.productsFilteredArray = productsFiltered; // отфильтрованный массив потом используем в pagesCounter ниже
       return productsFiltered.slice(this.productStart, this.productEnd); // срез продуктов на вывод по 8 штук на странице
     },
     pagesCounter() {

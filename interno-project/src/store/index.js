@@ -32,7 +32,6 @@ export default new Vuex.Store({
       state.examplesList = examplesList
     },
     SET_SliderImagesUrls (state, sliderImagesUrls) {
-      // примет картинки из actions, но по факту не принимает
       state.sliderImagesUrls = sliderImagesUrls
     },
     SET_Visibility (state, flag) { // сеттер для флага перехода на страницу NotFound
@@ -257,6 +256,15 @@ export default new Vuex.Store({
     fetchDataSliderImagesUrls ({ commit }) {
       setTimeout(() => {
         const sliderImagesUrls = [
+          {
+            url: 'projectDetailsImages/slider1.svg'
+          },
+          {
+            url: 'indexImages/bannerImage.svg'
+          },
+          {
+            url: 'blogImages/BannerPostPhoto.svg'
+          },
           {
             url: 'projectDetailsImages/slider1.svg'
           },
