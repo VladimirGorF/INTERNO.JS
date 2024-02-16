@@ -6,7 +6,7 @@ import ProjectDetails from '../components/pages/ProjectDetails/ProjectDetails.vu
 import MyHeader from '../components/pages/MyHeader.vue'
 import MyFooter from '../components/pages/MyFooter.vue'
 import MyBlog from '../components/pages/Blog/MyBlog'
-import MyBlogDetails from '../components/pages/MyBlogDetails.vue'
+import MyBlogDetails from '../components/pages/BlogDetails/MyBlogDetails.vue'
 import MyProject from '../components/pages/MyProject/MyProject.vue'
 import PageNotFound from '../components/pages/PageNotFound.vue'
 

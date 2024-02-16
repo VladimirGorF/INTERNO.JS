@@ -40,6 +40,7 @@ export default {
     ...mapMutations(['SET_projectItemsList']),
     ...mapActions(['fetchData']),
     ...mapGetters(['getProjectItemsList']),
+
     makeSound () {
       const audio = new Audio(
         require('../../../assets/sounds/knopka-klik-korotkii-odinochnyii-shumnyii.mp3')
@@ -49,6 +50,7 @@ export default {
   },
   computed: {
     itemsList () {
+      console.log(this.$store.getters.getProjectItemsList)
       return this.$store.getters.getProjectItemsList
     }
   },

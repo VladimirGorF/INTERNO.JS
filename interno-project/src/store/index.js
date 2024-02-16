@@ -13,6 +13,7 @@ export default new Vuex.Store({
     ],
     indexOfLastArticle: -1,
     articles: [], // статьи для ArticlesNews
+    articlesBlog: [], // статьи для BlogDEtails
     titleProjectDetails: 'Minimal Look Bedrooms',
     descriptonProjectDetails:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.'
@@ -21,6 +22,9 @@ export default new Vuex.Store({
     //  перебрасываем наш массив из actions в state
     SET_articles (state, articles) {
       state.articles = articles
+    },
+    SET_articlesBlog (state, articlesBlog) {
+      state.articlesBlog = articlesBlog
     },
     SET_indexOfLastArticle (state, indexOfLastArticle) {
       state.indexOfLastArticle = indexOfLastArticle
@@ -34,7 +38,8 @@ export default new Vuex.Store({
     SET_SliderImagesUrls (state, sliderImagesUrls) {
       state.sliderImagesUrls = sliderImagesUrls
     },
-    SET_Visibility (state, flag) { // сеттер для флага перехода на страницу NotFound
+    SET_Visibility (state, flag) {
+      // сеттер для флага перехода на страницу NotFound
       state.visibility = flag
     }
   },
@@ -234,6 +239,43 @@ export default new Vuex.Store({
         commit('SET_articles', articlesList)
       }, 100)
     },
+    fetchDataArticlesBlog ({ commit }) {
+      setTimeout(() => {
+        const articlesBlogList = [
+          {
+            id: 0,
+            url: 'blogDetailsImages/kitchen.svg',
+            title: 'Let’s Get Solution for Building Construction Work: KITCHEN',
+            dateBoxText: '26 December,2022',
+            type: 'Interior / Home / Decore',
+            sloganCheck: true,
+            subtitle: 'The details are not the details. They make the design.',
+            text: '',
+            text2: '',
+            text3: '',
+            text4: '',
+            text5: ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
+            text6: 'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
+          },
+          {
+            id: 1,
+            url: 'blogDetailsImages/kitchen2.svg',
+            title: 'Let’s Get Solution for Building Construction Work: KITCHEN',
+            dateBoxText: '26 December,2022',
+            type: 'Interior / Home / Decore',
+            sloganCheck: false,
+            subtitle: 'The details are not the details. They make the design.',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text2: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text3: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text4: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text5: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+          }
+
+        ]
+        commit('SET_articlesBlog', articlesBlogList)
+      }, 100)
+    },
     fetchDataExamples ({ commit }) {
       setTimeout(() => {
         const examplesList = [
@@ -263,16 +305,7 @@ export default new Vuex.Store({
             url: 'indexImages/bannerImage.svg'
           },
           {
-            url: 'blogImages/BannerPostPhoto.svg'
-          },
-          {
             url: 'projectDetailsImages/slider1.svg'
-          },
-          {
-            url: 'indexImages/bannerImage.svg'
-          },
-          {
-            url: 'blogImages/BannerPostPhoto.svg'
           }
         ]
         commit('SET_SliderImagesUrls', sliderImagesUrls)
@@ -283,6 +316,7 @@ export default new Vuex.Store({
     // для вызова данных из state в другие компоненты
     getProjectItemsList: (state) => state.projectItemsList,
     getArticlesList: (state) => state.articles,
+    getArticlesBlogList: (state) => state.articlesBlog,
     getindexOfLastArticle: (state) => state.indexOfLastArticle,
     getExamplesList: (state) => state.examplesList,
     getTitleProjectDetails: (state) => state.titleProjectDetails,

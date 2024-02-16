@@ -8,13 +8,7 @@
       </div>
     </div>
     <div class="sliderBox">
-      <img
-        :class="searchImageClass"
-        src="../../../assets/images/projectPageImages/search.svg"
-        alt="searchImg"
-        @click="preview()"
-      />
-      <div :class="sliderBoxClass">
+      <div id="sliderID" :class="sliderBoxClass">
         <img
           class="slide"
           :class="getImageClass(index)"
@@ -25,6 +19,14 @@
         />
         <button class="next" @click="forward()">&gt;</button>
         <button class="prev" @click="back()">&lt;</button>
+        <a href="#sliderID">
+          <img
+            :class="searchImageClass"
+            src="../../../assets/images/projectPageImages/search.svg"
+            alt="searchImg"
+            @click="preview()"
+          />
+        </a>
       </div>
     </div>
     <div class="iconsBox">
@@ -64,10 +66,8 @@ export default {
       this.makeSoundPreview()
       if (this.sliderBoxClass === 'slider') {
         this.sliderBoxClass = 'sliderBig'
-        this.searchImageClass = 'searchImage searchImageBig'
       } else {
         this.sliderBoxClass = 'slider'
-        this.searchImageClass = 'searchImage'
       }
     },
     makeSound () {
@@ -111,15 +111,19 @@ export default {
     },
 
     forward () {
+      this.makeSoundSlider()
       if (this.activeSlide < this.sliderUrls.length - 1) {
-        this.makeSoundSlider()
         this.activeSlide++
+      } else {
+        this.activeSlide = 0
       }
     },
     back () {
+      this.makeSoundSlider()
       if (this.activeSlide > 0) {
-        this.makeSoundSlider()
         this.activeSlide--
+      } else {
+        this.activeSlide = this.sliderUrls.length - 1
       }
     },
     move (indexOfClicked) {
@@ -185,19 +189,19 @@ export default {
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
-  height: 800px;
+  // height: 800px;
 }
 .slider {
-  width: 60%;
-  height: 100%;
+  width: 60vw;
+  height: 60vh;
   position: relative;
   overflow: hidden;
   transition: 1s;
 }
 
 .sliderBig {
-  width: 100%;
-  height: 150%;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   transition: 1s;
@@ -212,12 +216,12 @@ export default {
 
 .outRight {
   top: 10px;
-  left: 1300px;
+  left: 1650px;
   z-index: -1;
 }
 .outLeft {
   top: 10px;
-  left: -1300px;
+  left: -1650px;
   z-index: -1;
 }
 
@@ -229,7 +233,7 @@ export default {
 button {
   border-radius: 20px;
   position: absolute;
-  top: 48%;
+  top: 50%;
   opacity: 0.4;
   width: 100px;
   font-size: 50px;
@@ -242,27 +246,22 @@ button:hover {
 }
 
 .prev {
-  left: 10px;
+  left: 5%;
 }
 
 .next {
-  right: 10px;
+  right: 5%;
 }
 
 .searchImage {
   position: absolute;
-  top: 42%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%);
   z-index: 2;
   cursor: pointer;
   transition: 0.3s;
   opacity: 0.4;
-  transition: 1s;
-}
-
-.searchImageBig {
-  top: 75%;
 }
 
 .searchImage:hover {
