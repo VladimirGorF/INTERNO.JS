@@ -5,7 +5,7 @@
       <div id="app" class="articlesBox">
         <div class="articles">
           <div class="left">
-            <article class="article" v-if="Tag === 'kitchen' || Tag === ''">
+            <article class="article" v-if="Tag === 'Kitchen' || Tag === ''">
               <h2 class="title">
                 Let’s Get Solution for Building Construction Work: KITCHEN
               </h2>
@@ -35,7 +35,7 @@
                 </div>
               </div>
             </article>
-            <article class="article" v-if="Tag === 'kitchen' || Tag === ''">
+            <article class="article" v-if="Tag === 'Bedroom' || Tag === ''">
               <h2 class="title">Design sprints are great: KITCHEN</h2>
               <p class="text">
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -70,7 +70,7 @@
                 majority have suffered.
               </p>
             </article>
-            <article class="article" v-if="Tag === 'mobi' || Tag === ''">
+            <article class="article" v-if="Tag === 'Building' || Tag === ''">
               <h2 class="title">
                 Let’s Get Solution for Building Construction Work: MOBI
               </h2>
@@ -100,7 +100,7 @@
                 </div>
               </div>
             </article>
-            <article class="article" v-if="Tag === 'gor' || Tag === ''">
+            <article class="article" v-if="Tag === 'Architecture' || Tag === ''">
               <h2 class="title">Design sprints are great: GOR</h2>
               <p class="text">
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -135,7 +135,7 @@
                 majority have suffered.
               </p>
             </article>
-            <article class="article" v-if="Tag === 'burgerlist' || Tag === ''">
+            <article class="article" v-if="Tag === 'Kitchen Planing' || Tag === ''">
               <h2 class="title">Design sprints are great: BURGERLIST</h2>
               <p class="text">
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -209,6 +209,7 @@
               </p>
             </article>
           </div>
+
           <div class="right">
             <div class="title">Tags</div>
             <div class="tagsBox">
@@ -243,11 +244,11 @@ export default {
       activeTagId: '0',
       Tag: '',
       tags: [
-        { id: 0, name: 'kitchen' },
-        { id: 1, name: 'mobi' },
-        { id: 2, name: 'burgerlist' },
-        { id: 3, name: 'gor' },
-        { id: 4, name: 'kitchenNurgen' }
+        { id: 0, name: 'Kitchen' },
+        { id: 1, name: 'Bedroom' },
+        { id: 2, name: 'Building' },
+        { id: 3, name: 'Architecture' },
+        { id: 4, name: 'Kitchen Planing' }
       ]
     }
   },
