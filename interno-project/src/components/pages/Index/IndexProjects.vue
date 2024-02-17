@@ -50,7 +50,6 @@ export default {
   },
   computed: {
     itemsList () {
-      console.log(this.$store.getters.getProjectItemsList)
       return this.$store.getters.getProjectItemsList
     }
   },

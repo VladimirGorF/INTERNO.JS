@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     visibility () {
-      return this.$store.getters.getVisibility // запрашиваем флаг через геттер в store
+      return this.$store.getters.getVisibility // запрашиваем флаг подвала через геттер в store
     }
   }
 }

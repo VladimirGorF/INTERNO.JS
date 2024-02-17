@@ -60,7 +60,7 @@
         <router-link to="/index"
           ><h6 class="rightPage" @click="makeSound()">Home</h6></router-link
         >
-        <details class="details" @click="makeSound()">
+        <details    class="details" @click="makeSound()">
           <summary class="summary rightPage">Project</summary>
           <ul class="menu">
             <router-link to="/project">
@@ -82,10 +82,6 @@
             >
           </ul>
         </details>
-        <!-- Несуществующая страница -->
-        <!-- <router-link to="/non-existingPage">
-          <h6 class="rightPage" @click="makeSound()">NotExistingPage</h6>
-        </router-link> -->
       </nav>
     </div>
   </div>
@@ -94,7 +90,11 @@
 <script>
 export default {
   name: 'MyHeader',
-
+  data () {
+    return {
+      detailsFlag: false
+    }
+  },
   methods: {
     makeSound () {
       const audio = new Audio(
@@ -103,6 +103,7 @@ export default {
       audio.play()
     }
   }
+
 }
 </script>
 
