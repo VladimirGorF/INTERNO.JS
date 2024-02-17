@@ -118,8 +118,6 @@ export default {
       }
     },
     forwardPage () {
-      console.log(this.activePageId)
-      console.log(this.pagesQuantity)
       if (this.activePageId === this.pagesQuantity) {
         // значит и переключаться не надо никуда
         return
