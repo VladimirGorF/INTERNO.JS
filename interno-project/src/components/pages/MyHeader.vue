@@ -60,25 +60,27 @@
         <router-link to="/index"
           ><h6 class="rightPage" @click="makeSound()">Home</h6></router-link
         >
-        <details    class="details" @click="makeSound()">
-          <summary class="summary rightPage">Project</summary>
+        <details class="details">
+          <summary class="summary rightPage" @click="makeSoundShort()">Project</summary>
           <ul class="menu">
             <router-link to="/project">
-              <h6 class="rightPage">Project</h6>
+              <h6 class="rightPage" @click="makeSound()">Project</h6>
             </router-link>
             <router-link to="/projectDetails">
-              <h6 class="rightPage">ProjectDetails</h6>
+              <h6 class="rightPage" @click="makeSound()">ProjectDetails</h6>
             </router-link>
           </ul>
         </details>
-        <details class="details" @click="makeSound()">
-          <summary class="summary rightPage">Blog</summary>
+        <details class="details">
+          <summary class="summary rightPage" @click="makeSoundShort()">Blog</summary>
           <ul class="menu">
             <router-link to="/blog">
-              <h6 class="rightPage">Blog</h6></router-link
+              <h6 class="rightPage" @click="makeSound()">Blog</h6></router-link
             >
             <router-link to="/blogDetails">
-              <h6 class="rightPage">BlogDetails</h6></router-link
+              <h6 class="rightPage" @click="makeSound()">
+                BlogDetails
+              </h6></router-link
             >
           </ul>
         </details>
@@ -90,20 +92,21 @@
 <script>
 export default {
   name: 'MyHeader',
-  data () {
-    return {
-      detailsFlag: false
-    }
-  },
+
   methods: {
     makeSound () {
       const audio = new Audio(
         require('../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
       )
       audio.play()
+    },
+    makeSoundShort () {
+      const audio = new Audio(
+        require('../../assets/sounds/knopka-klik-korotkii-odinochnyii-shumnyii.mp3')
+      )
+      audio.play()
     }
   }
-
 }
 </script>
 

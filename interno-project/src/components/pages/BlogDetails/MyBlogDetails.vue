@@ -1,11 +1,11 @@
 <template>
   <div>
+    <MyHeader />
     <div class="box__blogDetailsPage">
       <div class="articleBlogBanner"></div>
       <div id="app" class="articlesBox">
         <div class="articles">
-
-          <MyBlogArticles :Tag = "Tag"/>
+          <MyBlogArticles :Tag="Tag" />
 
           <div class="right">
             <div class="title">Tags</div>
@@ -29,17 +29,21 @@
         </div>
       </div>
     </div>
+    <MyFooter />
   </div>
 </template>
 
 <script>
+import MyHeader from '../../pages/MyHeader.vue'
+import MyFooter from '../../pages/MyFooter.vue'
 import MyBlogArticles from './MyBlogArticles.vue'
-import { mapMutations } from 'vuex'
 
 export default {
   name: 'MyBlogDetails',
   components: {
-    MyBlogArticles
+    MyBlogArticles,
+    MyHeader,
+    MyFooter
   },
   data () {
     return {
@@ -54,9 +58,7 @@ export default {
       ]
     }
   },
-  created () {
-    this.SET_Visibility(true) //  передаем true во флаг страницы NotFound
-  },
+
   methods: {
     makeSound () {
       const audio = new Audio(
@@ -64,7 +66,6 @@ export default {
       )
       audio.play()
     },
-    ...mapMutations(['SET_Visibility']),
 
     showArticles (nameOfTag) {
       this.Tag === nameOfTag ? (this.Tag = '') : (this.Tag = nameOfTag)

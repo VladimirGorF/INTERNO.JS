@@ -1,55 +1,65 @@
 <template>
-  <div class="projactDetalsPage">
-    <div class="banner"></div>
-    <div class="informBox">
-      <div class="inform">
-        <h1 class="title">{{ title }}</h1>
-        <p class="description">{{ description }}</p>
+  <div>
+    <MyHeader />
+    <div class="projactDetalsPage">
+      <div class="banner"></div>
+      <div class="informBox">
+        <div class="inform">
+          <h1 class="title">{{ title }}</h1>
+          <p class="description">{{ description }}</p>
+        </div>
       </div>
-    </div>
-    <div class="sliderBox">
-      <div id="sliderID" :class="sliderBoxClass">
-        <img
-          class="slide"
-          :class="getImageClass(index)"
-          v-for="(item, index) in sliderUrls"
-          :key="index"
-          :src="item.url"
-          alt="Слайдер №"
-        />
-        <button class="next" @click="forward()">&gt;</button>
-        <button class="prev" @click="back()">&lt;</button>
-        <a href="#sliderID">
+      <div class="sliderBox">
+        <div id="sliderID" :class="sliderBoxClass">
           <img
-            :class="searchImageClass"
-            src="../../../assets/images/projectPageImages/search.svg"
-            alt="searchImg"
-            @click="preview()"
+            class="slide"
+            :class="getImageClass(index)"
+            v-for="(item, index) in sliderUrls"
+            :key="index"
+            :src="item.url"
+            alt="Слайдер №"
           />
-        </a>
+          <button class="next" @click="forward()">&gt;</button>
+          <button class="prev" @click="back()">&lt;</button>
+          <a href="#sliderID">
+            <img
+              :class="searchImageClass"
+              src="../../../assets/images/projectPageImages/search.svg"
+              alt="searchImg"
+              @click="preview()"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="iconsBox">
+        <div class="icons">
+          <!-- Рисуем иконки и присваиваем класс checked по номеру активного слайда. -->
+          <div
+            class="icon"
+            :class="{
+              checked: activeSlide === index,
+            }"
+            v-for="(item, index) in sliderUrls"
+            :key="index.id"
+            @click="move(index)"
+          ></div>
+        </div>
       </div>
     </div>
-    <div class="iconsBox">
-      <div class="icons">
-        <!-- Рисуем иконки и присваиваем класс checked по номеру активного слайда. -->
-        <div
-          class="icon"
-          :class="{
-            checked: activeSlide === index,
-          }"
-          v-for="(item, index) in sliderUrls"
-          :key="index.id"
-          @click="move(index)"
-        ></div>
-      </div>
-    </div>
+    <MyFooter />
   </div>
 </template>
 
 <script>
+import MyHeader from '../../pages/MyHeader.vue'
+import MyFooter from '../../pages/MyFooter.vue'
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
   name: 'ProjectDetails',
+  components: {
+    MyHeader,
+    MyFooter
+  },
   data () {
     return {
       sliderBoxClass: 'slider',
@@ -59,7 +69,6 @@ export default {
   },
   created () {
     this.SET_SliderImagesUrls(this.fetchDataSliderImagesUrls())
-    this.SET_Visibility(true) //  передаем true во флаг страницы NotFound
   },
   methods: {
     preview () {
@@ -95,7 +104,7 @@ export default {
       'getDescriptonProjectDetais',
       'getSliderImagesUrls'
     ]),
-    ...mapMutations(['SET_SliderImagesUrls', 'SET_Visibility']),
+    ...mapMutations(['SET_SliderImagesUrls']),
     ...mapActions(['fetchDataSliderImagesUrls']),
 
     getImageClass (index) {

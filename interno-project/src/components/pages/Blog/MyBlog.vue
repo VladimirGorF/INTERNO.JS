@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MyHeader />
     <div class="box__blogBanner">
       <div class="titleBox">
         <div class="title">Articles & News</div>
@@ -8,24 +9,22 @@
     </div>
     <LastArticle />
     <ArticlesNews />
+    <MyFooter />
   </div>
 </template>
 
 <script>
+import MyHeader from '../../pages/MyHeader.vue'
+import MyFooter from '../../pages/MyFooter.vue'
 import ArticlesNews from './ArticlesNews'
 import LastArticle from './LastArticle'
-import { mapMutations } from 'vuex'
 export default {
   name: 'MyBlog',
   components: {
     ArticlesNews,
-    LastArticle
-  },
-  created () {
-    this.SET_Visibility(true) //  передаем true во флаг страницы NotFound
-  },
-  methods: {
-    ...mapMutations(['SET_Visibility'])
+    LastArticle,
+    MyHeader,
+    MyFooter
   }
 }
 </script>

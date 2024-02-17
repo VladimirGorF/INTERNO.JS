@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MyHeader />
     <div class="box__projectPage">
       <div class="ProjectPageBanner">
         <div class="titleBox">
@@ -69,23 +70,26 @@
         </div>
       </div>
     </div>
+    <MyFooter />
   </div>
 </template>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
 <script>
+import MyHeader from "../../pages/MyHeader.vue";
+import MyFooter from '../../pages/MyFooter.vue'
 import ExampleItem from "./ExampleItem.vue";
 import MyToggle from "./MyToggle.vue";
-import { mapMutations } from "vuex";
 export default {
   name: "MyProject",
   components: {
     ExampleItem,
     MyToggle,
+    MyHeader,
+    MyFooter
   },
   created() {
-    this.SET_Visibility(true); //  передаем true во флаг страницы NotFound
     this.filterToggle("Bathroom"); // начнем страницу с ванных
   },
   data() {
@@ -563,7 +567,6 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["SET_Visibility"]),
     makeSound() {
       const audio = new Audio(
         require("../../../assets/sounds/jeleznaya-knopka-vyiklyucheniya1.mp3")

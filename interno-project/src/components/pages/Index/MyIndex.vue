@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MyHeader />
     <div class="box__bannerMain">
       <div class="banner">
         <img
@@ -85,34 +86,35 @@
       </div>
     </div>
     <IndexBlog />
+    <MyFooter />
   </div>
 </template>
 
 <script>
+import MyHeader from '../../pages/MyHeader.vue'
+import MyFooter from '../../pages/MyFooter.vue'
 import IndexBlog from './IndexBlog.vue'
 import IndexProjects from './IndexProjects.vue'
-import { mapMutations } from 'vuex'
 
 export default {
   name: 'MyIndex',
   components: {
     IndexProjects,
-    IndexBlog
+    IndexBlog,
+    MyHeader,
+    MyFooter
   },
   data () {
     return {}
   },
-  created () {
-    this.SET_Visibility(true) // переход c NonExistPage, передаем true во флаг старницы NotFound
-  },
+
   methods: {
     makeSound () {
       const audio = new Audio(
         require('../../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
       )
       audio.play()
-    },
-    ...mapMutations(['SET_Visibility'])
+    }
   }
 }
 </script>
@@ -131,7 +133,6 @@ export default {
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
-
   .box__bannerMain .banner .informPart .button {
     width: 160px;
     height: 50px;
@@ -154,7 +155,6 @@ export default {
 }
 
 @media (max-width: 767px) {
-
   .box__bannerMain .banner {
     margin-bottom: 34px;
   }

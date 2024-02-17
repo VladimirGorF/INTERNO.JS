@@ -1,44 +1,51 @@
 <template>
-  <div class="nepBox">
-    <div class="content">
-      <div class="leftSide">
-        <h1 class="title404">404</h1>
-        <h5 class="text">
-          We are sorry, but the page you requested was not found
-        </h5>
-        <router-link to="/index" class="reference">
-          <div class="button" @click="makeSound()">
-            <p class="buttonText">Back To Home</p>
-            <svg
-              width="18"
-              height="17"
-              viewBox="0 0 18 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                id="Vector"
-                d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887"
-                stroke="#CDA274"
-                stroke-width="2"
-                stroke-linecap="square"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </router-link>
-      </div>
-      <div class="rightImage">
-        <img src="/notFoundImage/notFound.svg" alt="image" />
+  <div>
+    <MyHeader />
+    <div class="nepBox">
+      <div class="content">
+        <div class="leftSide">
+          <h1 class="title404">404</h1>
+          <h5 class="text">
+            We are sorry, but the page you requested was not found
+          </h5>
+          <router-link to="/index" class="reference">
+            <div class="button" @click="makeSound()">
+              <p class="buttonText">Back To Home</p>
+              <svg
+                width="18"
+                height="17"
+                viewBox="0 0 18 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  id="Vector"
+                  d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887"
+                  stroke="#CDA274"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </router-link>
+        </div>
+        <div class="rightImage">
+          <img src="/notFoundImage/notFound.svg" alt="image" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import MyHeader from '../pages/MyHeader.vue'
 import { mapMutations } from 'vuex'
 export default {
   name: 'PageNotFound',
+  components: {
+    MyHeader
+  },
   created () {
     this.SET_Visibility(false) // переход на страницу NotFound, по умлочанию true, но  в момент создания NotFound, то передаем false
   },
