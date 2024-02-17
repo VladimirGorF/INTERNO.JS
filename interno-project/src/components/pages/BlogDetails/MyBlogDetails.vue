@@ -48,8 +48,8 @@ export default {
       tags: [
         { id: 0, name: 'Kitchen' },
         { id: 1, name: 'Bedroom' },
-        { id: 2, name: 'Building' },
-        { id: 3, name: 'Architecture' },
+        { id: 2, name: 'Architecture' },
+        { id: 3, name: 'Building' },
         { id: 4, name: 'Kitchen Planing' }
       ]
     }

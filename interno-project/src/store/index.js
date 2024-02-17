@@ -244,9 +244,10 @@ export default new Vuex.Store({
         const articlesBlogList = [
           {
             id: 0,
+            tagArticle: 'Kitchen',
             url: 'blogDetailsImages/kitchen.svg',
             title: 'Let’s Get Solution for Building Construction Work: KITCHEN',
-            dateBoxText: '26 December,2022',
+            dateBoxText: '15 February,2024',
             type: 'Interior / Home / Decore',
             sloganCheck: true,
             subtitle: 'The details are not the details. They make the design.',
@@ -259,6 +260,7 @@ export default new Vuex.Store({
           },
           {
             id: 1,
+            tagArticle: 'Kitchen',
             url: 'blogDetailsImages/kitchen2.svg',
             title: 'Let’s Get Solution for Building Construction Work: KITCHEN',
             dateBoxText: '26 December,2022',
@@ -270,8 +272,69 @@ export default new Vuex.Store({
             text3: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
             text4: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
             text5: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+          },
+          {
+            id: 2,
+            tagArticle: 'Bedroom',
+            url: 'blogDetailsImages/kitchen2.svg',
+            title: 'Make your space unique and unparalleled: Bedroom',
+            dateBoxText: '26 December,2022',
+            type: 'Interior / Home / Decore',
+            sloganCheck: false,
+            subtitle: 'The details are not the details. They make the design.',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text2: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text3: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text4: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text5: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+          },
+          {
+            id: 3,
+            tagArticle: 'Building',
+            url: 'blogDetailsImages/kitchen2.svg',
+            title: 'Organize The Building Construction Work: Building',
+            dateBoxText: '26 December,2022',
+            type: 'Interior / Home / Decore',
+            sloganCheck: false,
+            subtitle: 'The details are not the details. They make the design.',
+            text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text2: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text3: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text4: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text5: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+          },
+          {
+            id: 4,
+            tagArticle: 'Architecture',
+            url: 'blogDetailsImages/kitchen.svg',
+            title: 'The Best Intelligent Decisions For You: Architecture',
+            dateBoxText: '26 December,2022',
+            type: 'Interior / Home / Decore',
+            sloganCheck: true,
+            subtitle: 'The details are not the details. They make the design.',
+            text: '',
+            text2: '',
+            text3: '',
+            text4: '',
+            text5: ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
+            text6: 'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
+          },
+          {
+            id: 5,
+            tagArticle: 'Kitchen Planing',
+            url: 'blogDetailsImages/kitchen.svg',
+            title: 'The Plate, Forks and Spoons: Kitchen Planing',
+            dateBoxText: '15 February,2024',
+            type: 'Interior / Home / Decore',
+            sloganCheck: true,
+            subtitle: 'The details are not the details. They make the design.',
+            text: '',
+            text2: '',
+            text3: '',
+            text4: '',
+            text5: ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
+            text6: 'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
           }
-
         ]
         commit('SET_articlesBlog', articlesBlogList)
       }, 100)

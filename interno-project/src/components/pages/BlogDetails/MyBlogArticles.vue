@@ -1,45 +1,44 @@
 <template>
   <div class="left">
-    <div v-if="Tag === 'Kitchen' || Tag === ''">
-          <article class="article" v-for="item in itemsList" :key="item.id">
-      <h2 class="title">
-        {{ item.title }}
-      </h2>
-      <p class="text" v-if="item.text">
-        {{ item.text }}
-      </p>
-      <p class="text"  v-if="item.text2">
-        {{ item.text2 }}
-      </p>
-      <p class="text" v-if="item.text3">
-        {{ item.text3 }}
-      </p>
-      <p class="text" v-if="item.text4">
-        {{ item.text4 }}
-      </p>
-      <img
-        class="articleImage"
-        :src="item.url"
-        alt="articleImage"
-      />
-      <div class="dateInformation">
-        <div class="left">{{ item.dateBoxText }}</div>
-        <div class="right">{{ item.type }}</div>
-      </div>
-      <p class="text" v-if="item.text5">
-        {{ item.text5 }}
-      </p>
-      <p class="text" v-if="item.text5">
-        {{ item.text6 }}
-      </p>
-      <div class="sloganBox" v-if="item.sloganCheck">
-        <div class="commas">,,</div>
-        <div class="subtitle">
-          {{ item.subtitle }}
+    <article class="article" v-for="item in itemsList" :key="item.id">
+      <div v-if="Tag === item.tagArticle || Tag === ''">
+        <h2 class="title">
+          {{ item.title }}
+        </h2>
+        <p class="text" v-if="item.text">
+          {{ item.text }}
+        </p>
+        <p class="text" v-if="item.text2">
+          <span class="numbers">1</span>
+          {{ item.text2 }}
+        </p>
+        <p class="text" v-if="item.text3">
+          <span class="numbers">2</span>
+          {{ item.text3 }}
+        </p>
+        <p class="text" v-if="item.text4">
+          <span class="numbers">3</span>
+          {{ item.text4 }}
+        </p>
+        <img class="articleImage" :src="item.url" alt="articleImage" />
+        <div class="dateInformation">
+          <div class="left">{{ item.dateBoxText }}</div>
+          <div class="right">{{ item.type }}</div>
+        </div>
+        <p class="text" v-if="item.text5">
+          {{ item.text5 }}
+        </p>
+        <p class="text" v-if="item.text5">
+          {{ item.text6 }}
+        </p>
+        <div class="sloganBox" v-if="item.sloganCheck">
+          <div class="commas">,,</div>
+          <div class="subtitle">
+            {{ item.subtitle }}
+          </div>
         </div>
       </div>
     </article>
-    </div>
 
     <!-- <article class="article" v-if="Tag === 'Bedroom' || Tag === ''">
       <h2 class="title">Design sprints are great: BEDROOM</h2>
@@ -227,17 +226,7 @@ export default {
   },
 
   data () {
-    return {
-      activeTagId: '0',
-      articlesBlog: [],
-      tags: [
-        { id: 0, name: 'Kitchen' },
-        { id: 1, name: 'Bedroom' },
-        { id: 2, name: 'Building' },
-        { id: 3, name: 'Architecture' },
-        { id: 4, name: 'Kitchen Planing' }
-      ]
-    }
+    return {}
   },
   methods: {
     ...mapMutations(['SET_articlesBlog']),
@@ -246,7 +235,6 @@ export default {
   },
   computed: {
     itemsList () {
-      console.log(this.$store.getters.getArticlesBlogList)
       return this.$store.getters.getArticlesBlogList
     }
   }
