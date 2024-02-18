@@ -123,14 +123,14 @@ export default {
         },
         {
           id: 2,
-          url: "projectPageImages/1.svg",
+          url: "projectPageImages/3.svg",
           title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
         },
         {
           id: 3,
-          url: "projectPageImages/2.svg",
+          url: "projectPageImages/4.svg",
           title: "Classic Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
@@ -151,7 +151,7 @@ export default {
         },
         {
           id: 6,
-          url: "projectPageImages/6.svg",
+          url: "projectPageImages/7.svg",
           title: "Minimal Bathroom.",
           text: "Decor / Artchitecture",
           type: "Bathroom",
