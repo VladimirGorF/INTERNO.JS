@@ -8,6 +8,11 @@
           alt="bannerImage"
           class="bannerImage"
         />
+        <img
+          src="../../../../public/blogImages/Blog1.svg"
+          alt="bannerImage"
+          class="bannerImage"
+        />
         <div class="informPart">
           <h1 class="title">
             Let Your Home <br />
