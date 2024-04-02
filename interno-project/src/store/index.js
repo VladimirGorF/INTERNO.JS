@@ -49,22 +49,22 @@ export default new Vuex.Store({
       setTimeout(() => {
         const projectItemsList = [
           {
-            url: '../../../../public/indexImages/Item1.svg',
+            url: 'indexImages/Item1.svg',
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           },
           {
-            url: '../../../../public/indexImages/Item2.svg',
+            url: 'indexImages/Item2.svg',
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           },
           {
-            url: '../../../../public/indexImages/Item3.svg',
+            url: 'indexImages/Item3.svg',
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           },
           {
-            url: '../../../../public/indexImages/Item4.svg',
+            url: 'indexImages/Item4.svg',
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           }
@@ -255,8 +255,10 @@ export default new Vuex.Store({
             text2: '',
             text3: '',
             text4: '',
-            text5: ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
-            text6: 'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
+            text5:
+              ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
+            text6:
+              'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
           },
           {
             id: 1,
@@ -268,10 +270,14 @@ export default new Vuex.Store({
             sloganCheck: false,
             subtitle: 'The details are not the details. They make the design.',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text2: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text3: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text4: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text5: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+            text2:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text3:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text4:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text5:
+              'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
           },
           {
             id: 2,
@@ -283,10 +289,14 @@ export default new Vuex.Store({
             sloganCheck: false,
             subtitle: 'The details are not the details. They make the design.',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text2: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text3: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text4: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text5: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+            text2:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text3:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text4:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text5:
+              'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
           },
           {
             id: 3,
@@ -298,10 +308,14 @@ export default new Vuex.Store({
             sloganCheck: false,
             subtitle: 'The details are not the details. They make the design.',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text2: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text3: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text4: 'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
-            text5: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+            text2:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text3:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text4:
+              'Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
+            text5:
+              'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
           },
           {
             id: 4,
@@ -316,8 +330,10 @@ export default new Vuex.Store({
             text2: '',
             text3: '',
             text4: '',
-            text5: ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
-            text6: 'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
+            text5:
+              ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
+            text6:
+              'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
           },
           {
             id: 5,
@@ -332,8 +348,10 @@ export default new Vuex.Store({
             text2: '',
             text3: '',
             text4: '',
-            text5: ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
-            text6: 'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
+            text5:
+              ' Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which dont look even slightly believable.',
+            text6:
+              'Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.'
           }
         ]
         commit('SET_articlesBlog', articlesBlogList)
