@@ -8,6 +8,7 @@
             the of readable content of page lookings at its layouts points.
           </p>
         </div>
+        <img src="../../../../public/indexImages/Item1.svg" alt="">
         <div class="projects__items">
           <div class="item" v-for="item in itemsList" :key="item.id">
             <img class="itemImage" :src="item.url" alt="itemImage" />

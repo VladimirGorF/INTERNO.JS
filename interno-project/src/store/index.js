@@ -49,12 +49,12 @@ export default new Vuex.Store({
       setTimeout(() => {
         const projectItemsList = [
           {
-            url: '/indexImages/Item1.svg',
+            url: '../../../assets/images/indexImages/Item1.svg',
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           },
           {
-            url: './indexImages/Item2.svg',
+            url: '../../../../public/indexImages/Item1.svg',
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           },
