@@ -28,6 +28,7 @@
           </div>
         </div>
       </div>
+      <img src="indexImages/Item1.svg" alt="">
     </div>
 </template>
 
