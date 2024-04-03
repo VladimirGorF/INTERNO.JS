@@ -32,40 +32,14 @@
 </template>
 
 <script>
-// import { mapMutations, mapActions, mapGetters } from 'vuex'
+import { mapMutations, mapActions, mapGetters } from 'vuex'
 export default {
   name: 'IndexProjects',
-  data () {
-    return {
-      itemsList: [
-        {
-          url: 'indexImages/Item1.svg',
-          title: 'Modern Kitchan',
-          text: 'Decor / Artchitecture'
-        },
-        {
-          url: 'indexImages/Item2.svg',
-          title: 'Modern Kitchan',
-          text: 'Decor / Artchitecture'
-        },
-        {
-          url: 'indexImages/Item3.svg',
-          title: 'Modern Kitchan',
-          text: 'Decor / Artchitecture'
-        },
-        {
-          url: 'indexImages/Item4.svg',
-          title: 'Modern Kitchan',
-          text: 'Decor / Artchitecture'
-        }
-      ]
-    }
-  },
 
   methods: {
-    // ...mapMutations(['SET_projectItemsList']),
-    // ...mapActions(['fetchData']),
-    // ...mapGetters(['getProjectItemsList']),
+    ...mapMutations(['SET_projectItemsList']),
+    ...mapActions(['fetchData']),
+    ...mapGetters(['getProjectItemsList']),
 
     makeSound () {
       const audio = new Audio(
@@ -73,16 +47,16 @@ export default {
       )
       audio.play()
     }
+  },
+  computed: {
+    itemsList () {
+      return this.$store.getters.getProjectItemsList
+    }
+  },
+  created () {
+    // при создании вызывается мутация SET_projectItemsList и в нее передаются из коммита в actions данные из fetchData
+    this.SET_projectItemsList(this.fetchData())
   }
-  // computed: {
-  //   itemsList () {
-  //     return this.$store.getters.getProjectItemsList
-  //   }
-  // },
-  // created () {
-  //   // при создании вызывается мутация SET_projectItemsList и в нее передаются из коммита в actions данные из fetchData
-  //   this.SET_projectItemsList(this.fetchData())
-  // }
 }
 </script>
 
