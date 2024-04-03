@@ -1,5 +1,6 @@
 <template>
     <div>
+      <img src="../../../../dist/indexImages/Item1.svg" alt="">
         <div class="box__projects">
         <div class="projects__Heading">
           <h2 class="projects__Title">Follow Our Projects</h2>
