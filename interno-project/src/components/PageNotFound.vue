@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import MyHeader from '../pages/MyHeader.vue'
+import MyHeader from './MyHeader.vue'
 import { mapMutations } from 'vuex'
 export default {
   name: 'PageNotFound',
@@ -53,7 +53,7 @@ export default {
     ...mapMutations(['SET_Visibility']),
     makeSound () {
       const audio = new Audio(
-        require('../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
+        require('../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
       )
       audio.play()
     }

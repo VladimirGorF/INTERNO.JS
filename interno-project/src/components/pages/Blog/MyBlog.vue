@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import MyHeader from '../../pages/MyHeader.vue'
-import MyFooter from '../../pages/MyFooter.vue'
+import MyHeader from '../../MyHeader.vue'
+import MyFooter from '../../MyFooter.vue'
 import ArticlesNews from './ArticlesNews'
 import LastArticle from './LastArticle'
 export default {

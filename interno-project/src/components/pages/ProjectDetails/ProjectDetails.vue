@@ -51,8 +51,8 @@
 </template>
 
 <script>
-import MyHeader from '../../pages/MyHeader.vue'
-import MyFooter from '../../pages/MyFooter.vue'
+import MyHeader from '../../MyHeader.vue'
+import MyFooter from '../../MyFooter.vue'
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
   name: 'ProjectDetails',

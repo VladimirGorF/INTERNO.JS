@@ -94,7 +94,7 @@ export default {
   methods: {
     makeSound () {
       const audio = new Audio(
-        require('../../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
+        require('../assets/sounds/knopka-v-prostranstve-priglushennyii-blizkii.mp3')
       )
       audio.play()
     }

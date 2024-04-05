@@ -91,8 +91,8 @@
 </template>
 
 <script>
-import MyHeader from '../../pages/MyHeader.vue'
-import MyFooter from '../../pages/MyFooter.vue'
+import MyHeader from '../../MyHeader.vue'
+import MyFooter from '../../MyFooter.vue'
 import IndexBlog from './IndexBlog.vue'
 import IndexProjects from './IndexProjects.vue'
 

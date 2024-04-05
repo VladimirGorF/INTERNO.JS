@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import MyHeader from '../../pages/MyHeader.vue'
-import MyFooter from '../../pages/MyFooter.vue'
+import MyHeader from '../../MyHeader.vue'
+import MyFooter from '../../MyFooter.vue'
 import MyBlogArticles from './MyBlogArticles.vue'
 
 export default {

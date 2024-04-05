@@ -77,8 +77,8 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
 <script>
-import MyHeader from "../../pages/MyHeader.vue";
-import MyFooter from '../../pages/MyFooter.vue'
+import MyHeader from "../../MyHeader.vue";
+import MyFooter from '../../MyFooter.vue'
 import ExampleItem from "./ExampleItem.vue";
 import MyToggle from "./MyToggle.vue";
 export default {
