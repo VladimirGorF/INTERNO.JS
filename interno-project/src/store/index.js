@@ -49,22 +49,22 @@ export default new Vuex.Store({
       setTimeout(() => {
         const projectItemsList = [
           {
-            url: 'indexImages/Item1.svg',
+            url: require('/public/indexImages/Item1.svg'),
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           },
           {
-            url: 'indexImages/Item2.svg',
+            url: require('/public/indexImages/Item2.svg'),
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           },
           {
-            url: 'indexImages/Item3.svg',
+            url: require('/public/indexImages/Item3.svg'),
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           },
           {
-            url: 'indexImages/Item4.svg',
+            url: require('/public/indexImages/Item4.svg'),
             title: 'Modern Kitchan',
             text: 'Decor / Artchitecture'
           }
@@ -77,160 +77,160 @@ export default new Vuex.Store({
         const articlesList = [
           {
             id: 0,
-            url: '/blogImages/Blog1.svg',
+            url: require('/public/blogImages/Blog1.svg'),
             title: "Let's Get Solution For Building Construction Work",
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 1,
-            url: '/blogImages/Blog4.svg',
+            url: require('/public/blogImages/Blog4.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
             dateBoxText: '15 September,1614',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 2,
-            url: '/blogImages/Blog2.svg',
+            url: require('/public/blogImages/Blog2.svg'),
             title: 'Best For Any Office & Business Interior Solution',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 3,
-            url: '/blogImages/Blog3.svg',
+            url: require('/public/blogImages/Blog3.svg'),
             title: "Let's Get Solution For Building Construction Work",
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 4,
-            url: '/blogImages/Blog5.svg',
+            url: require('/public/blogImages/Blog5.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 5,
-            url: '/blogImages/Blog6.svg',
+            url: require('/public/blogImages/Blog6.svg'),
             title: 'Best For Any Office & Business Interior Solution',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 6,
-            url: '/blogImages/Blog1.svg',
+            url: require('/public/blogImages/Blog1.svg'),
             title: "Let's Get Solution For Building Construction Work",
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 7,
-            url: '/blogImages/Blog2.svg',
+            url: require('/public/blogImages/Blog2.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 8,
-            url: '/blogImages/Blog3.svg',
+            url: require('/public/blogImages/Blog3.svg'),
             title: 'Best For Any Office & Business Interior Solution',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 9,
-            url: '/blogImages/Blog4.svg',
+            url: require('/public/blogImages/Blog4.svg'),
             title: "Let's Get Solution For Building Construction Work",
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 10,
-            url: '/blogImages/Blog5.svg',
+            url: require('/public/blogImages/Blog5.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
             dateBoxText: '26 December,2022'
           },
           {
             id: 11,
-            url: '/blogImages/Blog6.svg',
+            url: require('/public/blogImages/Blog6.svg'),
             title: 'Best For Any Office & Business Interior Solution',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 12,
-            url: '/blogImages/Blog1.svg',
+            url: require('/public/blogImages/Blog1.svg'),
             title: "Let's Get Solution For Building Construction Work",
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 13,
-            url: '/blogImages/Blog2.svg',
+            url: require('/public/blogImages/Blog2.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 14,
-            url: '/blogImages/Blog3.svg',
+            url: require('/public/blogImages/Blog3.svg'),
             title: 'Best For Any Office & Business Interior Solution',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 15,
-            url: '/blogImages/Blog4.svg',
+            url: require('/public/blogImages/Blog4.svg'),
             title: "Let's Get Solution For Building Construction Work",
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 16,
-            url: '/blogImages/Blog5.svg',
+            url: require('/public/blogImages/Blog5.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 17,
-            url: '/blogImages/Blog6.svg',
+            url: require('/public/blogImages/Blog6.svg'),
             title: 'Best For Any Office & Business Interior Solution',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 18,
-            url: '/blogImages/Blog1.svg',
+            url: require('/public/blogImages/Blog1.svg'),
             title: "Let's Get Solution For Building Construction Work",
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 19,
-            url: '/blogImages/Blog2.svg',
+            url: require('/public/blogImages/Blog2.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 20,
-            url: '/blogImages/Blog3.svg',
+            url: require('/public/blogImages/Blog3.svg'),
             title: 'Best For Any Office & Business Interior Solution',
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 21,
-            url: '/blogImages/Blog4.svg',
+            url: require('/public/blogImages/Blog4.svg'),
             title: "Let's Get Solution For Building Construction Work",
             dateBoxText: '26 December,2022',
             text: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belie Lorem Ipsum is not simply random text. It has roots in a piece of classica.'
           },
           {
             id: 22,
-            url: '/blogImages/BannerPostPhoto.svg',
+            url: require('/public/blogImages/BannerPostPhoto.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.',
             dateBoxText: '26 January,2024',
             text: 'Last article ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief. Lorem Ipsum is not simply random text. It has roots in a piece of classica'
@@ -245,7 +245,7 @@ export default new Vuex.Store({
           {
             id: 0,
             tagArticle: 'Kitchen',
-            url: 'blogDetailsImages/kitchen.svg',
+            url: require('/public/blogDetailsImages/kitchen.svg'),
             title: 'Let’s Get Solution for Building Construction Work: KITCHEN',
             dateBoxText: '15 February,2024',
             type: 'Interior / Home / Decore',
@@ -263,7 +263,7 @@ export default new Vuex.Store({
           {
             id: 1,
             tagArticle: 'Kitchen',
-            url: 'blogDetailsImages/kitchen2.svg',
+            url: require('/public/blogDetailsImages/kitchen2.svg'),
             title: 'Let’s Get Solution for Building Construction Work: KITCHEN',
             dateBoxText: '26 December,2022',
             type: 'Interior / Home / Decore',
@@ -282,7 +282,7 @@ export default new Vuex.Store({
           {
             id: 2,
             tagArticle: 'Bedroom',
-            url: 'blogDetailsImages/kitchen2.svg',
+            url: require('/public/blogDetailsImages/kitchen2.svg'),
             title: 'Make your space unique and unparalleled: Bedroom',
             dateBoxText: '26 December,2022',
             type: 'Interior / Home / Decore',
@@ -301,7 +301,7 @@ export default new Vuex.Store({
           {
             id: 3,
             tagArticle: 'Building',
-            url: 'blogDetailsImages/kitchen2.svg',
+            url: require('/public/blogDetailsImages/kitchen2.svg'),
             title: 'Organize The Building Construction Work: Building',
             dateBoxText: '26 December,2022',
             type: 'Interior / Home / Decore',
@@ -320,7 +320,7 @@ export default new Vuex.Store({
           {
             id: 4,
             tagArticle: 'Architecture',
-            url: 'blogDetailsImages/kitchen.svg',
+            url: require('/public/blogDetailsImages/kitchen.svg'),
             title: 'The Best Intelligent Decisions For You: Architecture',
             dateBoxText: '26 December,2022',
             type: 'Interior / Home / Decore',
@@ -338,7 +338,7 @@ export default new Vuex.Store({
           {
             id: 5,
             tagArticle: 'Kitchen Planing',
-            url: 'blogDetailsImages/kitchen.svg',
+            url: require('/public/blogDetailsImages/kitchen.svg'),
             title: 'The Plate, Forks and Spoons: Kitchen Planing',
             dateBoxText: '15 February,2024',
             type: 'Interior / Home / Decore',
@@ -361,15 +361,15 @@ export default new Vuex.Store({
       setTimeout(() => {
         const examplesList = [
           {
-            url: 'indexImages/Blog1.svg',
+            url: require('/public/indexImages/Blog1.svg'),
             title: 'Let’s Get Solution For Building Construction Work'
           },
           {
-            url: 'indexImages/Blog2.svg',
+            url: require('/public/indexImages/Blog2.svg'),
             title: 'Low Cost Latest Invented Interior Designing Ideas.'
           },
           {
-            url: 'indexImages/Blog3.svg',
+            url: require('/public/indexImages/Blog3.svg'),
             title: 'Best For Any Office & Business Interior Solution'
           }
         ]
@@ -380,13 +380,13 @@ export default new Vuex.Store({
       setTimeout(() => {
         const sliderImagesUrls = [
           {
-            url: 'projectDetailsImages/slider1.svg'
+            url: require('/public/projectDetailsImages/slider1.svg')
           },
           {
-            url: 'indexImages/bannerImage.svg'
+            url: require('/public/indexImages/bannerImage.svg')
           },
           {
-            url: 'projectDetailsImages/slider1.svg'
+            url: require('/public/projectDetailsImages/slider1.svg')
           }
         ]
         commit('SET_SliderImagesUrls', sliderImagesUrls)
